@@ -1,0 +1,2899 @@
+<!DOCTYPE html>
+<!-- NOTE: The Site Map section has been moved to the end of the file, after the Appointments section. -->
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2YJ8NMMHMS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2YJ8NMMHMS');
+</script>
+    
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://ijngca.com/Ahmad/favicon.ico">
+
+	<title>Dr. Ahmad Raza Khan </title>
+
+	<!-- progress bar -->   
+	<script async="" src="js/analytics.js"></script><script src="js/pace.min.js"></script>
+	<link href="css/pace.css" rel="stylesheet">	
+	
+	<script>
+		paceOptions = {
+		  eventLag: true,
+		  ajax: true,
+		  document: true,
+		  elements: {
+		    selectors: ['.scroll-up']
+		  }
+		};
+		
+		Pace.on('done', function() {
+			$("#pace-preloader").fadeOut(2000);
+		});
+		
+		Pace.on('stop', function() {
+			$("#pace-preloader").fadeOut(2000);
+		});		
+	</script>
+	
+	<!-- CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="css/simple-line-icons.css" rel="stylesheet" media="screen">
+	<link href="css/animate.css" rel="stylesheet">
+    
+	<!-- Custom styles CSS -->
+	<link href="css/style.css" rel="stylesheet" media="screen">
+    <script src="js/modernizr.custom.js"></script>
+    
+
+
+	<script src="js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>	
+
+    
+    <style>
+        #home-slider {
+          width: 100%;
+          margin: 0px auto;
+          border-radius: 0px;
+          overflow: hidden;
+          box-shadow: 0 0px 0px rgba(0,0,0,0.2);
+        }
+        #home-slider img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        .carousel-inner > .item {
+          transition: 1s ease-in-out left;
+        }
+        .follow-me-button {
+            position: fixed;
+            bottom: -400px;
+            left: 0px;
+            z-index: 8000;
+        }
+        .follow-me-buttons {
+            position: fixed;
+            bottom: -150%;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .follow-me-buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #0076b58d; /* LinkedIn color as default */
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Added transform and box-shadow */
+        }
+        .follow-me-buttons a:hover {
+            background-color: #005582; /* Keep the existing hover color */
+            transform: scale(1.1); /* Slightly increase the size */
+            box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.7); /* Green glow effect */
+        }
+        .follow-me-buttons a i {
+            font-size: 24px;
+        }
+        /* General form styles */
+        #contact-form {
+            background-color: #f9f9f9; /* Light background for the form */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 20px; /* Padding inside the form */
+            margin: 20px auto; /* Center the form */
+            max-width: 600px; /* Maximum width for the form */
+        }
+
+        /* Form header styles */
+        .pfblock-title {
+            text-align: center; /* Center the title */
+            color: #333; /* Darker text color */
+            margin-bottom: 20px; /* Space below the title */
+        }
+
+        /* Input field styles */
+        .form-group {
+            margin-bottom: 15px; /* Space between fields */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%; /* Full width */
+            padding: 10px; /* Padding inside fields */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 4px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            transition: border-color 0.3s; /* Smooth transition for border color */
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #007bff; /* Change border color on focus */
+            outline: none; /* Remove default outline */
+        }
+
+        /* Button styles */
+        .btn {
+            background-color: #007bff; /* Primary color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            padding: 10px 15px; /* Padding */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        /* CAPTCHA field styles */
+        .captcha {
+            margin-top: 10px; /* Space above CAPTCHA */
+            font-size: 14px; /* Smaller font size */
+            color: #555; /* Darker text color */
+        }
+        /* Ensure the iframe is responsive */
+        #contact iframe {
+            width: 100%; /* Full width */
+            height: 645px; /* Fixed height */
+            border: none; /* No border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        </style>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+	
+	<style>
+        #home {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bg-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .bg-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .bg-slide.active {
+            opacity: 1;
+        }
+        
+        .home-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+        
+        .intro {
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Add a subtle zoom effect to active slide */
+        .bg-slide.active {
+            opacity: 1;
+            animation: zoomEffect 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes zoomEffect {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Add fade transition between slides */
+        .bg-slide {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+    </style>
+	
+	<style>
+        /* Fix for horizontal scrollbar */
+        body, html {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1170px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        /* Improve responsive iframe */
+        iframe {
+            max-width: 100%;
+        }
+        
+        /* Ensure images don't cause overflow */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Fix for row margins */
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        
+        /* Adjust column padding */
+        [class*="col-"] {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        /* Ensure TryHackMe badge doesn't overflow */
+        .tryhackme-badge-container {
+            overflow: hidden;
+            max-width: 100%;
+        }
+    </style>
+	
+</head>
+<body>
+
+	<!-- Preloader -->
+	
+  	<div id="pace-preloader">
+		<div class="pace-activity"></div>
+	</div>
+	
+	<!-- Home start -->
+
+	<section id="home" class="pfblock-image screen-height">
+
+        <div class="home-overlay"></div>
+		<div class="bg-slider">
+			<div class="bg-slide active" style="background-image: url('images/1.jpg');"></div>
+			<div class="bg-slide" style="background-image: url('images/2.jpg');"></div>
+			<div class="bg-slide" style="background-image: url('images/3.jpg');"></div>
+		</div>
+		<div class="intro">
+			<div class="start"></div>
+			<h1>Dr. Ahmad Raza Khan</h1>
+            <div class="typewriter-container">
+                <span id="typewriter" style="color: white; font-size: 1.5em; font-weight: 300;"></span>
+            </div>
+
+            <style>
+                .typewriter-container {
+                    min-height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px 0;
+                }
+                #typewriter {
+                    border-right: 2px solid rgba(255,255,255,.75);
+                    padding-right: 5px;
+                    animation: blink 0.7s step-end infinite;
+                }
+                @keyframes blink {
+                    from, to { border-color: transparent }
+                    50% { border-color: rgba(255,255,255,.75) }
+                }
+            </style>
+
+            <script>
+                const messages = [
+                    "AWS Certified Solutions Architect",
+                    "Certified Ethical Hacker (CEH)",
+                    "Certified Computer Hacking Forensic Investigator (CHFI)",
+                    "Certified Threat Intelligence Analyst (CTIA)",
+                    "Certified Junior Penetration Tester (JPT)",
+                    "Certified Security Operations Center (SOC) Level 1",
+                    "Cloud Computing & Cybersecurity Expert",
+                    "Machine Learning & AI Researcher",
+                    "Journal Reviewer & Academic Leader",
+                    "Empowering minds through education and innovation", 
+                    "Bridging theory and real-world technology",
+                    "Nurturing the next generation of cybersecurity leaders",
+                    "Committed to academic excellence and lifelong learning",
+                    "Where passion meets pedagogy",
+                    "Transforming classrooms into innovation labs",
+                    "Guiding students from curiosity to capability",
+                    "Fortifying digital frontiers with knowledge and tools.",
+                    "Shaping secure digital ecosystems for tomorrow.",
+                    "Cloud-native. Security-first. Innovation-driven.",
+                    "Ethical hacking for a safer cyber world.",
+                    "Zero Trust starts with strong education.",
+                    "Red teaming, blue teaming, always learning.",
+                    "From code to cloud—security is my mission.",
+                    "Curious mind. Research-driven. Impact-focused.",
+                    "Exploring intelligence—human and artificial.",
+                    "AI for Good. Research for Progress.",
+                    "From data to discoveries.",
+                    "Machine learning with a human touch.",
+                    "Academic leader. Research innovator.",
+                    "AWS Certified | CEH | CHFI | CTIA | CCSP",
+                    "Certified Cloud & Cybersecurity Expert",
+                    "Hands-on with hacking. Heart in education.",
+                    "Professor by role. Practitioner by passion.",
+                    "Security. Simplicity. Scalability.",
+                    "Bringing certifications to life through real teaching.",
+                    "Learn. Teach. Repeat. Evolve.",
+                    "Inspiring secure futures through impactful education.",
+                    "Combining academic rigor with industry relevance.",
+                    "Because the future deserves secure minds.",
+                    "Where science meets security and service.",
+                    "Lighting the path of knowledge, one student at a time.",
+                    "Technology is temporary—teaching is timeless.",
+                ];
+
+                let messageIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+                let isPaused = false;
+                const typingSpeed = 100;
+                const deleteSpeed = 50;
+                const pauseDuration = 1500;
+
+                function typeWriter() {
+                    const currentMessage = messages[messageIndex];
+                    const typewriterElement = document.getElementById('typewriter');
+
+                    if (isDeleting) {
+                        // Deleting text
+                        charIndex--;
+                        typewriterElement.textContent = currentMessage.substring(0, charIndex);
+                        setTimeout(typeWriter, deleteSpeed);
+
+                        if (charIndex === 0) {
+                            isDeleting = false;
+                            messageIndex = (messageIndex + 1) % messages.length;
+                            setTimeout(typeWriter, 500); // Pause before typing next message
+                        }
+                    } else if (!isPaused) {
+                        // Typing text
+                        charIndex++;
+                        typewriterElement.textContent = currentMessage.substring(0, charIndex);
+                        setTimeout(typeWriter, typingSpeed);
+
+                        if (charIndex === currentMessage.length) {
+                            isPaused = true;
+                            setTimeout(() => {
+                                isPaused = false;
+                                isDeleting = true;
+                                typeWriter();
+                            }, pauseDuration);
+                        }
+                    }
+                }
+
+                // Start the typewriter effect when the page loads
+                document.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(typeWriter, 1000); // Start after 1 second
+                });
+            </script>
+
+            <div class="follow-me-buttons">
+                <a href="http://www.linkedin.com/in/ahmad-raza-khan-68b39a225" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/ahmed-khan" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://scholar.google.com/citations?user=CD72xzgAAAAJ&hl=en" target="_blank"><i class="fa fa-google"></i></a>
+                <a href="https://ieeexplore.ieee.org/author/37085503176" target="_blank"><i class="fa fa-lightbulb-o"></i></a>
+                <a href="https://orcid.org/0000-0002-5365-9189" target="_blank"><i class="ai ai-orcid"></i></a>
+                <a href="https://www.researchgate.net/profile/Ahmed-Khan-34" target="_blank"><i class="ai ai-researchgate"></i></a>
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=56151985600" target="_blank"><i class="fa fa-book"></i></a>
+                <a href="https://www.webofscience.com/wos/author/record/160542" target="_blank"><i class="fa fa-globe"></i></a>
+                <a href="https://sciprofiles.com/profile/982585" target="_blank"><i class="fa fa-user"></i></a>
+                <a href="https://www.coursera.org/learner/dr-ahmad-raza-khan-8754" target="_blank" title="Coursera Profile"><i class="fa fa-graduation-cap"></i></a>
+                <a href="https://tryhackme.com/p/AHMAD.RAZA.KHAN" target="_blank" title="TryHackMe Profile"><i class="fa fa-shield"></i></a>
+            </div>
+		</div>
+       
+        <a href="#biography">
+		<div class="scroll-down">
+            <span>
+                <i class="fa fa-angle-down fa-2x"></i>
+            </span>
+		</div>
+        </a>
+
+	</section>
+
+	<!-- Home end -->
+
+	
+	<!-- Navigation start -->
+
+	<header class="header">
+        <nav class="navbar navbar-custom" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="custom-collapse">
+                    <ul class="nav navbar-nav navbar-center">
+                        <li class="active"><a href="#home">Home</a></li>
+                        <li><a href="#biography">Biography</a></li>
+                        <li><a href="#researchintersts">Interests</a></li>
+                        <li><a href="#publicationimage">Publications</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#servicesimage">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#appointments">Appointments</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <style>
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: none;
+            border-radius: 0;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .navbar-custom .navbar-nav {
+            display: flex;
+            flex-wrap: nowrap;
+            float: none;
+            text-align: center;
+        }
+
+        .navbar-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .navbar-custom .navbar-nav > li > a {
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 12px 20px;
+            margin: 0 5px;
+            border-radius: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .navbar-custom .navbar-nav > li > a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #007bff, #00bfff);
+            z-index: -1;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+            border-radius: 30px;
+        }
+
+        .navbar-custom .navbar-nav > li > a:hover:before,
+        .navbar-custom .navbar-nav > li.active > a:before {
+            transform: translateY(0);
+        }
+
+        .navbar-custom .navbar-nav > li > a:hover,
+        .navbar-custom .navbar-nav > li.active > a {
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .navbar-custom .navbar-nav > li.active > a {
+            box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+        }
+
+        .navbar-custom .navbar-toggle {
+            border: none;
+            background: transparent;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .navbar-custom .navbar-toggle .fa-bars {
+            color: #007bff;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-custom .navbar-toggle:hover .fa-bars {
+            color: #0056b3;
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: 768px) {
+            .navbar-center {
+                position: relative;
+                left: auto;
+                transform: none;
+            }
+            
+            .navbar-custom .navbar-nav > li > a {
+                margin: 5px 15px;
+            }
+            
+            .navbar-custom .navbar-collapse {
+                background: rgba(255, 255, 255, 0.98);
+                border-radius: 15px;
+                margin-top: 15px;
+                padding: 10px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                border: none;
+            }
+
+            .navbar-custom .navbar-nav {
+                margin: 0;
+            }
+        }
+
+        /* Add a subtle animation for the active menu item */
+        @keyframes activeGlow {
+            0% {
+                box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(0,123,255,0.4);
+            }
+            100% {
+                box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+            }
+        }
+
+        .navbar-custom .navbar-nav > li.active > a {
+            animation: activeGlow 2s infinite;
+        }
+    </style>
+	
+	<!-- Navigation end -->
+	
+    <style>
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: none;
+            border-radius: 0;
+            padding: 10px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-custom .navbar-nav {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+        }
+
+        .navbar-custom .container {
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-custom .navbar-nav > li > a {
+                margin: 5px 15px;
+            }
+            
+            .navbar-custom .navbar-collapse {
+                background: rgba(255, 255, 255, 0.98);
+                border-radius: 10px;
+                margin-top: 10px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+	
+	<!-- Biography start -->
+    
+    <section id="biography" class="pfblock pfblock-gray">
+		<div class="container">
+			<div class="row">
+                 <div class="col-sm-12"> 
+                       	<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title"><a>Biography</a></h2>
+						<div class="pfblock-line"></div>
+
+
+
+         
+				<div class="pfblock-subtitle text-left text-justify">
+                
+       <br>
+	   
+<p> Ahmad Raza Khan is a distinguished researcher and academician with a significant impact on the field of computer science and engineering. He is known for his contributions to areas such as Cloud Computing, Machine Learning, Artificial Intelligence, and Data Analysis. Dr. Khan's prolific career is highlighted by a robust portfolio of published research, numerous citations, and involvement in various high-impact projects.</p>
+<h3>- Professional and Academic Background</h3>
+<p> Dr. Ahmad Raza Khan's academic journey is marked by excellence and a commitment to advancing knowledge. He has earned recognition for his research contributions, reflected in his impressive citation metrics on platforms such as <a href="https://scholar.google.co.in/citations?user=CD72xzgAAAAJ&hl=en" target="_blank">Google Scholar .</a> His work, frequently published in leading journals and conferences, demonstrates his expertise and innovative approach to solving complex problems.</p>
+<h3>- Research Contributions</h3>
+<p> Dr. Khan's author profile on <a href="https://ieeexplore.ieee.org/author/37085503176?searchWithin=%22Author%20Ids%22:37085503176&history=no&sortType=newest&highlight=true&returnFacets=ALL&returnType=SEARCH&refinements=Author:Ahmad%20Raza%20Khan" target="_blank"> IEEE Xplore </a> showcases his extensive list of publications, where he has addressed cutting-edge topics and advanced the frontiers of his field . His research often explores the intersection of theoretical and applied aspects of technology, providing insights that are both academically rigorous and practically applicable.</p>
+<h3>- Impact and Recognition</h3>
+<p> Ahmad Raza Khan's research impact is further evidenced by his presence on various academic and professional platforms. His <a href="https://orcid.org/0000-0002-5365-9189" target="_blank">ORCID profile </a>lists a comprehensive record of his scholarly output, ensuring that his contributions are widely recognized and accessible to the global research community . Additionally, his 
+<a href="https://www.scopus.com/authid/detail.uri?authorId=56151985600" target="_blank">Scopus  </a> and <a href="https://www.webofscience.com/wos/author/record/160542" target="_blank"> Web of Science profiles </a>highlight his significant citation count and influence in the scientific community . </p>
+<h3>- Collaborative Endeavors</h3>
+<p> Dr. Khan is also active on ResearchGate, where he engages with the broader academic community, collaborates on research projects, and shares his findings . His <a href="https://sciprofiles.com/profile/982585" target="_blank">SciProfiles page </a>provides a detailed overview of his research interests and achievements, underscoring his dedication to advancing technology and science . With a career marked by innovation, rigorous research, and a commitment to academic excellence, Dr. Ahmad Raza Khan stands out as a leading figure in his field. His work not only contributes to the advancement of technology but also inspires the next generation of researchers and engineers.
+ </p>   
+       <br>
+       <div class="pfblock-subtitle  text-left">
+        <h6>
+        <div class="row">
+            <div class="col-sm-8">
+                <p>Member of IEEE (Member# 92843364) and ACM (Member #: 3389417)</p>
+                <p>Reviewer, <a>Multimedia Tools and Applications​</a></p>
+                <p>Consultant to Deanship of E-Learning and Deanship of IT</p>
+                <p>College of Computer &amp; Information Sciences, Building 4</p>
+                <p>Majmaah University, P.O. Box 11952</p>
+                <p>Kingdom of Saudi Arabia​</p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="tryhackme-badge-container" style="margin-top: 20px;">
+                    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=1867190" style='border:none; width:100%; height:150px;'></iframe>
+                </div>
+            </div>
+        </div>
+        </h6>
+ </div> 
+       
+						</div>
+  			            	</div>
+                                  </div>
+                                     	</div>
+		</div> <!-- .container -->
+	</section>
+
+	<!-- Biography end -->	
+
+	
+	<!-- Research Intersts start -->
+	
+    <section id="researchintersts" class="pfblock">
+		<div class="container">
+			<div class="row">
+            	 <!-- <div class="col-sm-6 col-sm-offset-3"> -->
+                 <div class="col-sm-12"> 
+                	<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title"><a>Interests</a></h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle  text-left text-justify">
+                    	This interest in research areas include Cloud Computing, Machine Learning, Artificial Intelligence, and Data Analysis. 
+                    	</div>
+					</div>
+				</div>
+			</div><!-- .row -->
+            
+            
+            <!-- First Row -->
+            <div class="row">
+                <!-- Cloud Computing Card -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn" id="cloud-computing-card">
+                        <figure class="effect-bubba">
+                            <img src="images/Tech-transfer.jpg" alt="img01">
+                            <figcaption>
+                                <h2>Cloud Computing<span></span></h2>
+                                <p>Trainings and Certifications</p>
+                            </figcaption>			
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Machine Learning Card -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn" id="machine-learning-card">
+                        <figure class="effect-bubba">
+                             <img src="images/Machine.jpg" alt="Machine Learning">
+                            <figcaption>
+                                <h2>Machine Learning<span></span></h2>
+                                <p>Algorithm Design and Development</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- AI Card -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn" id="ai-card">
+                        <figure class="effect-bubba">
+                            <img src="images/AI.jpg" alt="Artificial Intelligence">
+                            <figcaption>
+                                <h2>Artificial Intelligence <span></span></h2>
+                                <p>Prompt Optimization</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="row">
+                <!-- Data Analysis Card -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn" id="data-analysis-card">
+                        <figure class="effect-bubba">
+                            <img src="images/cloudsecurity.jpg" alt="Data Analysis">
+                            <figcaption>
+                                <h2>Data Analysis<span></span></h2>
+                                <p>Data Validation<br>Data Security<br>Privacy</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Additional Card 1 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn" id="cyber-security-card">
+                        <figure class="effect-bubba">
+                            <img src="images/Cyber-sect.jpg" alt="Cyber Security">
+                            <figcaption>
+                                <h2>Cyber Security<span></span></h2>
+                                <p>Penetration Testing and Ethical Hacking</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            
+                <!-- Additional Card 2 
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="images/placeholder.jpg" alt="Additional Topic">
+                            <figcaption>
+                                <h2>Additional Topic<span></span></h2>
+                                <p>Coming Soon</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+-->
+            <!-- Your existing card -->
+            
+            
+            <!-- Modal structure (add near the end of your body) -->
+            <div id="cloudModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
+              <div style="background:#fff; margin:10% auto; padding:20px; border-radius:8px; width:80%; max-width:900px; position:relative;">
+                <span id="closeModal" style="position:absolute; top:10px; right:20px; font-size:24px; cursor:pointer;">&times;</span>
+              
+              <div class="cloud-modal-body">
+
+                <h2 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 2em;">Cloud Computing</h2>
+                <div class="cloud-intro">
+                  <p>
+                    My work in <strong style="color: #1e40af;">Cloud Computing</strong> focuses on optimizing resource utilization, load balancing, and securing virtualized PaaS/IaaS environments using technologies like containerization.
+                    I apply these principles to develop robust, scalable solutions for diverse areas, including e-learning and project management.
+                    Complementing my research, I hold several industry certifications in Cloud Computing.
+                    <h3 class="cloud-section-title">Certifications in Cloud Computing</h3>
+                    <span style="color:#64748b;">
+                        <ul class="cloud-publications-list">
+                            <li>
+                              <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/d144c022cbc243208549fa6c4694267e" class="cloud-pub-link" target="_blank"><span class="cloud-pub-title">AWS Solutions Architect - Associate</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/5L48GZGY2HVM" class="cloud-pub-link" target="_blank"><span class="cloud-pub-title">AWS Cloud Practitioner Essentials</span></a>
+                              </li>
+                              <li>
+                                <a href="https://www.coursera.org/account/accomplishments/verify/LHKS7U2CQCTK" class="cloud-pub-link" target="_blank"><span class="cloud-pub-title">Exploring Data Transformation with Google Cloud</span></a>
+                              </li>
+                              <li>
+                                <a href="Certifications/Coursera/Coursera-Introduction-to-Information-Technology-and-AWS-Cloud.pdf" class="cloud-pub-link" target="_blank"><span class="cloud-pub-title">Introduction to Information Technology and AWS Cloud</span></a>
+                              </li>
+                              <li>
+                                <a href="Certifications/Coursera/Coursera-Cloud-Computing-Basics.pdf" class="cloud-pub-link" target="_blank"><span class="cloud-pub-title">Cloud Computing Basics (Cloud 101)</span></a>
+                              </li>
+                        </ul>
+                    </span>
+                  </p>
+                </div>
+              
+                <h3 class="cloud-section-title">Selected Publications in Cloud Computing</h3>
+                <ul class="cloud-publications-list">
+                  <li>
+                    <span class="cloud-pub-title">Optimizing cloud resource utilization in the digital economy: An integrated Pythagorean fuzzy-based decision-making approach, Khan, Ahmad Raza, Advanced Engineering Informatics, Vol. 62, Part A, 2024 </span><a href="https://doi.org/10.1016/j.aei.2024.102657" class="cloud-pub-link" target="_blank">Read Article</a>
+                  </li>
+                  <li>
+                    <span class="cloud-pub-title">Dynamic Load Balancing in Cloud Computing: Optimized RL-Based Clustering with Multi-Objective Optimized Task Scheduling, Khan, Ahmad Raza, Processes 12, no. 3: 519., 2024</span><a href="https://doi.org/10.3390/pr12030519" class="cloud-pub-link" target="_blank">Read Article</a>
+                  </li>
+                  <li>
+                    <span class="cloud-pub-title">Using virtualized multimedia tools for video conferencing solution integrated in teaching and learning environment, Khan, Ahmad Raza, Journal of Discrete Mathematical Sciences and Cryptography, pp. 801-815, 2022</span><a href="https://doi.org/10.1080/09720529.2021.2014137" class="cloud-pub-link" target="_blank">Read Article</a>
+                  </li>
+                </ul>
+              </div>
+              </div>
+            </div>
+            
+            <!-- JavaScript (add before </body>) -->
+            <script>
+            document.getElementById('cloud-computing-card').onclick = function() {
+              document.getElementById('cloudModal').style.display = 'block';
+            };
+            document.getElementById('closeModal').onclick = function() {
+              document.getElementById('cloudModal').style.display = 'none';
+            };
+            // Optional: close modal when clicking outside the content
+            window.onclick = function(event) {
+              var modal = document.getElementById('cloudModal');
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            };
+            </script>
+
+       
+       </div><!-- Machine Learning Modal -->
+       <div id="mlModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
+         <div style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+           <span id="closeMlModal" style="position:absolute; top:20px; right:25px; font-size:28px; color:#64748b; cursor:pointer;">&times;</span>
+           
+           <div class="cloud-modal-body">
+             <h2 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 2em;">Machine Learning</h2>
+             
+             <div class="cloud-intro">
+               <p style="font-size: 1.1em; line-height: 1.7; color: #334155; margin-bottom: 2rem;">
+                 My work in <strong style="color: #1e40af;">Machine Learning</strong> focuses on developing innovative algorithms 
+                 for pattern recognition, predictive modeling, and deep learning applications. 
+                 Specializing in both supervised and unsupervised learning techniques that involves the application of advanced algorithms, including reinforcement
+                 learning and deep learning, to address challenges in areas such as cloud computing optimization, personalized systems, and healthcare. 
+                 My research focuses on developing intelligent solutions for tasks like load balancing, gesture recognition, and disease prediction.
+               </p>
+               <h3 class="machine-section-title">Certifications in Machine Learning</h3>
+               <span style="color:#64748b;">
+                   <ul class="Machine-publications-list">
+                       <li>
+                         <a href="https://www.coursera.org/account/accomplishments/certificate/8UXJSQYAPXJG" class="cloud-pub-link" target="_blank"><span class="cloud-pub-title">Microsoft Azure Machine Learning</span></a>
+                       </li>
+                   </ul>
+               </span>
+             </div>
+       
+             
+
+
+             <h3 class="cloud-section-title">Selected Publications in Machine Learning</h3>
+             <ul class="cloud-publications-list">
+
+                <li class="publication-item">
+                    <div class="pub-header">
+                      <span class="pub-title">A Hybrid Brain Tumor Classification Using FL with FedAvg and FedProx for Privacy and Robustness across Heterogeneous Data Sources</span>
+                      <span class="pub-author">N Sivakumar, Ahmad Raza Khan, Syed Umar, RN Ravikumar, I Bremnavas, Munindra Lunagaria, Krunal Vaghela, Ghanshyam G Tejani, Sunil Kumar Sharma</span>
+                      <span class="pub-venue">IEEE Access, pp. 57705 - 57719, March 2025.</span>
+                      <a href="https://doi.org/10.1109/ACCESS.2025.3549440" class="pub-link" target="_blank">Read Article</a>
+                   </div>
+                  </li>
+
+               <li class="publication-item">
+                 <div class="pub-header">
+                   <span class="pub-title">Privacy-Enhanced Heart Disease Prediction in Cloud-Based Healthcare Systems: A Deep Learning Approach with Blockchain-Based Transmission</span>
+                   <span class="pub-author">Khan, Ahmad Raza</span>
+                   <span class="pub-venue">Fusion: Practice and Applications, pp. 98-119. February 2024.</span>
+                   <a href="https://doi.org/10.54216/FPA.150109" class="pub-link" target="_blank">Read Article</a>
+                </div>
+               </li>
+               <!-- Add more publications as needed -->
+             </ul>
+           </div>
+         </div>
+       </div>
+       <script>
+        // Machine Learning Modal Handling
+        document.getElementById('machine-learning-card').onclick = function() {
+          document.getElementById('mlModal').style.display = 'block';
+        };
+        document.getElementById('closeMlModal').onclick = function() {
+          document.getElementById('mlModal').style.display = 'none';
+        };
+        
+        // Add to existing window.onclick handler:
+        window.onclick = function(event) {
+          let modal = document.getElementById('mlModal');
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+          // Keep existing cloud modal check
+        };
+       </script>
+            
+
+               
+                </div><!-- AI Modal -->
+                <div id="aiModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
+                  <div style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+                    <span id="closeAiModal" style="position:absolute; top:20px; right:25px; font-size:28px; color:#64748b; cursor:pointer;">&times;</span>
+                    
+                    <div class="cloud-modal-body">
+                      <h2 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 2em;">Artificial Intelligence</h2>
+                      
+                      <div class="cloud-intro">
+                        <p style="font-size: 1.1em; line-height: 1.7; color: #334155; margin-bottom: 2rem;">
+                          My work in <strong style="color: #1e40af;">Artificial Intelligence</strong> focuses on developing advanced NLP models,
+                          optimizing prompt engineering techniques, and creating ethical AI frameworks.
+                          Specializing in transformer architectures and human-AI collaboration systems it also encompasses the development and application of intelligent systems and algorithms to solve complex problems across various domains. 
+                          This includes leveraging fuzzy logic, reinforcement learning, and deep learning techniques for optimization, prediction, and intelligent automation in cloud computing, healthcare, and industrial applications.
+                        </p>
+                      </div>
+
+                      <h3 class="cloud-section-title">Certifications in Artificial Intelligence</h3>
+                      <ul class="cloud-publications-list">
+                        <li class="publication-item">
+                          <div class="pub-header">
+                            
+                                <a href="https://www.coursera.org/account/accomplishments/verify/72LRNYUD0832" class="pub-link" target="_blank"><span class="pub-title">Google Prompting Essentials</span></a>
+                            
+                            <li>
+                                <a href="/Certifications/LinkedIn-Career-Essentials-in-Generative-AI-by-Microsoft-and-LinkedIn.pdf" class="pub-link" target="_blank"><span class="pub-title">Career Essentials in Generative AI by Microsoft and LinkedIn</span></a>
+                            </li>
+                            <li>
+                                <a href="/Certifications/LinkedIn-Introduction-to-Artificial-Intelligence.pdf" class="pub-link" target="_blank"><span class="pub-title">Introduction to Artificial Intelligence</span></a>
+                            </li>
+                            <li>
+                                <a href="/Certifications/LinkedIn-Prompt-Engineering-How-to-Talk-to-the-AIs.pdf" class="pub-link" target="_blank"><span class="pub-title">Prompt Engineering: How to Talk to the AIs</span></a>
+                            </li>
+                            <li>
+                                <a href="/Certifications/LinkedIn-What-Is-Generative-AI.pdf" class="pub-link" target="_blank"><span class="pub-title">What Is Generative AI?</span></a>
+                            </li>
+                            <li>
+                                <a href="/Certifications/LinkedIn-Generative-AI-The-Evolution-of-Thoughtful-Online.pdf" class="pub-link" target="_blank"><span class="pub-title">Generative AI: The Evolution of Thoughtful Online Search</span></a>
+                            </li>
+                            <li>
+                                <a href="/Certifications/LinkedIn-Streamlining_Your_Work_with_Microsoft_Copilot.pdf" class="pub-link" target="_blank"><span class="pub-title">Streamlining Your Work with Microsoft Copilot</span></a>
+                            </li>
+                            <li>
+                                <a href="/Certifications/LinkedIn-Learning_Microsoft_365_Copilot_for_Work.pdf" class="pub-link" target="_blank"><span class="pub-title">Learning Microsoft 365 Copilot for Work</span></a>
+                            </li>
+                            <li>
+                                <a href="/Certifications/LinkedIn-Ethics-in-the-Age-of-Generative-AI.pdf" class="pub-link" target="_blank"><span class="pub-title">Ethics in the Age of Generative AI</span></a>
+                            </li>
+                            <li>
+                                <a href="/Certifications/LinkedIn-How-to-Use-Generative-AI-Building-an-AIFirst-Mindset.pdf" class="pub-link" target="_blank"><span class="pub-title">How to Use Generative AI: Building an AI-First Mindset</span></a>
+                            </li>
+                            <li>
+                                <a href="/Certifications/LinkedIn-AI_Business_Implications_and_Ethical_Insights.pdf" class="pub-link" target="_blank"><span class="pub-title">Fundamentals of Agentic AI: Business Implications and Ethical Insights</span></a>
+                            </li>
+                          </div>
+                          
+                            
+                          
+                        </li>
+                        <!-- Add more items as needed -->
+                      </ul>
+                
+                      <h3 class="cloud-section-title">Selected Publications in Artificial Intelligence</h3>
+                      <ul class="cloud-publications-list">
+                        <li class="publication-item">
+                            <div class="pub-header">
+                              <span class="pub-title">Capsule DenseNet++: Enhanced autism detection framework with deep learning and reinforcement learning-based lifestyle recommendation, Ahmed Ibrahim Alutaibi, Sunil Kumar Sharma, Ahmad Raza Khan, Computers in Biology and Medicine, Vol 190, May 2025,. <a href="https://doi.org/10.1016/j.compbiomed.2025.110038" class="pub-link" target="_blank"> Read Article</a></span>
+                            </div>
+                          </li>
+                          <li class="publication-item">
+                            <div class="pub-header">
+                              <span class="pub-title"> Early attention-deficit/hyperactivity disorder (ADHD) with NeuroDCT-ICA and rhinofish optimization (RFO) algorithm based optimized ADHD-AttentionNet,Ahmed Alhussen, Ahmed Ibrahim Alutaibi, Sunil Kumar Sharma, Ahmad Raza Khan, Fuzail Ahmad, Ghanshyam G Tejani, Scientific Reports, Vol 190, February 2025,. <a href="https://doi.org/10.1038/s41598-025-90649-1" class="pub-link" target="_blank"> Read Article</a></span>
+                            </div>
+                          </li>
+                        <li class="publication-item">
+                          <div class="pub-header">
+                            <span class="pub-title">Consumer Personalized Gesture Recognition in UAV-Based Industry 5.0 Applications, Paikrao, P., Routray, S., Mukherjee, A., Khan, A. R., and Vohnout, R., IEEE Transactions on Consumer Electronics, vol. 69, no. 4, pp. 842-849, Nov. 2023. <a href="https://ieeexplore.ieee.org/document/10229211" class="pub-link" target="_blank"> Read Article</a></span>
+                          </div>
+                        </li>
+                        
+                        <!-- Add more items as needed -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  // AI Modal Handling
+                  document.getElementById('ai-card').onclick = function() {
+                    document.getElementById('aiModal').style.display = 'block';
+                  };
+                  document.getElementById('closeAiModal').onclick = function() {
+                    document.getElementById('aiModal').style.display = 'none';
+                  };
+                  
+                  // Add to existing window.onclick handler:
+                  window.onclick = function(event) {
+                    let modal = document.getElementById('aiModal');
+                    if (event.target == modal) {
+                      modal.style.display = "none";
+                    }
+                    // Keep existing cloud modal check
+                  };
+                </script>
+                    
+                </div>
+                
+           
+           </div><!-- Data Analysis Modal -->
+           <div id="dataAnalysisModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
+             <div style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+               <span id="closeDataModal" style="position:absolute; top:20px; right:25px; font-size:28px; color:#64748b; cursor:pointer;">&times;</span>
+               
+               <div class="cloud-modal-body">
+                 <h2 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 2em;">Data Analysis</h2>
+                 
+                 <div class="cloud-intro">
+                   <p style="font-size: 1.1em; line-height: 1.7; color: #334155; margin-bottom: 2rem;">
+                     My work in <strong style="color: #1e40af;">Data Analysis</strong> focuses on ensuring data integrity,
+                     implementing robust security protocols, and maintaining privacy compliance across
+                     diverse datasets and analytical pipelines. It also involves extracting meaningful insights and patterns from data to inform decision-making and improve system performance. 
+                     This includes applying various analytical techniques in the context of cloud resource optimization, healthcare prediction, and sensor data processing for applications like gesture recognition and medical image analysis.
+
+
+                   </p>
+                 </div>
+           
+
+                 <h3 class="cloud-section-title">Certifications in Data Analysis</h3>
+                 <ul class="cloud-publications-list">
+                   <li class="publication-item">
+                     <div class="pub-header">
+                        
+                        <a href="https://www.coursera.org/account/accomplishments/verify/Y3338YFULCV8" class="pub-link" target="_blank">What is Data Science?</a>
+                   
+                    <li>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/LHKS7U2CQCTK" class="pub-link" target="_blank">Exploring Data Transformation with Google Cloud</a>
+                      </li>
+                      <li>
+                        <a href="Certifications/Coursera/Coursera-Tools-of-the-Trade-Linux-and-SQL.pdf" class="pub-link" target="_blank">Tools of the Trade: Linux and SQL</a>
+                      </li>
+                    </div>
+                    
+                   </li>
+                   <!-- Add more items as needed -->
+                 </ul>   
+                 
+                 <h3 class="cloud-section-title">Selected Publications in Data Analysis</h3>
+                 <ul class="cloud-publications-list">
+                   <li class="publication-item">
+                     <div class="pub-header">
+                       <span class="pub-title">Federated Fusion of Magnified Histopathological Images for Breast Tumor Classification in the Internet of Medical Things, Agbley, B.L.Y., Khan, A. R., et al. IEEE Journal of Biomedical and Health Informatics, 2023</span><a href="https://ieeexplore.ieee.org/abstract/document/10068730" class="pub-link" target="_blank"> Read Article</a>
+                     </div>
+                   </li>
+                   <!-- Add more items as needed -->
+                 </ul>
+               </div>
+             </div>
+           </div>
+           <script>
+            // Data Analysis Modal Handling
+            document.getElementById('data-analysis-card').onclick = function() {
+              document.getElementById('dataAnalysisModal').style.display = 'block';
+            };
+            document.getElementById('closeDataModal').onclick = function() {
+              document.getElementById('dataAnalysisModal').style.display = 'none';
+            };
+            
+            // Add to existing window.onclick handler:
+            window.onclick = function(event) {
+              let modal = document.getElementById('dataAnalysisModal');
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+              // Keep existing cloud modal check
+            };
+           </script>
+
+            <!-- Add this modal structure after your existing modals -->
+            <div id="cyberSecurityModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
+                <div style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+                    <span id="closeCyberModal" style="position:absolute; top:20px; right:25px; font-size:28px; color:#64748b; cursor:pointer;">&times;</span>
+                    
+                    <div class="cloud-modal-body">
+                        <h2 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 2em;">Cyber Security</h2>
+                        
+                        <div class="cloud-intro">
+                            <p style="font-size: 1.1em; line-height: 1.7; color: #334155; margin-bottom: 2rem;">
+                                My work in <strong style="color: #1e40af;">Cyber Security</strong> focuses on penetration testing,
+                                ethical hacking, and implementing robust security measures. Specializing in identifying and
+                                mitigating security vulnerabilities while ensuring system integrity and data protection. It also focuses on developing and implementing secure architectures and frameworks to protect systems and data across various environments, including cloud computing and the Internet of Things. 
+                                This involves addressing vulnerabilities, implementing access control mechanisms, and leveraging technologies like blockchain to enhance security and privacy.
+                            </p>
+                        </div>
+                        
+                        <h3 class="cloud-section-title">Certifications in Cyber Security</h3>
+                        <ul class="cloud-publications-list">
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="https://drkhanwebsite.s3.us-east-1.amazonaws.com/Certifications/ECC-CEH-Certificate.pdf" class="pub-link" target="_blank"><span class="pub-title">Certified Ethical Hacker (CEH)</span></a>
+                                </div>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="https://drkhanwebsite.s3.us-east-1.amazonaws.com/Certifications/ECC-CHFI-Certificate-ANSI.pdf" class="pub-link" target="_blank"><span class="pub-title">Computer Hacking Forensic Investigator (CHFI)</span></a>
+                                </div>
+                            </li>
+                            <li class="publication-item">
+                                        <div class="pub-header">
+                                    <a href="https://drkhanwebsite.s3.us-east-1.amazonaws.com/Certifications/ECC-CTIA-Certificate.pdf" class="pub-link" target="_blank"><span class="pub-title"></span>Certified Threat Intelligence Analyst (CTIA)</a>
+                                </div>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="https://drkhanwebsite.s3.us-east-1.amazonaws.com/Certifications/Jr+Penetration+Tester.pdf" class="pub-link" target="_blank"><span class="pub-title">Junior Penetration Tester</span></a>
+                                 </div>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="/Certifications/SOC-Level-1.pdf" class="pub-link" target="_blank"><span class="pub-title">Security Operations Center (SOC)S Level 1</span></a>
+                                 </div>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="/Certifications/Security-Engineer.pdf" class="pub-link" target="_blank"><span class="pub-title">Security Engineer</span></a>
+                                 </div>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="/Certifications/Coursera/Coursera-Assets-Threats-and-Vulnerabilities.pdf" class="pub-link" target="_blank"><span class="pub-title">Assets, Threats, and Vulnerabilitiesr</span></a>
+                                 </div>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="/Certifications/Coursera/Coursera-Connect-and-Protect-Networks-and-Network-Security.pdf" class="pub-link" target="_blank"><span class="pub-title">Connect and Protect: Networks and Network Security</span></a>
+                                 </div>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="/Certifications/Others/Introduction-to-Cyber-Security.pdf" class="pub-link" target="_blank"><span class="pub-title">Introduction to Cyber Security</span></a>
+                                 </div>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="/Certifications/Coursera/Coursera-Play-It-Safe-Manage-Security-Risks.pdf" class="pub-link" target="_blank"><span class="pub-title">Play It Safe: Manage Security Risks</span></a>
+                                 </div>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="/Certifications/Coursera/Coursera-Foundations-of-Cybersecurity.pdf" class="pub-link" target="_blank"><span class="pub-title">Foundations of Cybersecurity</span></a>
+                                 </div>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <a href="/Certifications/Udemy/Udemy-Cyber-Security-Awareness-Training.pdf" class="pub-link" target="_blank"><span class="pub-title">Cyber Security Awareness Training</span></a>
+                                 </div>
+                            </li>
+                        </span></a>
+                                </div>
+                        
+                        </ul>
+                        <h3 class="cloud-section-title">Selected Publications in Security</h3>
+                        <ul class="cloud-publications-list">
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <span class="pub-title">Zero Trust-Based Blockchain Based IoT Security with Consensus and Access Control Framework, Khan, Ahmad Raza, Journal of Intelligent Systems and Internet of Things, pp. 110-128., 2024</span><a href="https://doi.org/10.54216/JISIoT.120109" class="pub-link" target="_blank"> Read Article</a>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <span class="pub-title">Privacy-Enhanced Heart Disease Prediction in Cloud-Based Healthcare Systems: A Deep Learning Approach with Blockchain-Based Transmission 1, Khan, Ahmad Raza, Fusion: Practice and Applications, pp. 98-119., 2024</span><a href="https://doi.org/10.54216/FPA.150109" class="pub-link" target="_blank"> Read Article</a>
+                            </li>
+                            <li class="publication-item">
+                                <div class="pub-header">
+                                    <span class="pub-title">A comprehensive architecture for securing virtualization environment in an hyper converged systems, Khan, Ahmad Raza, Journal of Theoretical and Applied Information Technology, 2019</span><a href="https://www.jatit.org/volumes/Vol97No10/13Vol97No10.pdf" class="pub-link" target="_blank"> Read Article</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add this script after your existing modal scripts -->
+            <script>
+                // Cyber Security Modal Handling
+                document.getElementById('cyber-security-card').onclick = function() {
+                    document.getElementById('cyberSecurityModal').style.display = 'block';
+                };
+                document.getElementById('closeCyberModal').onclick = function() {
+                    document.getElementById('cyberSecurityModal').style.display = 'none';
+                };
+                
+                // Add to existing window.onclick handler:
+                window.onclick = function(event) {
+                    let modal = document.getElementById('cyberSecurityModal');
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                    // Keep existing modal checks
+                };
+            </script>
+
+
+            </div>
+
+
+		</div><!-- .contaier -->
+
+	</section>
+	
+	<!-- Research Intersts end -->
+
+	
+    <!-- publicationimage start -->
+
+	<section id="publicationimage" class="pfblock pfblock-gray">
+		<div class="container">
+			
+               <div class="row">
+               <!-- <div class="col-sm-6 col-sm-offset-3"> -->
+                 <div class="col-sm-12"> 
+					<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title"><a>Publications</a></h2>
+						<div class="pfblock-line "></div>
+						<div class="pfblock-subtitle  text-left text-justify">
+					Dr. Ahmad Raza Khan has an extensive and impressive publication record, with numerous research papers featured in highly esteemed international journals and conferences. His scholarly contributions span various prestigious platforms, reflecting the depth and quality of his research. For a comprehensive list of his publications, please refer to the section below:
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- .row -->
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="images/books2.jpg" alt="img01">
+                         <figcaption>
+                                <h2>Books <span></span></h2>
+                                <p>My Books</p>
+                                 <a href="#books">Publications</a>
+                                </figcaption>			
+                        </figure>
+                    </div>
+                </div>	
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="images/jresearchpapers.jpg" alt="img01">
+                            <figcaption>
+                                <h2>Journal Research Papers <span></span></h2>
+                                <p>My Journal Papers</p>
+                                <a href="#researchpaper">Publications</a>
+                               
+
+                            </figcaption>			
+                        </figure>
+                    </div>
+                    
+                </div>
+                
+				
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                            <img src="images/researchpapers.jpg" alt="img01">
+                            <figcaption>
+                                <h2>Conference Research Papers <span></span></h2>
+                                <p>My Conference Papers</p>
+                                <a href="#conferresearchpaper">Publications</a>
+                            
+                          </figcaption>			
+                        </figure>
+                    </div>
+                    
+                </div>
+                
+                 
+
+            </div>
+
+
+		</div><!-- .contaier -->
+
+	</section>
+	
+	<!-- Book start -->
+	
+	<section id="books" class="pfblock">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12"> 
+					<div class="pfblock-header wow fadeInUp">
+							<h2 class="pfblock-title"><a>Books</a></h2> 
+							<div class="pfblock-line"></div>
+								<div class="pfblock-subtitle text-left text-justify">
+
+<ol class="custom-ol">
+<li><span>
+
+
+<div class="col-xs-12 col-sm-4 col-md-4">
+                    <a href="https://www.amazon.co.uk/Collaborative-Based-Project-Management-Software/dp/3659516600" target="_blank">
+                            <img src="images/book.png" alt="img01">
+                    </a>   
+               </div>
+
+
+
+
+ </span>
+
+
+	  </div>		
+		</div>		
+		  </div>		
+			</div>		
+			 </div>		
+	</section>
+	
+	<!-- Book end -->
+	
+	<!-- Journal Research paper start -->
+	
+	<section id="researchpaper" class="pfblock pfblock-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12"> 
+					<div class="pfblock-header wow fadeInUp">
+							<h2 class="pfblock-title"><a>Research Papers</a></h2> 
+							<div class="pfblock-line"></div>
+								<div class="pfblock-subtitle text-left text-justify">
+
+
+	<br>
+			<h3 class="pfblock-title"><a><big>Journal Publications</big></a></h3>
+	<br>
+
+<ol class="custom-ol">
+
+    <li><span>Ahmed Ibrahim Alutaibi, Sunil Kumar Sharma, Ahmad Raza Khan,<a href="https://doi.org/10.1016/j.compbiomed.2025.110038" target="_blank">"Capsule DenseNet++: Enhanced autism detection framework with deep learning and reinforcement learning-based lifestyle recommendation"</a>, Computers in Biology and Medicine, Vol. 190, May 2025, <a href="https://doi.org/10.1016/j.compbiomed.2025.110038" target="_blank">https://doi.org/10.1016/j.compbiomed.2025.110038</a> <b>[SCI / Scopus]</b></span></li>
+    <li><span>N. Sivakumar, Ahmad Raza Khan, Syed Umar, R. N. Ravikumar, I. Bremnavas, Munindra Lunagaria, Krunal Vaghela, Ghanshyam G. Tejani, Sunil Kumar Sharma,<a href="https://doi.org/10.1109/ACCESS.2025.3549440" target="_blank">"A Hybrid Brain Tumor Classification Using FL With FedAvg and FedProx for Privacy and Robustness Across Heterogeneous Data Sources"</a>, IEEE Access, Vol. 13, March 10, 2025, <a href="https://doi.org/10.1109/ACCESS.2025.3549440" target="_blank">https://doi.org/10.1109/ACCESS.2025.3549440</a> <b>[SCI / Scopus]</b></span></li>
+    <li><span>Ahmed Alhussen, Ahmed Ibrahim Alutaibi, Sunil Kumar Sharma, Ahmad Raza Khan, Fuzail Ahmad, Ghanshyam G Tejani,<a href="https://doi.org/10.1038/s41598-025-90649-1" target="_blank">"Early attention-deficit/hyperactivity disorder (ADHD) with NeuroDCT-ICA and rhinofish optimization (RFO) algorithm based optimized ADHD-AttentionNet"</a>, Scientific Reports, Vol. 15, Issue 1, February 2025, <a href="https://doi.org/10.1038/s41598-025-90649-1" target="_blank">https://doi.org/10.1038/s41598-025-90649-1</a> <b>[SCI / Scopus]</b></span></li>
+    <li><span>Abdulgader Zaid Almaymuni, Ahmad Raza Khan, Azan Hamad Alkhorem, Mohammed A Saleh,<a href="https://doi.org/10.17654/0974165825009" target="_blank">"MULTIMODAL BIOMETRIC ENROLMENT AND AUTHENTICATION SYSTEM (MBEAS) WITH MODIFIED SCORE-LEVEL FUSION AND TRIBLENDNN-BASED TEMPLATE MATCHING"</a>, Advances and Applications in Discrete Mathematics, Vol. 42, Issue 2, November 2024, <a href=" https://doi.org/10.17654/0974165825009" target="_blank">https://doi.org/10.17654/0974165825009</a> <b>[SCI / Scopus]</b></span></li>
+    <li><span>Pratikkumar Chauhan, Munindra Lunagaria, Deepak Kumar Verma, Krunal Vaghela, Ganshyam Tejani, Sunil Sharma, Ahmad Raza Khan<a href="https://doi.org/10.1109/ACCESS.2024.3521002" target="_blank">"PBVit: A Patch-Based Vision Transformer for Enhanced Brain Tumor Detection"</a>, IEEE Access, Vol. 13, December 2024, <a href="https://doi.org/10.1109/ACCESS.2024.3521002" target="_blank">https://doi.org/10.1109/ACCESS.2024.3521002</a> <b>[SCI / Scopus]</b></span></li>
+    <li><span>Ahmad Raza Khan, Shaik Shakeel Ahamad, Shailendra Mishra, Mohd Abdul Rahim Khan, Sunil Kumar Sharma, Abdullah AlEnizi, Osama Alfarraj, Majed Alowaidi, Manoj Kumar<a href="https://doi.org/10.1038/s41598-024-76214-2" target="_blank">"FinSafeNet: securing digital transactions using optimized deep learning and multi-kernel PCA (MKPCA) with Nyström approximation"</a>, Advanced Engineering Informatics, Vol. 62, Part A, October 2024, <a href="https://doi.org/10.1038/s41598-024-76214-2" target="_blank">https://doi.org/10.1038/s41598-024-76214-2</a> <b>[SCI / Scopus]</b></span></li>
+    <li><span>Khan, Ahmad Raza, <a href="https://doi.org/10.1016/j.aei.2024.102657" target="_blank">"Optimizing cloud resource utilization in the digital economy: An integrated Pythagorean fuzzy-based decision-making approach"</a>, Advanced Engineering Informatics, Vol. 62, Part A, October 2024, <a href="https://doi.org/10.1016/j.aei.2024.102657" target="_blank">https://doi.org/10.1016/j.aei.2024.102657</a> <b>[SCI / Scopus]</b></span></li>
+    <li><span>Khan, Ahmad Raza, <a href="https://doi.org/10.3390/pr12030519" target="_blank">"Dynamic Load Balancing in Cloud Computing: Optimized RL-Based Clustering with Multi-Objective Optimized Task Scheduling"</a>, Processes 12, no. 3: 519., 2024, <a href="https://doi.org/10.3390/pr12030519" target="_blank">https://doi.org/10.3390/pr12030519</a> <b>[SCI / Scopus]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://doi.org/10.54216/JISIoT.120109" target="_blank">"Zero Trust-Based Blockchain Based IoT Security with Consensus and Access Control Framework"</a>, Journal of Intelligent Systems and Internet of Things, pp. 110-128., 2024, <a href="https://doi.org/10.54216/JISIoT.120109" target="_blank">https://doi.org/10.54216/JISIoT.120109</a> <b>[Scopus]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://doi.org/10.54216/FPA.150109" target="_blank">"Privacy-Enhanced Heart Disease Prediction in Cloud-Based Healthcare Systems: A Deep Learning Approach with Blockchain-Based Transmission"</a>, Fusion: Practice and Applications, pp. 98-119., 2024, <a href="https://doi.org/10.54216/FPA.150109" target="_blank">https://doi.org/10.54216/FPA.150109</a> <b>[Scopus]</b></span></li>
+
+    <li><span>Paikrao, P., Routray, S., Mukherjee, A., Khan, A. R., and Vohnout, R., <a href="https://doi.org/10.1109/TCE.2023.3308209" target="_blank">"Consumer Personalized Gesture Recognition in UAV-Based Industry 5.0 Applications"</a>, IEEE Transactions on Consumer Electronics, vol. 69, no. 4, pp. 842-849, Nov. 2023, <a href="https://doi.org/10.1109/TCE.2023.3308209" target="_blank">https://doi.org/10.1109/TCE.2023.3308209</a> <b>[SCI / Scopus]</b></span></li>
+
+    <li><span>Agbley, B.L.Y., Khan, A. R., et al., <a href="https://doi.org/10.1109/JBHI.2023.3256974" target="_blank">"Federated Fusion of Magnified Histopathological Images for Breast Tumor Classification in the Internet of Medical Things"</a>, IEEE Journal of Biomedical and Health Informatics, 2023, <a href="https://doi.org/10.1109/JBHI.2023.3256974" target="_blank">https://doi.org/10.1109/JBHI.2023.3256974</a> <b>[SCI / Scopus]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://doi.org/10.1080/09720529.2021.2014137" target="_blank">"Using virtualized multimedia tools for video conferencing solution integrated in teaching and learning environment"</a>, Journal of Discrete Mathematical Sciences and Cryptography, pp. 801-815, 2022, <a href="https://doi.org/10.1080/09720529.2021.2014137" target="_blank">https://doi.org/10.1080/09720529.2021.2014137</a> <b>[SCI / Scopus]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://doi.org/10.21833/ijaas.2022.03.015" target="_blank">"Secure PAAS environment over hybrid cloud using load-balanced Docker containers"</a>, International Journal of ADVANCED AND APPLIED SCIENCES, 2022, <a href="https://doi.org/10.21833/ijaas.2022.03.015" target="_blank">https://doi.org/10.21833/ijaas.2022.03.015</a> <b>[SCI / JCI-0.13 / Scopus]</b></span></li>
+
+    <li><span>Sarafraz, M. M., Tlili, I., Tian, Z., Khan, A. R., and Safaei, M. R., <a href="https://doi.org/10.1007/s10973-019-08435-x" target="_blank">"Thermal analysis and thermo-hydraulic characteristics of zirconia–water nanofluid under a convective boiling regime"</a>, Journal of Thermal Analysis and Calorimetry, 2020, <a href="https://doi.org/10.1007/s10973-019-08435-x" target="_blank">10.1007/s10973-019-08435-x</a> <b>[SCI / JCI-0.81 / Scopus]</b></span></li>
+
+    <li><span>Manh, T. D., Khan, A. R., Shafee, A., Nam, N. D., Tlili, I., Nguyen-Thoi, T., and Li, Z., <a href="https://doi.org/10.1016/j.physa.2019.124042" target="_blank">"Hybrid nanoparticles migration due to MHD free convection considering radiation effect"</a>, Journal of Physica A: Statistical Mechanics and its Applications, 2020, <a href="https://doi.org/10.1016/j.physa.2019.124042" target="_blank">https://doi.org/10.1016/j.physa.2019.124042</a> <b>[ISI/ JCI-0.97/ Scopus]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://www.jatit.org/volumes/Vol97No10/13Vol97No10.pdf" target="_blank">"A comprehensive architecture for securing virtualization environment in an hyper converged systems"</a>, Journal of Theoretical and Applied Information Technology, 2019, <a href="https://www.jatit.org/volumes/Vol97No10/13Vol97No10.pdf" target="_blank">https://www.jatit.org/volumes/Vol97No10/13Vol97No10.pdf</a> <b>[Scopus / SJR-0.15]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://ijngca.com/Papers/nov2017/IJNGCA02112017.pdf" target="_blank">"Infrastrcuture as a Service: An Overview and its Impact on Digital Libraries"</a>, International Journal of Next Generation Computer Applications, Volume 4, Issue 1, ISSN 2319-524X, Pg. 4-10, 2017, <a href="https://ijngca.com/Papers/nov2017/IJNGCA02112017.pdf" target="_blank">https://ijngca.com/Papers/nov2017/IJNGCA02112017.pdf</a></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="http://jctjournals.com/june2012/v1.pdf" target="_blank">"Cloud services for collaborative web base Project Management System"</a>, JOURNAL OF COMPUTING TECHNOLOGIES, ISSN 2278 – 3814, 2012</span></li>
+</ol>
+    
+      </div>		
+        </div>		
+          </div>		
+            </div>		
+             </div>		
+    </section>
+	
+	<!--Journal Research Paper end -->	
+	
+	
+
+
+    <!-- Conference Research paper start -->
+    
+    <section id="conferresearchpaper" class="pfblock">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12"> 
+                    <div class="pfblock-header wow fadeInUp">
+                            <h2 class="pfblock-title"><a>Conference Papers</a></h2> 
+                            <div class="pfblock-line"></div>
+                                <div class="pfblock-subtitle text-left text-justify">
+
+
+    <br>
+            <h3 class="pfblock-title"><a><big>Conferences</big></a></h3>
+    <br>
+
+<ol class="custom-ol">
+    <li><span>Khan, Ahmad Raza, Alatiyyah, O. H., and Aljadaan, K. A., <a href="https://ieeexplore.ieee.org/document/8593036" target="_blank">"A Service Oriented Architecture based Comprehensive Smart Calendar for scheduling and managing real-time events"</a>, IEEE 21st Saudi Computer Society National Computer Conference (NCC'2018), Riyadh, Saudi Arabia, April 25-26, 2018. <b>[IEEE]</b></span></li>
+
+    <li><span>Alazmi, S., Khan, A. R., and Yu, Q., <a href="https://doi.org/10.1109/NCG.2018.8592961" target="_blank">"A Comprehensively Secure Smart card access controls"</a>, IEEE 21st Saudi Computer Society National Computer Conference (NCC'2018), Riyadh, Saudi Arabia, April 25-26, 2018. <b>[IEEE]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="http://bvicam.in/INDIACom/news/INDIACom%202018%20Proceedings/Main/papers/3208.pdf" target="_blank">"A Collaborative Design for Securing IaaS in Clouds"</a>, IEEE 5th International Conference on Computing for Sustainable Global Development, New Delhi, India, March 14-16, 2018, pp. 1478-4481, ISBN: 978-93-80544-28-1. <b>[IEEE]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://doi.org/10.1109/SysEng.2016.7753128" target="_blank">"Persistent architecture for optimizing web service for e-government implementation"</a>, IEEE International Symposium on Systems Engineering, Edinburgh, UK, October 3-5, 2016. <b>[IEEE]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://doi.org/10.1109/ICCSNT.2015.7490835" target="_blank">"A Comprehensive Research on Xss Scripting Attacks on Different Domains and their Verticals"</a>, IEEE International Conference on Computer Science and Network Technology (ICCSNT), Harbin, China, December 19-21, 2015. <b>[IEEE]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://doi.org/10.1109/RAECS.2014.6799644" target="_blank">"Collaborative web based cloud services for E-Learning and educational ERP"</a>, International Conference on Recent Advances in Engineering and Computational Sciences (RAECS), Chandigarh, India, March 6-8, 2014, pp. 1-4, ISBN: 978-1-4799-2290-1. <b>[IEEE]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://doi.org/10.1109/ICAICT.2012.6398496" target="_blank">"Cloud services for comprehensive project management software"</a>, IEEE 6th International Conference on Applications of Information and Communication Technologies (AICT), Tbilisi, Georgia, October 17-19, 2012. <b>[IEEE]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://arxiv.org/abs/1207.4966" target="_blank">"Service Oriented Architecture A Revolution For Comprehensive Web Based Project Management Software"</a>, Cornell University Library, Ithaca, NY, July 20, 2012. <b>[Cornell University]</b></span></li>
+
+    <li><span>Khan, Ahmad Raza, <a href="https://airccj.org/CSCP/vol2/csit2341.pdf">"Collaborative Web Based Project Management Software"</a>, Computer Science & Information Technology (CS & IT), 2012.</span></li>
+</ol>
+    
+      </div>     
+        </div>      
+          </div>        
+            </div>      
+              </div>        
+    </section>
+	<!-- Certifications start -->
+	
+    <section id="certifications" class="pfblock pfblock-gray">
+		<div class="container">
+			<div class="row">
+                 <div class="col-sm-12"> 
+                	<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title"><a>Certifications</a></h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle text-left text-justify">
+							<p>Dr. Ahmad Raza Khan has earned a total of <b>36</b> certifications from several prestigious organizations in critical domains including Cloud Computing, Machine Learning, Artificial Intelligence, and Data Analysis.</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- .row -->
+            
+            
+            <div class="row">
+                <!-- Row 1 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn">
+                        <a href="/Certifications/ECC-CEH-Certificate-2.pdf" target="_blank">
+                            <img src="images/CEH_2E345519D3F7.png" alt="CEH Certification">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn">
+                        <a href="/Certifications/ECC-CHFI-Certificate-ANSI-2.pdf" target="_blank">
+                            <img src="images/CHFI_EC3C17017B4E.png" alt="CHFI Certification">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn">
+                        <a href="/Certifications/ECC-CTIA-Certificate-2.pdf" target="_blank">
+                            <img src="images/ECC-CTIA-07FE193842E3.png" alt="CTIA Certification">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Row 2 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn">
+                        <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/d144c022cbc243208549fa6c4694267e" target="_blank">
+                            <img src="images/AWS Certified Solutions Architect.png" alt="AWS Solutions Architect">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/5L48GZGY2HVM" target="_blank">
+                            <img src="images/AWS Cloud Practitioner Essentials.png" alt="AWS Cloud Practitioner">
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://drkhanwebsite.s3.us-east-1.amazonaws.com/Certifications/Jr+Penetration+Tester.pdf" target="_blank">
+                            <img src="images/Jr_Pen_tester.png" alt="Jr Penetration Tester">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <!-- Row 3 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://drkhanwebsite.s3.us-east-1.amazonaws.com/Certifications/Web+Fundamentals.pdf" target="_blank">
+                            <img src="images/Web Fundamentals.jpg" alt="Web Fundamentals">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://drkhanwebsite.s3.us-east-1.amazonaws.com/Certifications/Introduction+to+Cyber+Security.pdf" target="_blank">
+                            <img src="images/Introduction to Cyber Security.jpg" alt="Introduction to Cyber Security">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="/Certifications/SOC-Level-1.pdf" target="_blank">
+                            <img src="images/SOC Level 1.png" alt="SOC Level 1">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <!-- Row 4 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="/Certifications/CertificateOfCompletion_Ethics in the Age of Generative AI.pdf" target="_blank">
+                            <img src="images/Ethics in the Age of Generative Al.png" alt="Ethics in the Age of Generative Al">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="/Certifications/CertificateOfCompletion_Prompt Engineering How to Talk to the AIs.pdf" target="_blank">
+                            <img src="images/Prompt Engineering.png" alt="Prompt Engineering How to Talk to the AIs">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="/Certifications/LinkedIn-How-to-Use-Generative-AI-Building-an-AIFirst-Mindset.pdf" target="_blank">
+                            <img src="images/How to Use Generative Al Building an Al-First Mindset.png" alt="How to Use Generative AI: Building an AI-First Mindset">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+
+            <div class="row">
+                <!-- Row 4-2 -->
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="/Certifications/LinkedIn-AI_Business_Implications_and_Ethical_Insights.pdf" target="_blank">
+                            <img src="images/Fundamentals of Agentic Al Business.png" alt="Fundamentals of Agentic AI: Business Implications and Ethical Insights">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="Certifications/UC-65731de8-0fcf-44a7-bf04-deb94fb1a0ed.pdf" target="_blank">
+                            <img src="images/Cyber Security AwarenessTraining.png" alt="Network Protection">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="/Certifications/Azure-Machine-Learning.pdf" target="_blank">
+                            <img src="images/Microsoft Azure Machine Learning.png" alt="Azure Machine Learning">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <div class="row">
+                <!-- Row 5 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://coursera.org/verify/72LRNYUD0832" target="_blank">
+                            <img src="images/Google Prompting Essentials.png" alt="Google Prompting Essentials">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://coursera.org/verify/1BCZWEZ9GV3M" target="_blank">
+                            <img src="images/Play It Safe-Manage Security Risks.png" alt="Security Risks Management">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://coursera.org/verify/TQW9X2UEZDRD" target="_blank">
+                            <img src="images/Connect and Protect_Networks.png" alt="Network Protection">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <!-- Row 6 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://coursera.org/verify/HRHXZZKVGY98" target="_blank">
+                            <img src="images/Introduction to Information AWS Cloud.png" alt="AWS Cloud Introduction">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/7VF4KCZ4VYJ7" target="_blank">
+                            <img src="images/Cloud-Computing-Basic.png" alt="Cloud Computing Basics">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/Y3338YFULCV8" target="_blank">
+                            <img src="images/Data-Science.png" alt="Data Science">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <!-- Row 6 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/P1FHK017Q2MQ" target="_blank">
+                            <img src="images/Design-Thinking-Innovation.png" alt="Design Thinking">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/LHKS7U2CQCTK" target="_blank">
+                            <img src="images/Exploring-Data-Transformation.png" alt="Data Transformation">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://coursera.org/verify/79TSRQEPHVPC" target="_blank">
+                            <img src="images/Visual-Basic.png" alt="Visual Basic">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <!-- Row 7 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://coursera.org/verify/QQPKKQV36UZN" target="_blank">
+                            <img src="images/Software-Engineering.png" alt="Software Engineering">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://coursera.org/verify/YAQ4GGTPYYX2" target="_blank">
+                            <img src="images/Word Forms and Simple Present Tense.png" alt="English Language">
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-4 col-md-4">
+            
+                    <div class="grid wow zoomIn">
+                        <a href="https://coursera.org/verify/3GZJZUS6STAE" target="_blank">
+                            <img src="images/Foundations of Cybersecurity.png" alt="Foundations of Cybersecurity">
+                        </a>
+                    </div>
+                </div>    
+
+
+            </div>
+
+
+            <div class="row">
+                <!-- Row 8 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/GWM0MOJWNX95" target="_blank">
+                            <img src="images/Tools of the Trade Linux and SQL.png" alt="Tools of the Trade Linux and SQL">
+                        </a>
+                    </div>
+                </div>
+                
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="grid wow zoomIn">
+                            <a href="Certifications/Security-Engineer.pdf" target="_blank">
+                                <img src="images/Security-Engineer.png" alt="Security Engineer">
+                            </a>
+                        </div>      
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="grid wow zoomIn">
+                            <a href="Certifications/Assets.pdf" target="_blank">
+                                <img src="images/Assets.png" alt="Assets, Threats, and Vulnerabilities">
+                            </a>
+                        </div>      
+                    </div>
+            </div>
+
+            <div class="row">
+                <!-- Row 9 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn">
+                        <a href="Certifications/LinkedIn-Career-Essentials-in-Generative-AI-by-Microsoft-and-LinkedIn.pdf" target="_blank">
+                            <img src="images/Career-Essentials-in-Generative-AI.png" alt="Career Essentials in Generative AI by Microsoft and LinkedIn">
+                        </a>
+                    </div>
+                </div>
+                
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="grid wow zoomIn">
+                            <a href="Certifications/LinkedIn-Introduction-to-Artificial-Intelligence.pdf" target="_blank">
+                                <img src="images/Introduction-to-Artificial-Intelligence.png" alt="Introduction to Artificial Intelligence">
+                            </a>
+                        </div>      
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="grid wow zoomIn">
+                            <a href="Certifications/LinkedIn-What-Is-Generative-AI.pdf" target="_blank">
+                                <img src="images/What-Is-Generative-AI.png" alt="What Is Generative AI">
+                            </a>
+                        </div>      
+                    </div>
+            </div>
+
+            <div class="row">
+                <!-- Row 10 -->
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="grid wow zoomIn">
+                        <a href="Certifications/LinkedIn-Generative-AI-The-Evolution-of-Thoughtful-Online.pdf" target="_blank">
+                            <img src="images/Generative-AI-The-Evolution-of-Thoughtful-Online.png" alt="Generative AI: The Evolution of Thoughtful Online Search">
+                        </a>
+                    </div>
+                </div>
+                
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="grid wow zoomIn">
+                            <a href="Certifications/LinkedIn-Streamlining_Your_Work_with_Microsoft_Copilot.pdf" target="_blank">
+                                <img src="images/Streamlining_Your_Work_with_Microsoft_Copilot.png" alt="Streamlining Your Work with Microsoft Copilot">
+                            </a>
+                        </div>      
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="grid wow zoomIn">
+                            <a href="Certifications/LinkedIn-Learning_Microsoft_365_Copilot_for_Work.pdf" target="_blank">
+                                <img src="images/Learning_Microsoft_365_Copilot_for_Work.png" alt="Learning Microsoft 365 Copilot for Work">
+                            </a>
+                        </div>      
+                    </div>
+            </div>
+
+		</div><!-- .contaier -->
+
+	</section>
+	
+	<!-- End of Certification -->
+
+
+<!-- servicesimage start -->
+
+<section id="servicesimage" class="pfblock">
+    <div class="container">
+        
+        <div class="row">
+          <div class="col-sm-12"> 
+             <div class="pfblock-header wow fadeInUp">
+                    <h2 class="pfblock-title"><a>Services</a></h2>
+                    <div class="pfblock-line "></div>
+                        <div class="pfblock-subtitle text-left text-justify">
+                            Dr. Khan is deeply involved in professional services, scholarly activities, and offers consultation to various university deanships, including the Deanship of E-Learning, Deanship of IT, and Deanship of Educational Affairs. His consultation projects encompass a range of initiatives such as designing E-Classrooms with smart interactive screens, creating E-Courses for Programming II, server virtualization, serving as the system administrator for Blackboard, and acting as a data analyst for the Deanship of Educational Affairs. In addition to these roles, he serves on the editorial boards of several prestigious journals indexed by Thomson Reuters. He is also an active member of technical program committees for international conferences and frequently reviews articles for international journals.
+                        </div>
+            </div>
+           </div>
+ 
+
+       
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="grid wow zoomIn" id="professional-services-card">
+                    <figure class="effect-bubba">
+                        <img src="images/Professional-Services.jpg" alt="Professional Services">
+                        <figcaption>
+                            <h2>Professional Services<span></span></h2>
+                            <p>Scientific &amp; Scholarly Activities</p>
+                        </figcaption>			
+                    </figure>
+                </div>
+            </div>
+      
+
+         <div class="col-xs-12 col-sm-4 col-md-4">
+             <div class="grid wow zoomIn" id="administrative-services-card">
+                 <figure class="effect-bubba">
+                     <img src="images/Administrative-Services.jpg" alt="Administrative Services">
+                     <figcaption>
+                         <h2>Administrative Services<span></span></h2>
+                         <p>Institutional Leadership & Management</p>
+                     </figcaption>			
+                 </figure>
+             </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-4 col-md-4">
+             <div class="grid wow zoomIn" id="consultation-services-card">
+                    <figure class="effect-bubba">
+                        <img src="images/Consultation-Services.jpeg" alt="Consultation Services">
+                     <figcaption>
+                            <h2>Consultation Services<span></span></h2>
+                            <p>Professional Consulting Network</p>
+                     </figcaption>			
+                    </figure>
+               </div>
+         </div>
+
+               </div> <!--row -->
+         </div><!-- .contaier -->
+</section>
+
+<!-- servicesimage end -->
+
+	<!-- Professional Services Start -->
+
+    <section id="professionalservices" class="pfblock pfblock-gray">
+		<div class="container">
+        	<div class="row">	
+                <div class="col-sm-12">
+                     <div class="pfblock-header wow fadeInUp">
+						 <h2 class="pfblock-title"><a>Professional Services</a></h2>
+						      <div class="pfblock-line "></div>
+						          <div class="pfblock-subtitle text-left text-justify">
+                                    Dr. Khan is committed to professionalism and is dedicated to leading and contributing to professional services and scholarly activities that advance scientific and technological research.
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+       <div class="row"> 
+
+           <div class="col-xs-12 col-sm-4 col-md-4">
+               <div class="grid wow zoomIn">
+                  <figure class="effect-bubba">
+                       <img src="images/books2.jpg" alt="img01">
+                        <figcaption>
+                                <h2>Journal Reviewer <span></span></h2>
+                                <p>Role as Reviewer</p>
+                                <a href="#journalsreviewer">Professional Services</a>
+                        </figcaption>			
+                    </figure>
+                </div>
+           </div>
+
+        
+          <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="grid wow zoomIn" id="workshops-seminars-card">
+                     <figure class="effect-bubba">
+                            <img src="images/Prof-Workshops.jpg" alt="Professional Workshops">
+                         <figcaption>
+                                <h2>Professional Workshops<span></span></h2>
+                                <p>Workshops & Seminars</p>
+                         </figcaption>			
+                    </figure>
+               </div>
+         </div>
+                
+           
+          <div class="col-xs-12 col-sm-4 col-md-4">
+             <div class="grid wow zoomIn" id="innovation-tech-card">
+                     <figure class="effect-bubba">
+                           <img src="images/Tech-transfer.jpg" alt="Innovation and Technology Transfer">
+                         <figcaption>
+                                <h2>Innovation & Tech<span></span></h2>
+                                <p>Technology Transfer</p>
+                          </figcaption>			
+                      </figure>
+                </div>
+          </div>
+               <!--
+      
+        <div class="col-xs-12 col-sm-4 col-md-4">
+           <div class="grid wow zoomIn">
+                <figure class="effect-bubba">
+                            <img src="images/progcommember.jpg" alt="img01">
+                         <figcaption>
+                                <h2>Program Committee Member<span></span></h2>
+                                <p>My Role in Conference Programs </p>
+                                <a href="#programcommitteemember">Professional Services</a>
+                        </figcaption>			
+               </figure>
+          </div>
+     </div>
+                
+         
+         
+         <div class="col-xs-12 col-sm-4 col-md-4">
+             <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                             <img src="images/generalreviewer.jpg" alt="img01">
+                             <figcaption>
+                                <h2>Journals Reviewer<span></span></h2>
+                                <p>My Role as a Reviewer</p>
+                                 <a href="#journalsreviewer">Professional Services</a>
+                            </figcaption>			
+                        </figure>
+                    </div>
+              </div>-->
+           
+           <!--     
+                 <div class="col-xs-12 col-sm-4 col-md-4">
+             <div class="grid wow zoomIn">
+                        <figure class="effect-bubba">
+                             <img src="assets/images/invitedtalks.jpg" alt="img01"/>
+                             <figcaption>
+                                <h2>Invited Talks/ Workshops / Lectures<span></span></h2>
+                                <p>My Role as a Public Speaker</p>
+                                 <a href="#itwl">Professional Services</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+              </div>
+
+          -->    
+
+
+                </div> <!--row -->
+          </div><!-- .contaier -->
+	</section>
+	
+	<section id="journalsreviewer" class="pfblock">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12"> 
+                    <div class="pfblock-header wow fadeInUp">
+                            <h2 class="pfblock-title"><a>Journals Reviewer</a></h2> 
+                            <div class="pfblock-line"></div>
+                                <br>
+                                    <div class="pfblock-subtitle text-justify">
+    
+    <ul class="custom-ul">								
+    <li>
+       <a href="https://link.springer.com/journal/11042" target="_blank"> <span>Reviewer for the journal Multimedia Tools and Applications (Since 2001) </span></a>
+    </li>
+    <li>
+        <a href="https://jecasmu.org/" target="_blank"> <span>Journal of Engineering and Applied Sciences-JE&AS (Since 2014) </span></a>
+     </li>
+     <li>
+        <a href="https://link.springer.com/journal/11761" target="_blank"> <span>Service Oriented Computing and Applications (Since 2022) </span></a>
+     </li>
+
+    </ul>
+    
+      </div>		
+        </div>		
+          </div>		
+            </div>		
+             </div>		
+    </section>
+
+
+    
+
+	<!-- Professional Services end -->
+
+    <section id="contact" class="pfblock pfblock-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pfblock-header wow fadeInUp">
+                        <h2 class="pfblock-title"><a>Get In Touch</a></h2>
+                        <div class="pfblock-line"></div>
+                        <div class="pfblock-subtitle">
+                            Feel free to contact me for any questions or collaborations
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <form id="contactForm" class="wow fadeInUp contact-form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        <input type="text" name="name" class="form-control input-lg" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                        <input type="email" name="email" class="form-control input-lg" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-comment"></i></span>
+                                        <textarea name="message" class="form-control input-lg" rows="7" placeholder="Your Message" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-shield"></i></span>
+                                        <input type="text" id="captchaInput" class="form-control input-lg" placeholder="Solve: " required>
+                                        <span class="input-group-addon" id="captchaQuestion"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn btn-lg btn-primary">
+                                        <i class="fa fa-paper-plane"></i> Send Message
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div id="responseMsg" class="text-center mt-4" style="display: none;">
+                                <div class="alert alert-success">
+                                    <i class="fa fa-check-circle"></i> 
+                                    <span class="message">Thank you for submitting the Form. Will get in touch soon!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .contact-form {
+            padding: 40px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin: 0 auto 30px;
+            text-align: center;
+            max-width: 600px;
+        }
+        .contact-form .form-group {
+            margin-bottom: 25px;
+        }
+        .contact-form .input-group {
+            margin: 0 auto;
+            width: 100%;
+        }
+        .contact-form .input-group-addon {
+            background: #f8f9fa;
+            border: none;
+            color: #666;
+            width: 50px;
+        }
+        .contact-form .form-control {
+            border: 1px solid #e9ecef;
+            box-shadow: none;
+            height: auto;
+            padding: 12px 15px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            text-align: left;
+            border-radius: 0 4px 4px 0;
+        }
+        .contact-form .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0,123,255,0.2);
+        }
+        .contact-form textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .contact-form .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form .btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .alert {
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin: 20px auto 0;
+            max-width: 400px;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .pfblock-subtitle {
+            margin-bottom: 40px;
+        }
+        .input-group-addon {
+            border-radius: 4px 0 0 4px;
+        }
+    </style>
+
+    <script>
+        // Generate random numbers for CAPTCHA
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 10) + 1;
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            document.getElementById('captchaQuestion').textContent = `${num1} + ${num2} = ?`;
+            return num1 + num2;
+        }
+
+        // Initialize CAPTCHA when page loads
+        let captchaAnswer = 0;
+        document.addEventListener('DOMContentLoaded', function() {
+            captchaAnswer = generateCaptcha();
+            
+            // Add form submission validation
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const userAnswer = parseInt(document.getElementById('captchaInput').value);
+                
+                if (userAnswer === captchaAnswer) {
+                    // Proceed with form submission
+                    handleSubmit();
+                } else {
+                    alert('Incorrect CAPTCHA answer. Please try again.');
+                    captchaAnswer = generateCaptcha();
+                    document.getElementById('captchaInput').value = '';
+                }
+            });
+        });
+    </script>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.parallax-1.1.3.js"></script>
+	<script src="js/imagesloaded.pkgd.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/wow.min.js"></script>
+    <script src="js/jquery.easypiechart.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.cbpQTRotator.js"></script>
+	<script src="js/custom.js"></script>
+
+    <script src="js/validator.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby6S5FwQ_MimuT1Xo05xCUQXDXp69sMYUzoHZNUYggsgSwKTGq-pPg0WMdVfis46l7W/exec';
+        const form = document.getElementById('contactForm');
+        const responseMsg = document.getElementById('responseMsg');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending...';
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    responseMsg.style.display = 'block';
+                    responseMsg.querySelector('.message').innerHTML = "Thank you for submitting the Form. Will get in touch soon!";
+                    form.reset();
+                })
+                .catch(error => {
+                    responseMsg.style.display = 'block';
+                    responseMsg.querySelector('.alert').className = 'alert alert-danger';
+                    responseMsg.querySelector('.message').innerHTML = "Something went wrong. Please try again.";
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fa fa-paper-plane"></i> Send Message';
+                });
+        });
+    </script>
+
+    <script>
+    function handleSubmit() {
+        // Display the thank you message
+        document.getElementById('thank-you-message').style.display = 'block';
+
+        // Clear the form fields
+       // document.getElementById('contact-form').reset();
+
+        // Allow the form to submit
+        return true; // This allows the form to be submitted to the action URL
+    }
+    </script>
+
+    <!-- Site Map section removed from here - now appears at the end of the page -->
+
+    <!-- Administrative Services Modal -->
+    <div id="administrativeModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
+        <div style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+            <span id="closeAdminModal" style="position:absolute; top:20px; right:25px; font-size:28px; color:#64748b; cursor:pointer;">&times;</span>
+            
+            <div class="cloud-modal-body">
+                <h2 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 2em;">Administrative Services</h2>
+                
+                <div class="cloud-intro">
+                    <p style="font-size: 1.1em; line-height: 1.7; color: #334155; margin-bottom: 2rem;">
+                        My work in <strong style="color: #1e40af;">Administrative Services</strong> focuses on providing leadership and management expertise to various institutional departments and initiatives. I serve as a consultant to multiple university deanships.
+                    </p>
+                </div>
+
+                <h3 class="cloud-section-title">Key Responsibilities</h3>
+                <ul class="cloud-publications-list">
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Consultant to Deanship of E-Learning</span>
+                            <ul>
+                                <li>Design and implementation of E-Classrooms with smart interactive screens</li>
+                                <li>Development of E-Courses for Programming II</li>
+                                <li>System administration for Blackboard platform</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Consultant to Deanship of IT</span>
+                            <ul>
+                                <li>Server virtualization projects</li>
+                                <li>Technical infrastructure optimization</li>
+                                <li>IT systems integration and management</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Consultant to Deanship of Educational Affairs</span>
+                            <ul>
+                                <li>Data analysis and reporting</li>
+                                <li>Educational program assessment</li>
+                                <li>Strategic planning and implementation</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Administrative Services Modal Handling
+        document.getElementById('administrative-services-card').onclick = function() {
+            document.getElementById('administrativeModal').style.display = 'block';
+        };
+        document.getElementById('closeAdminModal').onclick = function() {
+            document.getElementById('administrativeModal').style.display = 'none';
+        };
+        
+        // Add to existing window.onclick handler:
+        window.onclick = function(event) {
+            let adminModal = document.getElementById('administrativeModal');
+            if (event.target == adminModal) {
+                adminModal.style.display = "none";
+            }
+            // Keep existing modal checks
+        };
+    </script>
+
+    <!-- Consultation Services Modal -->
+    <div id="consultationModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
+        <div style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+            <span id="closeConsultModal" style="position:absolute; top:20px; right:25px; font-size:28px; color:#64748b; cursor:pointer;">&times;</span>
+            
+            <div class="cloud-modal-body">
+                <h2 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 2em;">Consultation Services</h2>
+                
+                <div class="cloud-intro">
+                    <p style="font-size: 1.1em; line-height: 1.7; color: #334155; margin-bottom: 2rem;">
+                        My work in <strong style="color: #1e40af;">Consultation Services</strong> encompasses a wide range of professional advisory roles, focusing on technological innovation, academic development, and institutional advancement. I provide expert consultation in areas including cloud computing, cybersecurity, and educational technology integration.
+                    </p>
+                </div>
+
+                <h3 class="cloud-section-title">Areas of Expertise</h3>
+                <ul class="cloud-publications-list">
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Technology Integration</span>
+                            <ul>
+                                <li>Cloud computing infrastructure design and implementation</li>
+                                <li>Cybersecurity framework development</li>
+                                <li>Educational technology solutions</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Academic Development</span>
+                            <ul>
+                                <li>Curriculum design and development</li>
+                                <li>E-learning platform optimization</li>
+                                <li>Research methodology consultation</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Professional Training</span>
+                            <ul>
+                                <li>Technical certification programs</li>
+                                <li>Professional development workshops</li>
+                                <li>Specialized skill development courses</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Consultation Services Modal Handling
+        document.getElementById('consultation-services-card').onclick = function() {
+            document.getElementById('consultationModal').style.display = 'block';
+        };
+        document.getElementById('closeConsultModal').onclick = function() {
+            document.getElementById('consultationModal').style.display = 'none';
+        };
+        
+        // Add to existing window.onclick handler:
+        window.onclick = function(event) {
+            let consultModal = document.getElementById('consultationModal');
+            if (event.target == consultModal) {
+                consultModal.style.display = "none";
+            }
+            // Keep existing modal checks
+        };
+    </script>
+
+    <!-- Professional Services Modal -->
+    <div id="professionalModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
+        <div style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+            <span id="closeProfModal" style="position:absolute; top:20px; right:25px; font-size:28px; color:#64748b; cursor:pointer;">&times;</span>
+            
+            <div class="cloud-modal-body">
+                <h2 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 2em;">Professional Services</h2>
+                
+                <div class="cloud-intro">
+                    <p style="font-size: 1.1em; line-height: 1.7; color: #334155; margin-bottom: 2rem;">
+                        My work in <strong style="color: #1e40af;">Professional Services</strong> encompasses a broad range of scientific and scholarly activities. I am actively involved in advancing research, reviewing academic work, and contributing to professional development in the field of computer science and technology.
+                    </p>
+                </div>
+
+                <h3 class="cloud-section-title">Key Professional Activities</h3>
+                <ul class="cloud-publications-list">
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Journal Review Work</span>
+                            <ul>
+                                <li>Reviewer for Multimedia Tools and Applications (Since 2001)</li>
+                                <li>Reviewer for Journal of Engineering and Applied Sciences-JE&AS (Since 2014)</li>
+                                <li>Reviewer for Service Oriented Computing and Applications (Since 2022)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Academic Leadership</span>
+                            <ul>
+                                <li>Editorial board member for multiple international journals</li>
+                                <li>Technical program committee member for international conferences</li>
+                                <li>Research collaboration and mentorship</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Professional Development</span>
+                            <ul>
+                                <li>Organization of workshops and seminars</li>
+                                <li>Development of professional training programs</li>
+                                <li>Technology transfer and knowledge sharing initiatives</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Professional Services Modal Handling
+        document.getElementById('professional-services-card').onclick = function() {
+            document.getElementById('professionalModal').style.display = 'block';
+        };
+        document.getElementById('closeProfModal').onclick = function() {
+            document.getElementById('professionalModal').style.display = 'none';
+        };
+        
+        // Add to existing window.onclick handler:
+        window.onclick = function(event) {
+            let profModal = document.getElementById('professionalModal');
+            if (event.target == profModal) {
+                profModal.style.display = "none";
+            }
+            // Keep existing modal checks
+        };
+    </script>
+
+    <!-- Professional Workshops Modal -->
+    <div id="workshopsModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
+        <div style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+            <span id="closeWorkshopsModal" style="position:absolute; top:20px; right:25px; font-size:28px; color:#64748b; cursor:pointer;">&times;</span>
+            
+            <div class="cloud-modal-body">
+                <h2 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 2em;">Professional Workshops and Seminars</h2>
+                
+                <div class="cloud-intro">
+                    <p style="font-size: 1.1em; line-height: 1.7; color: #334155; margin-bottom: 2rem;">
+                        My work in <strong style="color: #1e40af;">Professional Workshops and Seminars</strong> focuses on delivering high-quality educational and training programs across various technological domains. I develop and conduct workshops that combine theoretical knowledge with practical applications, ensuring participants gain valuable hands-on experience.
+                    </p>
+                </div>
+
+                <h3 class="cloud-section-title">Workshop Categories</h3>
+                <ul class="cloud-publications-list">
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Technical Workshops</span>
+                            <ul>
+                                <li>Cloud Computing and Infrastructure</li>
+                                <li>Cybersecurity and Ethical Hacking</li>
+                                <li>Machine Learning and AI Applications</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Academic Seminars</span>
+                            <ul>
+                                <li>Research Methodology</li>
+                                <li>Academic Writing and Publication</li>
+                                <li>Technology Integration in Education</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Professional Development</span>
+                            <ul>
+                                <li>Certification Preparation Programs</li>
+                                <li>Industry Best Practices</li>
+                                <li>Emerging Technology Trends</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Professional Workshops Modal Handling
+        document.getElementById('workshops-seminars-card').onclick = function() {
+            document.getElementById('workshopsModal').style.display = 'block';
+        };
+        document.getElementById('closeWorkshopsModal').onclick = function() {
+            document.getElementById('workshopsModal').style.display = 'none';
+        };
+        
+        // Add to existing window.onclick handler:
+        window.onclick = function(event) {
+            let workshopsModal = document.getElementById('workshopsModal');
+            if (event.target == workshopsModal) {
+                workshopsModal.style.display = "none";
+            }
+            // Keep existing modal checks
+        };
+    </script>
+
+    <!-- Innovation and Technology Transfer Modal -->
+    <div id="innovationModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
+        <div style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+            <span id="closeInnovationModal" style="position:absolute; top:20px; right:25px; font-size:28px; color:#64748b; cursor:pointer;">&times;</span>
+            
+            <div class="cloud-modal-body">
+                <h2 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 2em;">Innovation and Technology Transfer</h2>
+                
+                <div class="cloud-intro">
+                    <p style="font-size: 1.1em; line-height: 1.7; color: #334155; margin-bottom: 2rem;">
+                        My work in <strong style="color: #1e40af;">Innovation and Technology Transfer</strong> focuses on bridging the gap between academic research and practical implementation. I specialize in transforming theoretical concepts into practical solutions, facilitating knowledge transfer, and promoting technological innovation across various domains.
+                    </p>
+                </div>
+
+                <h3 class="cloud-section-title">Key Areas</h3>
+                <ul class="cloud-publications-list">
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Technology Innovation</span>
+                            <ul>
+                                <li>Development of innovative cloud computing solutions</li>
+                                <li>Implementation of AI and machine learning technologies</li>
+                                <li>Creation of advanced cybersecurity frameworks</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Knowledge Transfer</span>
+                            <ul>
+                                <li>Academic-industry collaboration projects</li>
+                                <li>Technology commercialization initiatives</li>
+                                <li>Research-to-practice implementation</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-title">Impact and Applications</span>
+                            <ul>
+                                <li>Educational technology solutions</li>
+                                <li>Enterprise system optimization</li>
+                                <li>Digital transformation projects</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Innovation and Technology Transfer Modal Handling
+        document.getElementById('innovation-tech-card').onclick = function() {
+            document.getElementById('innovationModal').style.display = 'block';
+        };
+        document.getElementById('closeInnovationModal').onclick = function() {
+            document.getElementById('innovationModal').style.display = 'none';
+        };
+        
+        // Add to existing window.onclick handler:
+        window.onclick = function(event) {
+            let innovationModal = document.getElementById('innovationModal');
+            if (event.target == innovationModal) {
+                innovationModal.style.display = "none";
+            }
+            // Keep existing modal checks
+        };
+    </script>
+
+    <!-- Appointment Scheduling Section -->
+    <section id="appointments" class="pfblock">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pfblock-header wow fadeInUp">
+                        <h2 class="pfblock-title"><a>Schedule an Appointment</a></h2>
+                        <div class="pfblock-line"></div>
+                        <div class="pfblock-subtitle text-center">
+                            <p>Book a meeting or consultation with Dr. Ahmad Raza Khan using the calendar below.</p>
+                            <div class="appointment-container" style="margin-top: 30px;">
+                                <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3XB7KXsRJvPKWAHY3dJadm410HCGeFjBzI1aAGMtTahnA1kYvQGHCN-WNTz5r9MfTJ5oKj9bV1?gv=true" 
+                                        style="border: 0; width: 100%; height: 600px;" 
+                                        frameborder="0" 
+                                        scrolling="no">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Appointment Section Styles */
+        #appointments {
+            padding: 80px 0;
+        }
+        
+        .appointment-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        
+        @media (max-width: 768px) {
+            .appointment-container {
+                padding: 10px;
+            }
+            
+            .appointment-container iframe {
+                height: 500px;
+            }
+        }
+    </style>
+
+    <!-- Site Map Section -->
+    <section id="sitemap" class="pfblock">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pfblock-header wow fadeInUp">
+                        <h2 class="pfblock-title"><a>Site Map</a></h2>
+                        <div class="pfblock-line"></div>
+                        <div class="pfblock-subtitle text-left text-justify">
+                            <div class="sitemap-grid">
+                                <div class="sitemap-item">
+                                    <a href="#home" class="sitemap-link">
+                                        <i class="fa fa-home"></i>
+                                        <span>Home</span>
+                                    </a>
+                                </div>
+                                <div class="sitemap-item">
+                                    <a href="#biography" class="sitemap-link">
+                                        <i class="fa fa-user"></i>
+                                        <span>Biography</span>
+                                    </a>
+                                </div>
+                                <div class="sitemap-item">
+                                    <a href="#researchintersts" class="sitemap-link">
+                                        <i class="fa fa-lightbulb-o"></i>
+                                        <span>Interests</span>
+                                    </a>
+                                </div>
+                                <div class="sitemap-item">
+                                    <a href="#publicationimage" class="sitemap-link">
+                                        <i class="fa fa-book"></i>
+                                        <span>Publications</span>
+                                    </a>
+                                </div>
+                                <div class="sitemap-item">
+                                    <a href="#certifications" class="sitemap-link">
+                                        <i class="fa fa-certificate"></i>
+                                        <span>Certifications</span>
+                                    </a>
+                                </div>
+                                <div class="sitemap-item">
+                                    <a href="#servicesimage" class="sitemap-link">
+                                        <i class="fa fa-cogs"></i>
+                                        <span>Services</span>
+                                    </a>
+                                </div>
+                                <div class="sitemap-item">
+                                    <a href="#contact" class="sitemap-link">
+                                        <i class="fa fa-envelope"></i>
+                                        <span>Contact Me</span>
+                                    </a>
+                                </div>
+                                <div class="sitemap-item">
+                                    <a href="#appointments" class="sitemap-link">
+                                        <i class="fa fa-calendar"></i>
+                                        <span>Appointments</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .sitemap-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .sitemap-item {
+            flex: 0 0 150px; /* Adjust width as needed */
+            text-align: center;
+        }
+        .sitemap-link {
+            display: block;
+            padding: 20px;
+            background: #ffffff; /* White background for links */
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333; /* Dark text color */
+            font-weight: bold; /* Bold text for emphasis */
+        }
+        .sitemap-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            background: #007bff62; /* Change background on hover */
+            color: #ffffff; /* Change text color on hover */
+        }
+        .sitemap-link i {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #007bff; /* Icon color */
+        }
+        .sitemap-link span {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        #sitemap {
+            background: #f8f9fa;
+        }
+        #sitemap .pfblock-header {
+            margin-bottom: 40px;
+        }
+    </style>
+
+    <!-- Jotform Chatbot -->
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function() {
+        window.AgentInitializer.init({
+          agentRenderURL: "https://agent.jotform.com/01967c3b53da7b70a46b1d88d7ccb3fe8d50",
+          rootId: "JotformAgent-01967c3b53da7b70a46b1d88d7ccb3fe8d50",
+          formID: "01967c3b53da7b70a46b1d88d7ccb3fe8d50",
+          queryParams: ["skipWelcome=1", "maximizable=1"],
+          domain: "https://www.jotform.com",
+          isDraggable: false,
+          background: "linear-gradient(180deg, #6C73A8 0%, #6C73A8 100%)",
+          buttonBackgroundColor: "#0066C3",
+          buttonIconColor: "#FFFFFF",
+          variant: false,
+          customizations: {
+            "greeting": "Yes",
+            "greetingMessage": "Hi! How can I assist you?",
+            "openByDefault": "No",
+            "pulse": "Yes",
+            "position": "right",
+            "autoOpenChatIn": "0"
+          },
+          isVoice: false,
+        });
+      });
+    </script>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+      <div class="footer-container">
+        <div style="text-align: center; white-space: nowrap;">
+          © 2025 by Dr. Ahmad Raza Khan. | Powered and secured by <a href="https://connectingahmad.info" target="_blank">connectingahmad.info</a> | Write to me at - <a href="mailto:ahmed@connectingahmad.info">ahmed@connectingahmad.info</a>  
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+
+</body>
+<!-- keep this at the end -->
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.bg-slide');
+        let currentSlide = 0;
+        
+        function nextSlide() {
+            // Fade out current slide
+            slides[currentSlide].classList.remove('active');
+            
+            // Move to next slide
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            // Fade in next slide
+            slides[currentSlide].classList.add('active');
+        }
+        
+        // Start the slideshow
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    });
+</script>
