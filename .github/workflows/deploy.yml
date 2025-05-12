@@ -15,7 +15,7 @@ jobs:
       - name: Add SSH key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.LIGHTSAIL_PRIVATE_KEY }}" > ~/.ssh/lightsail_ci_key
+          echo "${{ secrets.LIGHTSAIL_PRIVATE_KEY }}" > ~/.ssh/LIGHTSAIL_PRIVATE_KEY
           chmod 400 ~/.ssh/lightsail_ci_key
           ssh-keyscan -H ${{ secrets.LIGHTSAIL_PUBLIC_IP }} >> ~/.ssh/known_hosts
 
