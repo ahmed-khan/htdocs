@@ -24,7 +24,7 @@ jobs:
       - name: Run deployment script
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa bitnami@${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
-          cd /home/bitnami/
+          cd /home/bitnami/htdocs
           git pull origin main
           # sudo systemctl restart your-app
           EOF
