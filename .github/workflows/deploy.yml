@@ -1,4 +1,4 @@
-name: Deploy to AWS Lightsail
+name: Deploy to Lightsail
 
 on:
   push:
@@ -8,23 +8,25 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up SSH
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.LIGHTSAIL_SSH_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.LIGHTSAIL_HOST }} >> ~/.ssh/known_hosts
+      - name: Add SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.LIGHTSAIL_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 400 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.LIGHTSAIL_PUBLIC_IP }} >> ~/.ssh/known_hosts
 
-    - name: Deploy to Lightsail
-      run: |
-        ssh -i ~/.ssh/id_rsa bitnami@${{ secrets.LIGHTSAIL_USER }}bitnami@@${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
-          cd /htdocs
-          git pull origin main
-          # Restart service if needed
-          # sudo systemctl restart your-app
-        EOF
+      - name: Run deployment script
+        run: |
+          ssh -i ~/.ssh/id_rsa bitnami@${{ secrets.LIGHTSAIL_PUBLIC_IP }} << 'EOF'
+            cd /htdocs
+            git pull origin main
+            # Restart service if needed
+            # sudo systemctl restart your-app
+          EOF
+
+      - name: Clean up SSH key
+        run: rm -rf ~/.ssh
