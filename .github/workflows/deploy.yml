@@ -21,7 +21,7 @@ jobs:
 
       - name: Run deployment script
         run: |
-          sudo ssh -i ~/.ssh/lightsail_ci_key bitnami@${{ secrets.LIGHTSAIL_PUBLIC_IP }} << 'EOF'
+          ssh -i ~/.ssh/lightsail_ci_key bitnami@${{ secrets.LIGHTSAIL_PUBLIC_IP }} << 'EOF'
             cd /htdocs
             git pull origin main
             # Restart service if needed
