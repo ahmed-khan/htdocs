@@ -22,7 +22,7 @@ jobs:
 
     - name: Deploy to Lightsail
       run: |
-        ssh -i ~/.ssh/id_rsa ${{ secrets.LIGHTSAIL_USER }}@${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
+        ssh -i ~/.ssh/id_rsa bitnami@${{ secrets.LIGHTSAIL_USER }}bitnami@@${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
           cd /htdocs
           git pull origin main
           # Restart service if needed
