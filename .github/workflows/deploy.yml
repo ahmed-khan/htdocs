@@ -24,10 +24,10 @@ jobs:
       - name: Run deployment script
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa bitnami@${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
-          cd /opt/bitnami/htdocs
+          cd /home/bitnami/
           git pull origin main
           # sudo systemctl restart your-app
-           EOF
+          EOF
 
       - name: Clean up SSH key
         run: rm -rf ~/.ssh
