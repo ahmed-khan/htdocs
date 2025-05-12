@@ -12,21 +12,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Add SSH key
+
+
+      - name: Set up SSH key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.LIGHTSAIL_PRIVATE_KEY }}" > ~/lightsail_rescue_key
-          chmod 400 ~/lightsail_rescue_key
-          ssh-keyscan -H ${{ secrets.LIGHTSAIL_PUBLIC_IP }} >> ~/.ssh/known_hosts
+          echo "${{ secrets.LIGHTSAIL_RESCUE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.LIGHTSAIL_HOST }} >> ~/.ssh/known_hosts
 
       - name: Run deployment script
         run: |
-          ssh -i ~/lightsail_rescue_key bitnami@${{ secrets.LIGHTSAIL_PUBLIC_IP }} << 'EOF'
-            cd /htdocs
-            git pull origin main
-            # Restart service if needed
-            # sudo systemctl restart your-app
-          EOF
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa bitnami@${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
+          cd /opt/bitnami/htdocs
+          git pull origin main
+          # sudo systemctl restart your-app
+           EOF
 
       - name: Clean up SSH key
         run: rm -rf ~/.ssh
