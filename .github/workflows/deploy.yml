@@ -23,11 +23,21 @@ jobs:
 
       - name: Run deployment script
         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa bitnami@${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
-          cd /htdocs
+         ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa bitnami@${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
+          # Pull latest code to temp directory (replace with your repo path)
+          cd /home/bitnami/htdocs || exit
           git pull origin main
-          # sudo systemctl restart your-app
-          EOF
+
+          # Copy updated files to web root
+          sudo cp -r /home/bitnami/htdocs/* /opt/bitnami/apache2/htdocs/
+
+          # Fix ownership and permissions
+          sudo chown -R bitnami:daemon /opt/bitnami/apache2/htdocs/
+          sudo chmod -R 755 /opt/bitnami/apache2/htdocs/
+
+          # Restart Apache (optional)
+          sudo /opt/bitnami/ctlscript.sh restart apache
+         EOF
 
       - name: Clean up SSH key
         run: rm -rf ~/.ssh
