@@ -16,7 +16,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.LIGHTSAIL_PRIVATE_KEY }}" > ~/.ssh/LIGHTSAIL_PRIVATE_KEY
-          chmod 400 ~/.ssh/lightsail_ci_key
+          chmod 400 ~/.ssh/LIGHTSAIL_PRIVATE_KEY
           ssh-keyscan -H ${{ secrets.LIGHTSAIL_PUBLIC_IP }} >> ~/.ssh/known_hosts
 
       - name: Run deployment script
