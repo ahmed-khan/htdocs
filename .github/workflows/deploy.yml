@@ -15,13 +15,13 @@ jobs:
       - name: Add SSH key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.LIGHTSAIL_PRIVATE_KEY }}" > /bitnami/lightsail_ci_key
-          chmod 400 /bitnami/lightsail_ci_key
+          echo "${{ secrets.LIGHTSAIL_PRIVATE_KEY }}" > /htdocs/lightsail_ci_key
+          chmod 400 /htdocs/lightsail_ci_key
           ssh-keyscan -H ${{ secrets.LIGHTSAIL_PUBLIC_IP }} >> ~/.ssh/known_hosts
 
       - name: Run deployment script
         run: |
-          ssh -i /bitnami/lightsail_ci_key bitnami@${{ secrets.LIGHTSAIL_PUBLIC_IP }} << 'EOF'
+          ssh -i /htdocs/lightsail_ci_key bitnami@${{ secrets.LIGHTSAIL_PUBLIC_IP }} << 'EOF'
             cd /htdocs
             git pull origin main
             # Restart service if needed
