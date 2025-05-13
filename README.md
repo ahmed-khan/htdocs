@@ -39,7 +39,7 @@ This repository hosts the source code for the personal academic website of **Dr.
 
 The diagram below illustrates a CI/CD pipeline that automates the deployment of code from a GitHub repository to an AWS Lightsail instance using GitHub Actions.
 
-![CI/CD Pipeline Diagram](images/CICD Pipeline to Push Code to AWS lightsail via github.png)
+![CI/CD Pipeline Diagram](htdocs/images/CICD Pipeline to Push Code to AWS lightsail via github.png)
 
 ### Workflow Description:
 
