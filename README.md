@@ -35,6 +35,23 @@ This repository hosts the source code for the personal academic website of **Dr.
 - Google Analytics & Pace.js for preloading and performance
 
 ---
+## 📁 CICD Pipeline Process Automation 
+The image illustrates a CI/CD pipeline that automates code deployment from GitHub to AWS Lightsail, using GitHub Actions.
+
+Description of Workflow:
+
+	1.	GitHub User Writes Code: A developer writes code on their local machine.
+	2.	Push Code to GitHub Repository: The developer pushes the code to a remote GitHub repository.  
+	3.	GitHub Repository: This is the central place where the code is stored and version-controlled.    
+	4.	GitHub Actions: Upon detecting a code push, GitHub Actions is triggered. It executes a workflow that could include building, testing, and deploying the application.   
+	5.	Deployment to AWS Lightsail: The GitHub Actions workflow uses configured access credentials (represented by the key icon) to deploy the code from the GitHub repository to an AWS Lightsail instance.
+Key Concepts:
+	•	GitHub Actions is the CI/CD tool here.
+	•	AWS Lightsail is the cloud service receiving the deployed application.
+	•	Secure Keys (indicated by the key icons) are used to authenticate and authorize access between GitHub and AWS.
+
+This setup represents an automated pipeline where every code push can result in a seamless deployment to AWS.
+
 
 ## 📁 File Structure
 
