@@ -35,23 +35,26 @@ This repository hosts the source code for the personal academic website of **Dr.
 - Google Analytics & Pace.js for preloading and performance
 
 ---
-## 📁 CICD Pipeline Process Automation 
-The image illustrates a CI/CD pipeline that automates code deployment from GitHub to AWS Lightsail, using GitHub Actions.
+## 📦 CI/CD Pipeline Process Automation
 
-Description of Workflow:
+The diagram below illustrates a CI/CD pipeline that automates the deployment of code from a GitHub repository to an AWS Lightsail instance using GitHub Actions.
 
-	1.	GitHub User Writes Code: A developer writes code on their local machine.
-	2.	Push Code to GitHub Repository: The developer pushes the code to a remote GitHub repository.  
-	3.	GitHub Repository: This is the central place where the code is stored and version-controlled.    
-	4.	GitHub Actions: Upon detecting a code push, GitHub Actions is triggered. It executes a workflow that could include building, testing, and deploying the application.   
-	5.	Deployment to AWS Lightsail: The GitHub Actions workflow uses configured access credentials (represented by the key icon) to deploy the code from the GitHub repository to an AWS Lightsail instance.
-Key Concepts:
-	•	GitHub Actions is the CI/CD tool here.
-	•	AWS Lightsail is the cloud service receiving the deployed application.
-	•	Secure Keys (indicated by the key icons) are used to authenticate and authorize access between GitHub and AWS.
+![CI/CD Pipeline Diagram](./images/cicd-pipeline-diagram.png)
 
-This setup represents an automated pipeline where every code push can result in a seamless deployment to AWS.
+### Workflow Description:
 
+1. **Code Development**: A developer writes and tests code on their local machine.
+2. **Push to GitHub**: The code is pushed to a remote GitHub repository, which serves as the central version-controlled storage.
+3. **Trigger GitHub Actions**: Upon detecting a code push, GitHub Actions initiates a workflow. This workflow can include steps for building, testing, and deploying the application.
+4. **Deployment to AWS Lightsail**: The workflow uses secure access credentials (represented by key icons) to deploy the application to an AWS Lightsail instance.
+
+### Key Concepts:
+
+- **GitHub Actions**: The CI/CD tool that automates the workflow.
+- **AWS Lightsail**: The cloud service where the application is deployed.
+- **Secure Authentication**: Keys are used to securely authenticate and authorize the deployment process.
+
+This setup ensures a seamless and automated deployment process, enabling developers to focus on writing code while the pipeline handles the rest.
 
 ## 📁 File Structure
 
