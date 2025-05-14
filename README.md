@@ -78,7 +78,7 @@ Edit
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/academic-portfolio.git
+   git clone https://github.com/ahmed-khan/htdocs.git
 Open index.html in a web browser.
 
 Customize content, links, and styles as needed.
