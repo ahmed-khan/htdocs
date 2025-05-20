@@ -3686,44 +3686,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-// ... existing code ...
-        // Event listener for Cyber Security card to open modal
-        const csCard = document.getElementById('cyber-security-card');
-        if (csCard) {
-            csCard.addEventListener('click', function(event) {
-                // Check if the click was on a link inside the card
-                if (!event.target.closest('a')) {
-                    const csModal = document.getElementById('csModal');
-                    if (csModal) {
-                        csModal.style.display = 'block';
-                    }
-                }
-            });
-        }
 
-        // Event listener for Cyber Security arrow to open modal
-        const csArrow = document.querySelector('#cyber-security-card .modern-flip-arrow');
-        if (csArrow) {
-            csArrow.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent default link behavior
-                const csModal = document.getElementById('csModal');
-                if (csModal) {
-                    csModal.style.display = 'block';
-                }
-            });
-        }
-
-        // Event listener for Cyber Security modal close button
-        const closeCsModalButton = document.getElementById('closeCsModal');
-        if (closeCsModalButton) {
-            closeCsModalButton.addEventListener('click', function() {
-                const csModal = document.getElementById('csModal');
-                if (csModal) {
-                    csModal.style.display = 'none';
-                }
-            });
-        }
-// ... existing code ...
 
     <!-- Cyber Security Modal -->
     <div id="csModal" class="modal">
@@ -3743,7 +3706,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-// ... existing code ...
+
         <script>
             // ... existing code ...
             function closeModal(modalId) {
@@ -3754,99 +3717,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             // ... existing code ...
         </script>
-// ... existing code ...
 
-        /* Cyber Security theme (Red) */
-        .modern-flip-box-cs .modern-flip-box-front,
-        .modern-flip-box-cs .modern-flip-box-back {
-            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            text-align: center;
-            height: 100%;
-            position: relative;
-        }
-        .modern-flip-box-cs .modern-flip-box-icon {
-            color: #fee2e2;
-            margin-bottom: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: auto;
-        }
-        .modern-flip-box-cs .modern-flip-box-icon svg {
-            width: 48px;
-            height: 48px;
-        }
-        .modern-flip-box-cs .modern-flip-box-title {
-            color: #fecaca;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            text-align: center;
-            position: absolute;
-            bottom: 2rem;
-        }
-        .modern-flip-box-cs .modern-flip-box-back-title {
-            color: #fca5a5;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-family: 'Inter', sans-serif;
-            text-align: center;
-            position: absolute;
-            top: 2rem;
-        }
-        .modern-flip-box-cs .modern-flip-box-back-text {
-            color: #f87171;
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 1.5rem;
-            font-family: 'Inter', sans-serif;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            padding: 0 1rem;
-        }
-        .modern-flip-box-cs .modern-flip-box-arrow {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            bottom: 2rem;
-            width: 100%;
-        }
-        .modern-flip-box-cs .modern-flip-box-arrow svg {
-            fill: #fecaca;
-            width: 24px;
-            height: 24px;
-        }
-// ... existing code ...
-        .modern-flip-box-cs .modern-flip-box-icon {
-            color: #fee2e2;
-            margin-bottom: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: auto;
-        }
-        .modern-flip-box-cs .modern-flip-box-icon svg {
-            width: 48px;
-            height: 48px;
-        }
-// ... existing code ...
 
         <script>
             // Function to open modal
