@@ -1,6 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+/* Self-hosted fonts (no Google Fonts CDN). Inter is the site-wide sans-serif;
+   Lobster is the decorative navbar brand. Inter is a variable font, so a single
+   file covers every weight via the wght axis. */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('../fonts/inter/InterVariable.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('../fonts/inter/InterVariable-Italic.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Lobster';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/lobster/Lobster-400.woff2') format('woff2');
+}
+
+/* Shared sans-serif stack: Inter first, then native system sans as fallback. */
+:root {
+	--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
 /* TODO: Compress large background images (cover.png, item-3.jpg, etc.) for faster loading */
 
 /*!
@@ -11,17 +37,17 @@
 */
 
 body {
-	font: 400 16px/1.8 'Raleway', sans-serif;
+	font: 400 16px/1.8 var(--font-sans);
 	color: #444;
 	overflow-x: hidden;
 }
 
-/* Serif display headings for editorial, journal-grade hierarchy.
-   Pairs against the Raleway humanist sans on a serif/sans contrast axis.
-   Navbar brand (Lobster) and flip-card titles keep their own families. */
+/* Headings use the same Inter sans-serif as the body for a clean, uniform,
+   fully sans-serif hierarchy (weight/size carry the contrast).
+   Navbar brand (Lobster) keeps its own decorative family. */
 h1, h2, h3, h4,
 .pfblock-title {
-	font-family: 'Spectral', Georgia, 'Times New Roman', serif;
+	font-family: var(--font-sans);
 	text-wrap: balance;
 }
 
@@ -147,7 +173,7 @@ a,
 /* ---------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6, h7 ,h8{
-	font: 700 40px/1.2 Raleway, sans-serif;
+	font: 700 40px/1.2 var(--font-sans);
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	margin: 5px 0 5px;
@@ -264,7 +290,7 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 .btn {
-	font-family: Raleway, sans-serif;
+	font-family: var(--font-sans);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 13px;
@@ -374,7 +400,7 @@ textarea.form-control {
 }
 
 .pfblock-subtitle {
-	font-family: Raleway, "Times New Roman", Times, sans-serif;
+	font-family: var(--font-sans);
 	font-style: normal;
 	font-size: 18px;
 }
@@ -484,7 +510,7 @@ textarea.form-control {
 }
 
 .start {
-	font-family: Raleway, "Times New Roman", Times, sans-serif;
+	font-family: var(--font-sans);
 	font-size: 16px;
 	font-style: normal;
 	text-transform: none;
@@ -657,7 +683,7 @@ textarea.form-control {
 	border-radius: 0;
 	margin: 0;
 	text-transform: uppercase;
-	font-family: Raleway, sans-serif;
+	font-family: var(--font-sans);
 }
 
 .navbar-custom,
