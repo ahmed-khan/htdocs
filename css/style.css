@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 /* TODO: Compress large background images (cover.png, item-3.jpg, etc.) for faster loading */
 
 /*!
@@ -10,9 +11,18 @@
 */
 
 body {
-	font: 300 14px/1.8 'Raleway', sans-serif;
-	color: #666;
+	font: 400 16px/1.8 'Raleway', sans-serif;
+	color: #444;
 	overflow-x: hidden;
+}
+
+/* Serif display headings for editorial, journal-grade hierarchy.
+   Pairs against the Raleway humanist sans on a serif/sans contrast axis.
+   Navbar brand (Lobster) and flip-card titles keep their own families. */
+h1, h2, h3, h4,
+.pfblock-title {
+	font-family: 'Spectral', Georgia, 'Times New Roman', serif;
+	text-wrap: balance;
 }
 
 img {
@@ -91,7 +101,7 @@ ol.custom-ol {
 
 .custom-ul,
 .custom-ol span {
-	color: #999;
+	color: #555;
 	font-weight: normal;
 }
 
@@ -309,15 +319,17 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 .pfblock {
-	padding: 120px 0 100px;
+	padding: clamp(64px, 8vw, 112px) 0 clamp(56px, 7vw, 96px);
+}
+
+/* Tighter rhythm between a gray band and the white block that follows,
+   so sections breathe instead of marching at one fixed interval. */
+.pfblock-gray + .pfblock {
+	padding-top: clamp(48px, 6vw, 80px);
 }
 
 .pfblock-gray {
 	background: #f5f5f5;
-}
-
-.pfblock-green {
-	background: #AFFF04;
 }
 
 
@@ -390,7 +402,7 @@ textarea.form-control {
 		 -o-background-size: cover;
 			background-size: cover;
 	padding: 50px 0;
-	color: #999;
+	color: #e8e8e8;
 }
 
 .calltoaction h2 {
@@ -442,7 +454,7 @@ textarea.form-control {
 }
 
 .home-overlay {
-    background-color: rgba(44, 62, 80, 0.3);
+    background-color: rgba(0, 36, 107, 0.3);
     background-image: url("../images/cover.png");
     background-repeat: repeat;
     height: 100%;
@@ -558,26 +570,26 @@ textarea.form-control {
 }
 
 .footer-left a, .footer-center a, .footer-right a {
-  color: #007bff;
+  color: #408EC6;
   text-decoration: underline;
-  border-bottom: 1px dotted #007bff;
+  border-bottom: 1px dotted #408EC6;
 }
 
 .footer-left a:hover, .footer-center a:hover, .footer-right a:hover {
-  color: #0056b3;
+  color: #00246B;
   text-decoration: none;
 }
 
 .social-links a {
-  background: rgba(0,123,255,0.08);
-  color: #007bff;
+  background: rgba(64,142,198,0.08);
+  color: #408EC6;
   border: none;
   font-size: 18px;
   transition: background 0.2s, color 0.2s;
 }
 
 .social-links a:hover {
-  background: #007bff;
+  background: #408EC6;
   color: #fff;
 }
 
@@ -668,7 +680,7 @@ textarea.form-control {
 .navbar-custom .navbar-nav > li.active a {
 	background: none;
 	outline: 0;
-	color: #E7746F;
+	color: #408EC6;
 }
 
 .navbar-custom .navbar-brand {
@@ -679,7 +691,7 @@ textarea.form-control {
 
 .navbar-custom .dropdown-menu {
 	border: 0;
-	border-top: 2px solid #E7746F;
+	border-top: 2px solid #408EC6;
 	border-radius: 0;
 }
 
@@ -723,7 +735,7 @@ textarea.form-control {
 .scroll-up a:hover,
 .scroll-up a:active {
 	background-color: rgba(235, 235, 235, .8);
-	color: #E7746F;
+	color: #408EC6;
 }
 
 /* ---------------------------------------------- /*
@@ -1078,7 +1090,7 @@ figure.effect-bubba:hover p {
 
 .cbp-qtrotator blockquote p {
 	font-size: 2em;
-	color: #888;
+	color: #555;
 	font-weight: 300;
 	margin: 0.4em 0 1em;
 }
