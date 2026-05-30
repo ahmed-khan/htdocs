@@ -20,12 +20,31 @@
 		/* ---------------------------------------------- */
 
 		$('a[href*=#]').bind("click", function(e){
-           
+
 			var anchor = $(this);
-			$('html, body').stop().animate({
-				scrollTop: $(anchor.attr('href')).offset().top
-			}, 1000);
+			var href = anchor.attr('href');
+
+			// Skip bare "#" and modal triggers (handled elsewhere); only act on
+			// links that resolve to a real section target.
+			if (!href || href === '#' || href.length < 2) {
+				return;
+			}
+			var target = $(href);
+			if (!target.length) {
+				return;
+			}
+
 			e.preventDefault();
+
+			// Prefer Lenis when active so the scroll matches the wheel feel;
+			// fall back to jQuery animation when Lenis is off (reduced motion).
+			if (window.lenis) {
+				window.lenis.scrollTo(target[0], { offset: -70 });
+			} else {
+				$('html, body').stop().animate({
+					scrollTop: target.offset().top - 70
+				}, 1000);
+			}
 		});
 
 		$(window).scroll(function() {
