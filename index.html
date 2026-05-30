@@ -17,7 +17,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Dr. Ahmad Raza Khan",
-  "jobTitle": "Associate Professor",
+  "jobTitle": "Professor of Cybersecurity",
   "affiliation": "Majmaah University",
   "url": "https://www.connectingahmad.info",
   "sameAs": [
@@ -37,7 +37,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="https://www.connectingahmad.info/favicon.ico">
 
-    <title>Dr. Ahmad Raza Khan | Associate Professor </title>
+    <title>Dr. Ahmad Raza Khan | Professor of Cybersecurity · Majmaah University</title>
 
     <!-- progress bar loading -->
     <script async="" src="js/analytics.js"></script>
@@ -135,11 +135,9 @@
 
         .follow-me-buttons a:hover {
             background-color: #00246B;
-            /* Keep the existing hover color */
-            transform: scale(1.1);
-            /* Slightly increase the size */
-            box-shadow: 0 0 10px 2px rgba(64, 142, 198, 0.5);
-            /* Brand blue glow — Cybersea Blue */
+            /* Deeper brand blue on hover */
+            transform: scale(1.05);
+            /* Gentle lift, no glow */
         }
 
         .follow-me-buttons a i {
@@ -372,7 +370,7 @@
                 <script>
                 (function () {
                     var messages = [
-                        "Associate Professor",
+                        "Associate Professor, Majmaah University",
                         "AWS Certified Solutions Architect, Associate",
                         "Certified Ethical Hacker (CEH), EC-Council",
                         "Computer Hacking Forensic Investigator (CHFI), EC-Council",
@@ -562,11 +560,6 @@
         .navbar-custom .navbar-nav>li>a:hover,
         .navbar-custom .navbar-nav>li.active>a {
             color: #fff;
-            transform: translateY(-2px);
-        }
-
-        .navbar-custom .navbar-nav>li.active>a {
-            box-shadow: 0 4px 15px rgba(64, 142, 198, 0.2);
         }
 
         .navbar-custom .navbar-toggle {
@@ -612,24 +605,7 @@
             }
         }
 
-        /* Add a subtle animation for the active menu item */
-        @keyframes activeGlow {
-            0% {
-                box-shadow: 0 4px 15px rgba(64, 142, 198, 0.2);
-            }
-
-            50% {
-                box-shadow: 0 4px 20px rgba(64, 142, 198, 0.4);
-            }
-
-            100% {
-                box-shadow: 0 4px 15px rgba(64, 142, 198, 0.2);
-            }
-        }
-
-        .navbar-custom .navbar-nav>li.active>a {
-            animation: activeGlow 2s infinite;
-        }
+        /* Active menu item rests in the brand pill fill, no pulsing glow. */
 
         /* --- MOBILE MENU FIX: Stack all menu items vertically and show all --- */
         @media (max-width: 768px) {
