@@ -1071,7 +1071,7 @@
                 <div id="cloudModal" class="modal" role="dialog" aria-modal="true"
                     style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
                     <div
-                        style="background:#fff; margin:10% auto; padding:20px; border-radius:8px; width:80%; max-width:900px; position:relative;">
+                        style="background:#fff; margin:5vh auto; padding:20px; border-radius:8px; width:80%; max-width:900px; position:relative; max-height:90vh; overflow-y:auto;">
                         <span id="closeModal"
                             style="position:absolute; top:10px; right:20px; font-size:24px; cursor:pointer;">&times;</span>
 
@@ -1174,7 +1174,7 @@
             <div id="mlModal" class="modal" role="dialog" aria-modal="true"
                 style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
                 <div
-                    style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+                    style="background:#fff; margin:5vh auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative; max-height:90vh; overflow-y:auto;">
                     <span id="closeMlModal"
                         style="position:absolute; top:20px; right:25px; font-size:28px; color:#555; cursor:pointer;">&times;</span>
 
@@ -1284,7 +1284,7 @@
         <div id="aiModal" class="modal" role="dialog" aria-modal="true"
             style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
             <div
-                style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+                style="background:#fff; margin:5vh auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative; max-height:90vh; overflow-y:auto;">
                 <span id="closeAiModal"
                     style="position:absolute; top:20px; right:25px; font-size:28px; color:#555; cursor:pointer;">&times;</span>
 
@@ -1460,7 +1460,7 @@
         <div id="dataAnalysisModal" class="modal" role="dialog" aria-modal="true"
             style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
             <div
-                style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+                style="background:#fff; margin:5vh auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative; max-height:90vh; overflow-y:auto;">
                 <span id="closeDataModal"
                     style="position:absolute; top:20px; right:25px; font-size:28px; color:#555; cursor:pointer;">&times;</span>
 
@@ -1611,7 +1611,7 @@
         <div id="cyberSecurityModal" class="modal" role="dialog" aria-modal="true"
             style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
             <div
-                style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+                style="background:#fff; margin:5vh auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative; max-height:90vh; overflow-y:auto;">
                 <span id="closeCyberModal" onclick="closeCyberModal()"
                     style="position:absolute; top:20px; right:25px; font-size:28px; color:#555; cursor:pointer;">&times;</span>
 
@@ -4520,6 +4520,14 @@
             });
             window.lenis = lenis;
 
+            // Allow native mouse-wheel scrolling inside overlay scroll containers.
+            // Lenis intercepts wheel events globally (even while stopped), so the
+            // popup scrollbar previously only responded to dragging. data-lenis-prevent
+            // tells Lenis to ignore wheel events originating inside these boxes.
+            document.querySelectorAll('.modal > div, .popup .popup-content').forEach(function (el) {
+                el.setAttribute('data-lenis-prevent', '');
+            });
+
             function raf(time) {
                 lenis.raf(time);
                 requestAnimationFrame(raf);
@@ -4614,7 +4622,7 @@
     <div id="administrativeModal" class="modal" role="dialog" aria-modal="true"
         style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
         <div
-            style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+            style="background:#fff; margin:5vh auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative; max-height:90vh; overflow-y:auto;">
             <span id="closeAdminModal"
                 style="position:absolute; top:20px; right:25px; font-size:28px; color:#555; cursor:pointer;">&times;</span>
 
@@ -4688,7 +4696,7 @@
     <div id="consultationModal" class="modal" role="dialog" aria-modal="true"
         style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
         <div
-            style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+            style="background:#fff; margin:5vh auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative; max-height:90vh; overflow-y:auto;">
             <span id="closeConsultModal"
                 style="position:absolute; top:20px; right:25px; font-size:28px; color:#555; cursor:pointer;">&times;</span>
 
@@ -4763,7 +4771,7 @@
     <div id="professionalModal" class="modal" role="dialog" aria-modal="true"
         style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
         <div
-            style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+            style="background:#fff; margin:5vh auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative; max-height:90vh; overflow-y:auto;">
             <span id="closeProfModal"
                 style="position:absolute; top:20px; right:25px; font-size:28px; color:#555; cursor:pointer;">&times;</span>
 
@@ -4844,7 +4852,7 @@
     <div id="workshopsModal" class="modal" role="dialog" aria-modal="true"
         style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
         <div
-            style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+            style="background:#fff; margin:5vh auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative; max-height:90vh; overflow-y:auto;">
             <span id="closeWorkshopsModal"
                 style="position:absolute; top:20px; right:25px; font-size:28px; color:#555; cursor:pointer;">&times;</span>
 
@@ -4920,7 +4928,7 @@
     <div id="innovationModal" class="modal" role="dialog" aria-modal="true"
         style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5);">
         <div
-            style="background:#fff; margin:10% auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative;">
+            style="background:#fff; margin:5vh auto; padding:30px; border-radius:12px; width:80%; max-width:900px; position:relative; max-height:90vh; overflow-y:auto;">
             <span id="closeInnovationModal"
                 style="position:absolute; top:20px; right:25px; font-size:28px; color:#555; cursor:pointer;">&times;</span>
 
