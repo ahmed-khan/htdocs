@@ -131,6 +131,71 @@ ol.custom-ol {
 	font-weight: normal;
 }
 
+.reviewer-certificates {
+	margin-top: 34px;
+}
+
+.reviewer-certificates-title {
+	margin: 0 0 22px;
+	color: #222;
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.reviewer-certificates-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.reviewer-certificate-card {
+	display: block;
+	background: #fff;
+	border: 1px solid #e6edf3;
+	border-radius: 6px;
+	box-shadow: 0 8px 24px rgba(0, 36, 107, 0.08);
+	overflow: hidden;
+	transition: transform 0.125s ease-in-out, box-shadow 0.125s ease-in-out;
+}
+
+.reviewer-certificate-card:hover,
+.reviewer-certificate-card:focus {
+	transform: translateY(-3px);
+	box-shadow: 0 12px 30px rgba(0, 36, 107, 0.14);
+}
+
+.reviewer-certificate-card img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 7 / 9;
+	object-fit: cover;
+	object-position: top center;
+	background: #f4f7fa;
+}
+
+.reviewer-certificate-card span {
+	display: block;
+	padding: 12px 14px;
+	color: #222;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.35;
+	text-align: center;
+}
+
+@media (max-width: 767px) {
+	.reviewer-certificates-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.reviewer-certificates-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
 
 /* ---------------------------------------------- /*
  * Transition elsements
@@ -1221,4 +1286,3 @@ figure.effect-bubba:hover p {
     margin-bottom: 0;
   }
 }
-
