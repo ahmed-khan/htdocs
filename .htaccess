@@ -1,0 +1,55 @@
+# ============================================================
+#  Performance: compression + caching  (Apache / Amazon Lightsail)
+#  Safe to drop in your site's web root (next to index.html).
+# ============================================================
+
+# ---------- 1. Brotli compression (preferred) ----------
+# Requires mod_brotli (Apache 2.4.26+, included in the Bitnami stack).
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/xml \
+    text/javascript application/javascript application/x-javascript \
+    application/json application/ld+json application/xml \
+    application/rss+xml image/svg+xml application/manifest+json
+</IfModule>
+
+# ---------- 2. Gzip fallback (for clients without Brotli) ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml \
+    text/javascript application/javascript application/x-javascript \
+    application/json application/ld+json application/xml \
+    application/rss+xml image/svg+xml application/manifest+json
+</IfModule>
+
+# ---------- 3. Cache-Control (fixes "efficient cache lifetimes") ----------
+<IfModule mod_headers.c>
+  # Fingerprint-free static assets: cache 1 year, immutable.
+  <FilesMatch "\.(avif|webp|jpg|jpeg|png|gif|ico|svg|woff2|woff|ttf|eot|css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # HTML must stay fresh so content updates show immediately.
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # PDFs (certificates): cache 30 days.
+  <FilesMatch "\.pdf$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+# ---------- 4. Expires headers (belt-and-suspenders for #3) ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/avif              "access plus 1 year"
+  ExpiresByType image/webp              "access plus 1 year"
+  ExpiresByType image/png               "access plus 1 year"
+  ExpiresByType image/jpeg              "access plus 1 year"
+  ExpiresByType image/svg+xml           "access plus 1 year"
+  ExpiresByType image/x-icon            "access plus 1 year"
+  ExpiresByType text/css                "access plus 1 year"
+  ExpiresByType application/javascript  "access plus 1 year"
+  ExpiresByType font/woff2              "access plus 1 year"
+  ExpiresByType application/pdf         "access plus 1 month"
+  ExpiresByType text/html               "access plus 0 seconds"
+</IfModule>
