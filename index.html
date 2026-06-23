@@ -2,13 +2,27 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YJ8NMMHMS"></script>
+    <!-- Google tag (gtag.js) — loaded after first interaction / idle to reduce blocking time -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-2YJ8NMMHMS');
+        (function () {
+            var started = false;
+            function loadGA() {
+                if (started) return; started = true;
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2YJ8NMMHMS';
+                document.head.appendChild(s);
+                gtag('js', new Date());
+                gtag('config', 'G-2YJ8NMMHMS');
+            }
+            ['scroll', 'pointerdown', 'keydown', 'touchstart', 'mousemove'].forEach(function (e) {
+                window.addEventListener(e, loadGA, { once: true, passive: true });
+            });
+            // Fallback so analytics still fires for users who don't interact
+            setTimeout(loadGA, 4000);
+        })();
     </script>
 
     <script type="application/ld+json">
@@ -37,17 +51,17 @@
 
     <title>Dr. Ahmad Raza Khan | Associate Professor</title>
 
-    <!-- Fonts -->
+    <!-- Fonts — loaded without blocking render (display=swap shows text immediately, then swaps) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Icons (local) -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
-    <!-- Font Awesome 4.7 from CDN: provides fa-id-badge (ORCID), fa-amazon, and
-         fa-calendar-check-o, which the local 4.3 copy lacks. Local copy above
-         remains as an offline fallback. -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <!-- Icons — Font Awesome 4.7 (single copy; superset of all fa-* icons used, incl. fa-id-badge / fa-amazon / fa-calendar-check-o). Loaded non-render-blocking. -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"></noscript>
 
     <style>
         /* ============================================================
@@ -3056,32 +3070,45 @@
     })();
     </script>
 
-    <!-- Jotform Chatbot -->
-    <script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>
+    <!-- Jotform Chatbot — loaded on first interaction / idle to cut blocking time (behavior unchanged) -->
     <script>
-        window.addEventListener("DOMContentLoaded", function () {
-            window.AgentInitializer.init({
-                agentRenderURL: "https://agent.jotform.com/01967c3b53da7b70a46b1d88d7ccb3fe8d50",
-                rootId: "JotformAgent-01967c3b53da7b70a46b1d88d7ccb3fe8d50",
-                formID: "01967c3b53da7b70a46b1d88d7ccb3fe8d50",
-                queryParams: ["skipWelcome=1", "maximizable=1"],
-                domain: "https://www.jotform.com",
-                isDraggable: false,
-                background: "linear-gradient(180deg, #6C73A8 0%, #6C73A8 100%)",
-                buttonBackgroundColor: "#408EC6",
-                buttonIconColor: "#FFFFFF",
-                variant: false,
-                customizations: {
-                    "greeting": "Yes",
-                    "greetingMessage": "Hi! How can I assist you?",
-                    "openByDefault": "No",
-                    "pulse": "Yes",
-                    "position": "right",
-                    "autoOpenChatIn": "0"
-                },
-                isVoice: false,
+        (function () {
+            var started = false;
+            function loadJotformAgent() {
+                if (started) return; started = true;
+                var s = document.createElement('script');
+                s.src = 'https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js';
+                s.onload = function () {
+                    window.AgentInitializer.init({
+                        agentRenderURL: "https://agent.jotform.com/01967c3b53da7b70a46b1d88d7ccb3fe8d50",
+                        rootId: "JotformAgent-01967c3b53da7b70a46b1d88d7ccb3fe8d50",
+                        formID: "01967c3b53da7b70a46b1d88d7ccb3fe8d50",
+                        queryParams: ["skipWelcome=1", "maximizable=1"],
+                        domain: "https://www.jotform.com",
+                        isDraggable: false,
+                        background: "linear-gradient(180deg, #6C73A8 0%, #6C73A8 100%)",
+                        buttonBackgroundColor: "#408EC6",
+                        buttonIconColor: "#FFFFFF",
+                        variant: false,
+                        customizations: {
+                            "greeting": "Yes",
+                            "greetingMessage": "Hi! How can I assist you?",
+                            "openByDefault": "No",
+                            "pulse": "Yes",
+                            "position": "right",
+                            "autoOpenChatIn": "0"
+                        },
+                        isVoice: false,
+                    });
+                };
+                document.body.appendChild(s);
+            }
+            ['pointerdown', 'touchstart', 'keydown', 'scroll', 'mousemove'].forEach(function (e) {
+                window.addEventListener(e, loadJotformAgent, { once: true, passive: true });
             });
-        });
+            // Fallback so the assistant still appears without any interaction
+            setTimeout(loadJotformAgent, 4500);
+        })();
     </script>
 
 </body>
