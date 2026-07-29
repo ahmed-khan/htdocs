@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* Self-hosted fonts (no Google Fonts CDN). Inter is the site-wide sans-serif;
    Lobster is the decorative navbar brand. Inter is a variable font, so a single
    file covers every weight via the wght axis. */
@@ -27,6 +28,11 @@
 :root {
 	--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
+=======
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+>>>>>>> Stashed changes
 /* TODO: Compress large background images (cover.png, item-3.jpg, etc.) for faster loading */
 
 /*!
@@ -37,17 +43,30 @@
 */
 
 body {
+<<<<<<< Updated upstream
 	font: 400 16px/1.8 var(--font-sans);
+=======
+	font: 400 16px/1.8 'Raleway', sans-serif;
+>>>>>>> Stashed changes
 	color: #444;
 	overflow-x: hidden;
 }
 
+<<<<<<< Updated upstream
 /* Headings use the same Inter sans-serif as the body for a clean, uniform,
    fully sans-serif hierarchy (weight/size carry the contrast).
    Navbar brand (Lobster) keeps its own decorative family. */
 h1, h2, h3, h4,
 .pfblock-title {
 	font-family: var(--font-sans);
+=======
+/* Serif display headings for editorial, journal-grade hierarchy.
+   Pairs against the Raleway humanist sans on a serif/sans contrast axis.
+   Navbar brand (Lobster) and flip-card titles keep their own families. */
+h1, h2, h3, h4,
+.pfblock-title {
+	font-family: 'Spectral', Georgia, 'Times New Roman', serif;
+>>>>>>> Stashed changes
 	text-wrap: balance;
 }
 
