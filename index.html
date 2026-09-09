@@ -684,6 +684,30 @@
             50%      { box-shadow: 0 6px 16px -6px rgba(46,127,192,.6), 0 0 0 8px rgba(46,127,192,0); }
         }
         @media (prefers-reduced-motion: reduce) { .pub-video-link { animation: none; } }
+        /* inline "Audio Overview" trigger — teal variant to differentiate from video */
+        .pub-audio-link {
+            display: inline-flex; align-items: center; gap: 6px; vertical-align: middle;
+            margin-left: 8px; padding: 4px 13px; border: 0; border-radius: 999px; cursor: pointer;
+            font-family: var(--font-mono, inherit); font-weight: 700; font-size: 12px;
+            letter-spacing: .03em; text-transform: uppercase; color: #fff;
+            background: linear-gradient(135deg, #3fa6a0 0%, #2e7fc0 100%);
+            box-shadow: 0 6px 16px -6px rgba(63,166,160,.7);
+            animation: audioPulse 2.2s ease-in-out infinite;
+            transition: transform .2s var(--ease-out), box-shadow .2s var(--ease-out), filter .2s;
+        }
+        .pub-audio-link:hover {
+            transform: translateY(-1px) scale(1.05); filter: saturate(1.15);
+            box-shadow: 0 10px 24px -6px rgba(46,127,192,.85);
+            animation-play-state: paused;
+        }
+        .pub-audio-link:focus-visible { outline: 2px solid var(--accent-deep); outline-offset: 2px; }
+        .pub-audio-link i { margin: 0; font-size: 14px; }
+        @keyframes audioPulse {
+            0%, 100% { box-shadow: 0 6px 16px -6px rgba(63,166,160,.6), 0 0 0 0 rgba(63,166,160,.5); }
+            50%      { box-shadow: 0 6px 16px -6px rgba(63,166,160,.6), 0 0 0 8px rgba(63,166,160,0); }
+        }
+        .modal-audio { width: 100%; margin-top: 6px; }
+        @media (prefers-reduced-motion: reduce) { .pub-audio-link { animation: none; } }
         .modal-video { width: 100%; border-radius: 16px; background: #000; box-shadow: 0 20px 50px -20px rgba(8,25,50,.5); display: block; }
 
         /* ============================================================
@@ -1063,7 +1087,7 @@
             <ol class="pub-list">
                 <li class="pub-item rv" style="--d:0.06s">
                     <span class="pub-num">01</span>
-                    <div class="pub-text"><span>Sunil Kumar Sharma, Ahmad Raza Khan, Ghanshyam G. Tejani, David Bassir, Sujan Tripathi, <a href="https://doi.org/10.1371/journal.pdig.0001158" target="_blank" rel="noopener noreferrer">"MultiMindNet: AI-based mental health analysis using hybrid deep learning approach and Hybrid Ant-Grey Wolf Optimization (HAGWO) algorithm"</a>, PLOS Digital Health, Vol. 5, No. 4, April 2026, <a href="https://doi.org/10.1371/journal.pdig.0001158" target="_blank" rel="noopener noreferrer">https://doi.org/10.1371/journal.pdig.0001158</a> <b>[SCI / Scopus]</b> <button type="button" class="pub-video-link" data-modal="videoMultiMindNet" aria-label="Watch video overview of MultiMindNet"><i class="fa fa-play-circle"></i>[Video Overview]</button></span></div>
+                    <div class="pub-text"><span>Sunil Kumar Sharma, Ahmad Raza Khan, Ghanshyam G. Tejani, David Bassir, Sujan Tripathi, <a href="https://doi.org/10.1371/journal.pdig.0001158" target="_blank" rel="noopener noreferrer">"MultiMindNet: AI-based mental health analysis using hybrid deep learning approach and Hybrid Ant-Grey Wolf Optimization (HAGWO) algorithm"</a>, PLOS Digital Health, Vol. 5, No. 4, April 2026, <a href="https://doi.org/10.1371/journal.pdig.0001158" target="_blank" rel="noopener noreferrer">https://doi.org/10.1371/journal.pdig.0001158</a> <b>[SCI / Scopus]</b> <button type="button" class="pub-video-link" data-modal="videoMultiMindNet" aria-label="Watch video overview of MultiMindNet"><i class="fa fa-play-circle"></i>[Video Overview]</button> <button type="button" class="pub-audio-link" data-modal="audioMultiMindNet" aria-label="Listen to audio overview of MultiMindNet"><i class="fa fa-headphones"></i>[Audio Overview]</button></span></div>
                 </li>
                 <li class="pub-item rv" style="--d:0.12s">
                     <span class="pub-num">02</span>
@@ -2863,6 +2887,21 @@
     </div>
 
     <!-- ============ SCRIPTS ============ -->
+    <!-- Audio Overview modal — MultiMindNet paper -->
+    <div id="audioMultiMindNet" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-card" data-lenis-prevent tabindex="-1" style="width:min(560px,100%);">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-body">
+                <h2>Audio Overview</h2>
+                <p>AI psychiatric diagnosis in sixty seconds — an audio overview of MultiMindNet: AI-based mental health analysis using a hybrid deep learning approach and the Hybrid Ant-Grey Wolf Optimization (HAGWO) algorithm.</p>
+                <audio class="modal-audio" controls preload="metadata">
+                    <source src="audio/MultiMindNet-Audio-Overview-v2.m4a" type="audio/mp4">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+
     <!-- Video Overview modal — MultiMindNet paper (placed with the other modals so it is wired before the script runs) -->
     <div id="videoMultiMindNet" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="modal-card" data-lenis-prevent tabindex="-1" style="width:min(920px,100%);">
@@ -3215,7 +3254,7 @@
         }
         function closeModal() {
             if (!openModalEl) return;
-            openModalEl.querySelectorAll('video').forEach(function (v) { v.pause(); });
+            openModalEl.querySelectorAll('video, audio').forEach(function (v) { v.pause(); });
             openModalEl.classList.remove('open');
             openModalEl.setAttribute('aria-hidden', 'true');
             openModalEl = null;
