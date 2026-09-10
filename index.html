@@ -793,6 +793,9 @@
             .modal-card { max-height: 92vh; padding: 28px 18px; border-radius: 22px 22px 0 0; width: 100%; }
             .modal-close { margin: -12px -6px 0 0; width: 40px; height: 40px; }
             .modal-body h2 { font-size: 24px; padding-right: 40px; }
+            /* Video/Audio overview popups centered on mobile (not bottom-sheet) */
+            .modal[id^="video"], .modal[id^="audio"] { align-items: center; padding: 16px; }
+            .modal[id^="video"] .modal-card, .modal[id^="audio"] .modal-card { border-radius: 22px; }
         }
 
         @media (max-width: 520px) {
