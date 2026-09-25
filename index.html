@@ -291,6 +291,34 @@
         }
         .stat:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
         .stat { border-top: 3px solid var(--accent); }
+        /* Animated icon above each stat number */
+        .stat-anim { display: block; width: 44px; height: 44px; margin-bottom: 8px; color: var(--accent); }
+        .stat-anim svg { width: 100%; height: 100%; display: block; overflow: visible; }
+        .hero-stats .stat:nth-child(2) .stat-anim { color: var(--violet); }
+        .hero-stats .stat:nth-child(3) .stat-anim { color: var(--teal); }
+        .hero-stats .stat:nth-child(4) .stat-anim { color: var(--peach); }
+        .hero-stats .stat:nth-child(5) .stat-anim { color: var(--rose); }
+        .stat-anim [class^="an-"], .stat-anim [class*=" an-"] { transform-box: fill-box; }
+        .an-float { animation: anFloat 3.2s ease-in-out infinite; transform-origin: center; }
+        .an-twinkle { animation: anTwinkle 2.2s ease-in-out infinite; transform-origin: center; }
+        .an-draw { stroke-dasharray: 40; animation: anDraw 3.4s ease-in-out infinite; }
+        .an-l2 { animation-delay: .25s; } .an-l3 { animation-delay: .5s; }
+        .an-bars > * { transform-origin: bottom; }
+        .an-b1 { animation: anBar 2.4s ease-in-out infinite; }
+        .an-b2 { animation: anBar 2.4s ease-in-out infinite .3s; }
+        .an-b3 { animation: anBar 2.4s ease-in-out infinite .6s; }
+        .an-check { stroke-dasharray: 26; animation: anCheck 3s ease-in-out infinite; }
+        .an-rays { animation: anRays 2s ease-in-out infinite; transform-origin: center; }
+        @keyframes anFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
+        @keyframes anTwinkle { 0%,100% { opacity: .55; transform: scale(.88); } 50% { opacity: 1; transform: scale(1.1); } }
+        @keyframes anDraw { 0% { stroke-dashoffset: 40; } 45%,100% { stroke-dashoffset: 0; } }
+        @keyframes anBar { 0%,100% { transform: scaleY(.55); } 50% { transform: scaleY(1); } }
+        @keyframes anCheck { 0% { stroke-dashoffset: 26; } 45%,100% { stroke-dashoffset: 0; } }
+        @keyframes anRays { 0%,100% { opacity: .3; } 50% { opacity: 1; } }
+        @media (prefers-reduced-motion: reduce) {
+            .an-float, .an-twinkle, .an-draw, .an-b1, .an-b2, .an-b3, .an-check, .an-rays { animation: none; }
+            .an-draw, .an-check { stroke-dashoffset: 0; }
+        }
         .hero-stats .stat:nth-child(2) { border-top-color: var(--violet); }
         .hero-stats .stat:nth-child(3) { border-top-color: var(--teal); }
         .hero-stats .stat:nth-child(4) { border-top-color: var(--peach); }
@@ -890,11 +918,11 @@
                     <a class="btn-glass" href="#contact"><i class="fa fa-paper-plane"></i> Get in Touch</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat glass rv" style="--d:.38s"><b data-count="196">0</b><span>Certifications</span></div>
-                    <div class="stat glass rv" style="--d:.46s"><b data-count="22">0</b><span>Journal Papers</span></div>
-                    <div class="stat glass rv" style="--d:.54s"><b data-count="9">0</b><span>Conference Papers</span></div>
-                    <div class="stat glass rv" style="--d:.62s"><b data-count="16">0</b><span>Journals Reviewed</span></div>
-                    <div class="stat glass rv" style="--d:.70s"><b data-count="1">0</b><span>US Patent</span></div>
+                    <div class="stat glass rv" style="--d:.38s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g class="an-float"><circle cx="24" cy="17" r="10"/><path d="M24 12.5l1.7 3.4 3.8.6-2.75 2.65.65 3.75L24 21.1l-3.35 1.75.65-3.75L18.5 16.5l3.8-.6z" fill="currentColor" stroke="none" class="an-twinkle"/></g><path d="M17.5 26l-2.5 11 9-4 9 4-2.5-11"/></svg></span><b data-count="196">0</b><span>Certifications</span></div>
+                    <div class="stat glass rv" style="--d:.46s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g class="an-float"><path d="M14 8h13l7 7v25H14z"/><path d="M27 8v7h7"/></g><path class="an-draw an-l1" d="M18 22h12"/><path class="an-draw an-l2" d="M18 28h12"/><path class="an-draw an-l3" d="M18 34h8"/></svg></span><b data-count="22">0</b><span>Journal Papers</span></div>
+                    <div class="stat glass rv" style="--d:.54s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="9" width="32" height="22" rx="2"/><path d="M24 31v6M17 41h14"/><g class="an-bars"><path class="an-b1" d="M16 25v-3"/><path class="an-b2" d="M24 25v-9"/><path class="an-b3" d="M32 25v-6"/></g></svg></span><b data-count="9">0</b><span>Conference Papers</span></div>
+                    <div class="stat glass rv" style="--d:.62s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="10" width="26" height="30" rx="2"/><path d="M19 8h10v5H19z"/><path class="an-check" d="M17.5 25l4.2 4.2L30.5 20"/></svg></span><b data-count="16">0</b><span>Journals Reviewed</span></div>
+                    <div class="stat glass rv" style="--d:.70s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 7a11 11 0 0 0-6.5 19.9c1.3 1 2 2.2 2.2 3.6h8.6c.2-1.4.9-2.6 2.2-3.6A11 11 0 0 0 24 7z"/><path d="M20 34.5h8M21.5 38.5h5"/><g class="an-rays"><path d="M24 1.5v2.5"/><path d="M8.5 10l1.8 1.6"/><path d="M39.5 10l-1.8 1.6"/></g></svg></span><b data-count="1">0</b><span>US Patent</span></div>
                 </div>
             </div>
         </div>
