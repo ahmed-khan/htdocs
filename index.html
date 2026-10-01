@@ -557,6 +557,27 @@
         .cert-toggle-wrap { text-align: center; margin-top: 40px; }
         #certs-extended { display: none; }
         #certs-extended.open { display: block; animation: fadeup .8s var(--ease-out); }
+        /* ---------- certificate filters ---------- */
+        .cert-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px; margin: 30px 0 4px; }
+        .cert-filters .cf-field { display: flex; flex-direction: column; gap: 5px; }
+        .cert-filters label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+        .cert-filters select {
+            font: inherit; font-size: 14.5px; color: var(--ink); min-width: 210px; cursor: pointer;
+            padding: 11px 40px 11px 15px; border-radius: 14px; border: 1px solid rgba(11,57,105,.16);
+            background: rgba(255,255,255,.72) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%236b7a8d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M1 1.5l5 5 5-5'/></svg>") no-repeat right 15px center;
+            -webkit-appearance: none; appearance: none; transition: border-color .2s, box-shadow .2s;
+        }
+        .cert-filters select:hover { border-color: var(--accent); }
+        .cert-filters select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(46,127,192,.15); }
+        .cert-count { margin-left: auto; align-self: center; font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+        .cert-count b { color: var(--accent); font-size: 15px; }
+        .cert-reset { background: none; border: 0; padding: 0; cursor: pointer; font: inherit; font-size: 13px; color: var(--accent); text-decoration: underline; align-self: center; }
+        .cert-empty { display: none; text-align: center; color: var(--muted); font-size: 15px; padding: 34px 0; }
+        @media (max-width: 640px) {
+            .cert-filters .cf-field { flex: 1 1 100%; }
+            .cert-filters select { width: 100%; min-width: 0; }
+            .cert-count { margin-left: 0; flex: 1 1 100%; }
+        }
         @keyframes fadeup { from { opacity: 0; transform: translateY(26px);} to { opacity: 1; transform: none;} }
 
         /* ---------- reviewer ---------- */
@@ -1262,6 +1283,21 @@
             <p class="lede rv" style="--d:.12s">Examination-based professional credentials in cybersecurity, cloud
                 architecture, and penetration testing. 196 certifications in total, spanning Cloud Computing, Machine
                 Learning, AI, and Data Analysis. Click any certificate to verify it.</p>
+
+            <div class="cert-filters rv" style="--d:.16s">
+                <div class="cf-field">
+                    <label for="cf-org">Organization</label>
+                    <select id="cf-org" aria-label="Filter by organization"><option value="">All organizations</option></select>
+                </div>
+                <div class="cf-field">
+                    <label for="cf-skill">Skill</label>
+                    <select id="cf-skill" aria-label="Filter by skill"><option value="">All skills</option></select>
+                </div>
+                <span class="cert-count" id="cf-count" aria-live="polite"></span>
+                <button type="button" class="cert-reset" id="cf-reset" hidden>Reset filters</button>
+            </div>
+
+            <p class="cert-empty" id="cf-empty">No certificates match these filters. <button type="button" class="cert-reset cf-clear">Clear filters</button></p>
 
             <div class="cert-grid">
                 <a class="cert-card rv" style="--d:0.00s" href="/Certifications/ECC-CEH-Certificate-2.pdf" target="_blank" rel="noopener noreferrer">
@@ -3649,6 +3685,65 @@
                     submitBtn.innerHTML = '<i class="fa fa-paper-plane"></i> Send Message';
                 });
         });
+    })();
+    </script>
+
+    <!-- Certificate filters (organization + skill) -->
+    <script>
+    window.CERT_META=[{"o":"EC-Council","s":["Cybersecurity"]},{"o":"EC-Council","s":["Cybersecurity"]},{"o":"EC-Council","s":["Cybersecurity"]},{"o":"AWS","s":["Cloud Computing"]},{"o":"AWS","s":["Cloud Computing"]},{"o":"TryHackMe","s":["Cybersecurity"]},{"o":"TryHackMe","s":["Cybersecurity"]},{"o":"TryHackMe","s":["Cybersecurity"]},{"o":"TryHackMe","s":["Cybersecurity"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"Udemy","s":["Cybersecurity"]},{"o":"Microsoft","s":["Machine Learning","Cloud Computing"]},{"o":"Google","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"AWS","s":["Cloud Computing"]},{"o":"Coursera","s":["Cloud Computing"]},{"o":"Coursera","s":["Data Science & Analytics"]},{"o":"Coursera","s":["Design Thinking & Innovation"]},{"o":"Coursera","s":["Data Science & Analytics"]},{"o":"Coursera","s":["Software Development"]},{"o":"Coursera","s":["Software Development"]},{"o":"Coursera","s":["Professional Development"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"Coursera","s":["Data Science & Analytics","Cybersecurity","Software Development"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"Microsoft","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"Microsoft","s":["Artificial Intelligence"]},{"o":"Microsoft","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"NVIDIA","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"Google","s":["Cybersecurity"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence","Leadership & Management"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence","Leadership & Management"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence","Leadership & Management"]},{"o":"IBM","s":["Professional Development"]},{"o":"Coursera","s":["Product Management"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence","Leadership & Management"]},{"o":"IBM","s":["Professional Development"]},{"o":"IBM","s":["Software Development"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"Microsoft","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Business Analysis"]},{"o":"LinkedIn Learning","s":["Digital Transformation"]},{"o":"IBM","s":["Artificial Intelligence"]},{"o":"IBM","s":["Cybersecurity"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Digital Transformation"]},{"o":"LinkedIn Learning","s":["Leadership & Management"]},{"o":"LinkedIn Learning","s":["Leadership & Management"]},{"o":"LinkedIn Learning","s":["Leadership & Management"]},{"o":"Other","s":["Research & Academic Writing"]},{"o":"LinkedIn Learning","s":["Leadership & Management","Digital Transformation"]},{"o":"LinkedIn Learning","s":["Leadership & Management"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["IoT"]},{"o":"LinkedIn Learning","s":["Cloud Computing"]},{"o":"LinkedIn Learning","s":["Quantum Computing"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Product Management"]},{"o":"Coursera","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Blockchain"]},{"o":"LinkedIn Learning","s":["Cloud Computing"]},{"o":"Simplilearn","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["IoT"]},{"o":"LinkedIn Learning","s":["IoT"]},{"o":"Simplilearn","s":["Artificial Intelligence"]},{"o":"LinkedIn Learning","s":["Project Management"]},{"o":"Databricks","s":["Machine Learning","Data Science & Analytics"]},{"o":"LinkedIn Learning","s":["Leadership & Management"]},{"o":"LinkedIn Learning","s":["Project Management"]},{"o":"LinkedIn Learning","s":["Design Thinking & Innovation"]},{"o":"LinkedIn Learning","s":["Project Management"]},{"o":"LinkedIn Learning","s":["Design Thinking & Innovation"]},{"o":"LinkedIn Learning","s":["Cybersecurity"]},{"o":"LinkedIn Learning","s":["Design Thinking & Innovation"]},{"o":"LinkedIn Learning","s":["Design Thinking & Innovation"]},{"o":"LinkedIn Learning","s":["Design Thinking & Innovation"]},{"o":"LinkedIn Learning","s":["Design Thinking & Innovation"]},{"o":"LinkedIn Learning","s":["Design Thinking & Innovation"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence","Digital Transformation"]},{"o":"LinkedIn Learning","s":["Digital Transformation"]},{"o":"Coursera","s":["Product Management"]},{"o":"Coursera","s":["Product Management"]},{"o":"Microsoft","s":["Artificial Intelligence","Leadership & Management","Product Management"]},{"o":"Coursera","s":["Software Development"]},{"o":"Coursera","s":["Data Science & Analytics"]},{"o":"Google","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Software Development"]},{"o":"Coursera","s":["Data Science & Analytics"]},{"o":"Coursera","s":["Data Science & Analytics"]},{"o":"Coursera","s":["Machine Learning","Data Science & Analytics"]},{"o":"Coursera","s":["Machine Learning"]},{"o":"Google","s":["Data Science & Analytics"]},{"o":"Google","s":["Data Science & Analytics"]},{"o":"Coursera","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Software Development"]},{"o":"Coursera","s":["Data Science & Analytics"]},{"o":"Coursera","s":["Data Science & Analytics"]},{"o":"Coursera","s":["Artificial Intelligence","Data Science & Analytics"]},{"o":"Coursera","s":["Data Science & Analytics"]},{"o":"Coursera","s":["Data Science & Analytics"]},{"o":"Coursera","s":["Project Management"]},{"o":"Coursera","s":["Project Management"]},{"o":"Coursera","s":["Project Management"]},{"o":"Coursera","s":["Digital Transformation"]},{"o":"Coursera","s":["Digital Transformation"]},{"o":"Coursera","s":["Digital Transformation"]},{"o":"Coursera","s":["Digital Transformation"]},{"o":"Google","s":["Artificial Intelligence","Cloud Computing"]},{"o":"Other","s":["Leadership & Management"]},{"o":"AWS","s":["Cloud Computing"]},{"o":"Coursera","s":["Cloud Computing"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"Forage","s":["Business Analysis"]},{"o":"Forage","s":["Cybersecurity"]},{"o":"Forage","s":["Cybersecurity"]},{"o":"Microsoft","s":["Cybersecurity","Cloud Computing"]},{"o":"Microsoft","s":["Cybersecurity"]},{"o":"Coursera","s":["Project Management"]},{"o":"Coursera","s":["Project Management"]},{"o":"Google","s":["Project Management"]},{"o":"Coursera","s":["Leadership & Management"]},{"o":"Coursera","s":["Leadership & Management"]},{"o":"Coursera","s":["Leadership & Management"]},{"o":"Databricks","s":["Machine Learning","Data Science & Analytics"]},{"o":"Databricks","s":["Data Science & Analytics","Cloud Computing"]},{"o":"Databricks","s":["Data Science & Analytics"]},{"o":"Databricks","s":["Artificial Intelligence","Data Science & Analytics"]},{"o":"Databricks","s":["Artificial Intelligence","Data Science & Analytics","Cybersecurity"]},{"o":"Databricks","s":["Artificial Intelligence","Data Science & Analytics"]},{"o":"Coursera","s":["Leadership & Management"]},{"o":"Google","s":["Leadership & Management"]},{"o":"Google","s":["Cybersecurity","Leadership & Management"]},{"o":"Microsoft","s":["Artificial Intelligence","Leadership & Management"]},{"o":"Coursera","s":["Business Analysis"]},{"o":"Coursera","s":["Digital Transformation"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"IBM","s":["Artificial Intelligence"]},{"o":"IBM","s":["Artificial Intelligence"]},{"o":"IBM","s":["Machine Learning","Data Science & Analytics"]},{"o":"IBM","s":["Design Thinking & Innovation"]},{"o":"IBM","s":["Machine Learning"]},{"o":"Coursera","s":["Business Analysis"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"Coursera","s":["Cybersecurity"]},{"o":"IBM","s":["Machine Learning"]},{"o":"IBM","s":["Cybersecurity"]},{"o":"IBM","s":["Artificial Intelligence","Leadership & Management"]},{"o":"IBM","s":["Artificial Intelligence"]},{"o":"IBM","s":["Artificial Intelligence"]},{"o":"Google","s":["Artificial Intelligence"]},{"o":"Google","s":["Artificial Intelligence","Design Thinking & Innovation"]},{"o":"Google","s":["Artificial Intelligence","Research & Academic Writing"]},{"o":"Google","s":["Artificial Intelligence"]},{"o":"Google","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Artificial Intelligence","Software Development"]},{"o":"Coursera","s":["Artificial Intelligence","Data Science & Analytics"]},{"o":"Google","s":["Artificial Intelligence"]},{"o":"Coursera","s":["Artificial Intelligence"]},{"o":"OpenAI","s":["Artificial Intelligence"]},{"o":"University of Oxford","s":["Artificial Intelligence"]},{"o":"University of Oxford","s":["Artificial Intelligence"]},{"o":"University of Oxford","s":["Artificial Intelligence"]},{"o":"University of Oxford","s":["Artificial Intelligence"]},{"o":"Anthropic","s":["Artificial Intelligence"]},{"o":"Anthropic","s":["Artificial Intelligence"]},{"o":"Dataiku","s":["Data Science & Analytics"]},{"o":"Anthropic","s":["Artificial Intelligence"]},{"o":"OpenAI","s":["Artificial Intelligence"]},{"o":"Anthropic","s":["Artificial Intelligence"]},{"o":"AWS","s":["Cloud Computing"]},{"o":"LinkedIn Learning","s":["Artificial Intelligence"]},{"o":"SAP","s":["Business Analysis"]},{"o":"Coursera","s":["Business Analysis"]},{"o":"Coursera","s":["Software Development"]},{"o":"Coursera","s":["Artificial Intelligence"]}];
+    (function () {
+        var META = window.CERT_META || [];
+        var section = document.getElementById('certifications');
+        if (!section) return;
+        var cards = Array.prototype.slice.call(section.querySelectorAll('.cert-card'));
+        var orgSel = document.getElementById('cf-org');
+        var skillSel = document.getElementById('cf-skill');
+        var countEl = document.getElementById('cf-count');
+        var resetBtn = document.getElementById('cf-reset');
+        var emptyEl = document.getElementById('cf-empty');
+        var ext = document.getElementById('certs-extended');
+        var toggleWrap = section.querySelector('.cert-toggle-wrap');
+        if (!orgSel || !skillSel) return;
+        var TOTAL = cards.length;
+        var orgCounts = {}, skillCounts = {};
+        cards.forEach(function (c, i) {
+            var m = META[i] || { o: 'Other', s: [] };
+            c.setAttribute('data-org', m.o);
+            c.setAttribute('data-skills', '|' + (m.s || []).join('|') + '|');
+            orgCounts[m.o] = (orgCounts[m.o] || 0) + 1;
+            (m.s || []).forEach(function (s) { skillCounts[s] = (skillCounts[s] || 0) + 1; });
+        });
+        function esc(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); }
+        function fill(sel, counts, allLabel) {
+            var keys = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); });
+            var html = '<option value="">' + allLabel + '</option>';
+            keys.forEach(function (k) { html += '<option value="' + esc(k) + '">' + esc(k) + ' (' + counts[k] + ')</option>'; });
+            sel.innerHTML = html;
+        }
+        fill(orgSel, orgCounts, 'All organizations');
+        fill(skillSel, skillCounts, 'All skills');
+        function apply() {
+            var o = orgSel.value, s = skillSel.value;
+            var filtering = !!(o || s);
+            resetBtn.hidden = !filtering;
+            if (filtering) { if (ext) ext.classList.add('open'); if (toggleWrap) toggleWrap.style.display = 'none'; }
+            else { if (ext) ext.classList.remove('open'); if (toggleWrap) toggleWrap.style.display = ''; }
+            var n = 0;
+            cards.forEach(function (c) {
+                if (!filtering) { c.style.display = ''; return; }
+                var match = (!o || c.getAttribute('data-org') === o) &&
+                            (!s || (c.getAttribute('data-skills') || '').indexOf('|' + s + '|') !== -1);
+                c.style.display = match ? '' : 'none';
+                if (match) { c.classList.add('in'); n++; }
+            });
+            if (filtering) { countEl.innerHTML = 'Showing <b>' + n + '</b> of ' + TOTAL; emptyEl.style.display = n ? 'none' : 'block'; }
+            else { countEl.innerHTML = ''; emptyEl.style.display = 'none'; }
+        }
+        function reset() { orgSel.value = ''; skillSel.value = ''; apply(); }
+        orgSel.addEventListener('change', apply);
+        skillSel.addEventListener('change', apply);
+        if (resetBtn) resetBtn.addEventListener('click', reset);
+        section.querySelectorAll('.cf-clear').forEach(function (b) { b.addEventListener('click', reset); });
     })();
     </script>
 
