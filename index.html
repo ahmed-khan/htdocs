@@ -278,31 +278,33 @@
         }
         .hero h1 .thin { font-weight: 400; font-style: italic; color: var(--accent); }
         .hero-sub { margin: 22px 0 14px; font-size: clamp(17px, 2vw, 21px); color: var(--muted); min-height: 64px; display:flex; align-items:center; }
-        /* Top 2% Scientist badge (hero, right of name) */
-        .hero-namerow { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
-        .hero-namerow h1 { margin: 0; }
+        /* Top 2% Scientist badge (hero, one line below name) */
         .top2-badge {
-            display: flex; flex-direction: column; align-items: center; text-align: center; gap: 9px;
-            width: min(290px, 100%); padding: 22px 24px; border-radius: 22px;
-            background: linear-gradient(155deg, rgba(212,175,90,.18), rgba(255,255,255,.6));
-            border: 1px solid rgba(194,150,47,.4);
-            box-shadow: 0 26px 54px -28px rgba(140,100,20,.55), inset 0 1px 0 rgba(255,255,255,.75);
-            -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4);
+            display: inline-flex; align-items: center; gap: 14px;
+            margin: 20px 0 2px; padding: 11px 20px 11px 12px; border-radius: 16px;
+            background: linear-gradient(135deg, rgba(212,175,90,.18), rgba(255,255,255,.55));
+            border: 1px solid rgba(194,150,47,.38);
+            box-shadow: 0 16px 36px -22px rgba(140,100,20,.5), inset 0 1px 0 rgba(255,255,255,.7);
+            -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4);
         }
-        .t2-medallion {
+        .t2-icon {
             display: inline-flex; align-items: center; justify-content: center; flex: none;
-            width: 62px; height: 62px; border-radius: 18px; color: #fff; margin-bottom: 2px;
+            width: 46px; height: 46px; border-radius: 13px; color: #fff;
             background: linear-gradient(140deg, #e0bd63, #c2962f);
-            box-shadow: 0 11px 24px -9px rgba(194,150,47,.85), inset 0 1px 0 rgba(255,255,255,.45);
+            box-shadow: 0 8px 18px -7px rgba(194,150,47,.8), inset 0 1px 0 rgba(255,255,255,.45);
         }
-        .t2-medallion svg { width: 34px; height: 34px; display: block; overflow: visible; }
-        .t2-medallion [class^="an-"] { transform-box: fill-box; }
-        .top2-badge .t2-s2 { animation-delay: 1.1s; }
-        .t2-eyebrow { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: #b0862a; }
-        .top2-badge strong { font-family: var(--font-display); font-weight: 600; font-size: 18px; line-height: 1.22; color: var(--ink); }
-        .top2-badge small { font-family: var(--font-mono); font-size: 10px; letter-spacing: .02em; line-height: 1.5; color: var(--muted); }
-        @media (max-width: 760px) { .hero-namerow { gap: 26px; } }
-        @media (max-width: 560px) { .top2-badge { width: 100%; max-width: 320px; padding: 20px; } }
+        .t2-icon svg { width: 26px; height: 26px; display: block; overflow: visible; }
+        .t2-icon [class^="an-"] { transform-box: fill-box; }
+        .t2-icon .t2-s2 { animation-delay: 1.1s; }
+        .t2-text { display: flex; flex-direction: column; line-height: 1.25; }
+        .t2-text strong { font-family: var(--font-display); font-weight: 600; font-size: 16.5px; color: var(--ink); }
+        .t2-text small { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .02em; color: var(--muted); margin-top: 3px; }
+        @media (max-width: 560px) {
+            .top2-badge { gap: 12px; padding: 10px 16px 10px 10px; }
+            .t2-icon { width: 40px; height: 40px; }
+            .t2-text strong { font-size: 15px; }
+            .t2-text small { font-size: 9.5px; }
+        }
         #typewriter { font-family: var(--font-mono); font-weight: 500; color: var(--accent-deep);
             border-right: 2px solid var(--accent); padding-right: 6px; animation: caret .8s step-end infinite; }
         @keyframes caret { 0%,100% { border-color: var(--accent);} 50% { border-color: transparent;} }
@@ -954,14 +956,13 @@
         <div class="wrap">
             <div class="hero-inner">
                 <div class="eyebrow hero-eyebrow rv">Associate Professor</div>
-                <div class="hero-namerow">
-                    <h1 class="rv" style="--d:.08s">Dr. Ahmad<br><span class="thin">Raza Khan</span></h1>
-                    <div class="top2-badge rv" style="--d:.14s">
-                        <span class="t2-medallion" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g class="an-float"><path d="M16 9h16v7a8 8 0 0 1-16 0z"/><path d="M16 11h-4a4 4 0 0 0 4 7"/><path d="M32 11h4a4 4 0 0 1-4 7"/><path d="M24 24v6"/><path d="M18.5 37h11l-1.5-5h-8z"/><path d="M15.5 40h17"/></g><path class="an-twinkle t2-s1" fill="currentColor" stroke="none" d="M9 8l.9 1.9 1.9.9-1.9.9L9 13.6l-.9-1.9-1.9-.9 1.9-.9z"/><path class="an-twinkle t2-s2" fill="currentColor" stroke="none" d="M40 12l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8z"/></svg></span>
-                        <span class="t2-eyebrow">Top 2% Worldwide</span>
-                        <strong>Top 2% Scientist<br>in the World</strong>
-                        <small>Stanford / Elsevier 2026<br>Rank #8,540 in Artificial Intelligence &amp; Image Processing</small>
-                    </div>
+                <h1 class="rv" style="--d:.08s">Dr. Ahmad<br><span class="thin">Raza Khan</span></h1>
+                <div class="top2-badge rv" style="--d:.14s">
+                    <span class="t2-icon" id="t2-lottie" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="14"/><path d="M10 24h28"/><path d="M24 10c-5.5 4-5.5 24 0 28"/><path d="M24 10c5.5 4 5.5 24 0 28"/></svg></span>
+                    <span class="t2-text">
+                        <strong>Top 2% Scientist in the World</strong>
+                        <small>Stanford / Elsevier 2026 &middot; Rank #8,540 in Artificial Intelligence &amp; Image Processing</small>
+                    </span>
                 </div>
                 <div class="hero-sub rv" style="--d:.16s"><span id="typewriter"></span></div>
                 <p class="lede rv" style="--d:.22s">Researching cloud security, adversarial machine learning, and
@@ -3778,6 +3779,37 @@
         if (resetBtn) resetBtn.addEventListener('click', reset);
         section.querySelectorAll('.cf-clear').forEach(function (b) { b.addEventListener('click', reset); });
     })();
+    </script>
+
+    <!-- Lottie animation for the Top 2% badge icon (inline data, works on file:// and server; SVG fallback until it renders) -->
+    <script>
+        (function () {
+            var el = document.getElementById('t2-lottie');
+            if (!el) return;
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            var DATA = {"v":"5.7.4","fr":60,"ip":0,"op":120,"w":100,"h":100,"nm":"top2-badge","ddd":0,"assets":[],"layers":[{"ddd":0,"ind":1,"ty":4,"nm":"star","sr":1,"ao":0,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.5],"y":[1]},"o":{"x":[0.5],"y":[0]},"t":0,"s":[85]},{"i":{"x":[0.5],"y":[1]},"o":{"x":[0.5],"y":[0]},"t":60,"s":[100]},{"t":120,"s":[85]}]},"r":{"a":1,"k":[{"i":{"x":[0.5],"y":[1]},"o":{"x":[0.5],"y":[0]},"t":0,"s":[-6]},{"i":{"x":[0.5],"y":[1]},"o":{"x":[0.5],"y":[0]},"t":60,"s":[6]},{"t":120,"s":[-6]}]},"p":{"a":0,"k":[50,50,0]},"a":{"a":0,"k":[0,0,0]},"s":{"a":1,"k":[{"i":{"x":[0.5,0.5,0.5],"y":[1,1,1]},"o":{"x":[0.5,0.5,0.5],"y":[0,0,0]},"t":0,"s":[88,88,100]},{"i":{"x":[0.5,0.5,0.5],"y":[1,1,1]},"o":{"x":[0.5,0.5,0.5],"y":[0,0,0]},"t":60,"s":[112,112,100]},{"t":120,"s":[88,88,100]}]}},"shapes":[{"ty":"sr","sy":1,"d":1,"pt":{"a":0,"k":5},"p":{"a":0,"k":[0,0]},"r":{"a":0,"k":0},"ir":{"a":0,"k":14},"is":{"a":0,"k":0},"or":{"a":0,"k":34},"os":{"a":0,"k":0},"nm":"Star"},{"ty":"fl","c":{"a":0,"k":[1,1,1,1]},"o":{"a":0,"k":100},"r":1,"nm":"Fill"},{"ty":"tr","p":{"a":0,"k":[0,0]},"a":{"a":0,"k":[0,0]},"s":{"a":0,"k":[100,100]},"r":{"a":0,"k":0},"o":{"a":0,"k":100}}],"ip":0,"op":120,"st":0,"bm":0}],"markers":[]};
+            var started = false;
+            function load() {
+                if (started) return; started = true;
+                var s = document.createElement('script');
+                s.src = 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js';
+                s.onload = function () {
+                    if (typeof lottie === 'undefined') return;
+                    var fb = el.firstElementChild;
+                    var holder = document.createElement('span');
+                    holder.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:30px;height:30px;display:block;';
+                    el.style.position = 'relative';
+                    el.appendChild(holder);
+                    try {
+                        var anim = lottie.loadAnimation({ container: holder, renderer: 'svg', loop: true, autoplay: true, animationData: DATA });
+                        anim.addEventListener('DOMLoaded', function () { if (fb) fb.style.display = 'none'; });
+                    } catch (e) { holder.parentNode && holder.parentNode.removeChild(holder); }
+                };
+                document.body.appendChild(s);
+            }
+            if ('requestIdleCallback' in window) { requestIdleCallback(load, { timeout: 2500 }); }
+            else { window.addEventListener('load', function () { setTimeout(load, 600); }); }
+        })();
     </script>
 
     <!-- Jotform Chatbot — loaded on first interaction / idle to cut blocking time (behavior unchanged) -->
