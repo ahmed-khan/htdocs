@@ -278,6 +278,31 @@
         }
         .hero h1 .thin { font-weight: 400; font-style: italic; color: var(--accent); }
         .hero-sub { margin: 22px 0 14px; font-size: clamp(17px, 2vw, 21px); color: var(--muted); min-height: 64px; display:flex; align-items:center; }
+        /* Top 2% Scientist badge (hero, right of name) */
+        .hero-namerow { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .hero-namerow h1 { margin: 0; }
+        .top2-badge {
+            display: flex; flex-direction: column; align-items: center; text-align: center; gap: 9px;
+            width: min(290px, 100%); padding: 22px 24px; border-radius: 22px;
+            background: linear-gradient(155deg, rgba(212,175,90,.18), rgba(255,255,255,.6));
+            border: 1px solid rgba(194,150,47,.4);
+            box-shadow: 0 26px 54px -28px rgba(140,100,20,.55), inset 0 1px 0 rgba(255,255,255,.75);
+            -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4);
+        }
+        .t2-medallion {
+            display: inline-flex; align-items: center; justify-content: center; flex: none;
+            width: 62px; height: 62px; border-radius: 18px; color: #fff; margin-bottom: 2px;
+            background: linear-gradient(140deg, #e0bd63, #c2962f);
+            box-shadow: 0 11px 24px -9px rgba(194,150,47,.85), inset 0 1px 0 rgba(255,255,255,.45);
+        }
+        .t2-medallion svg { width: 34px; height: 34px; display: block; overflow: visible; }
+        .t2-medallion [class^="an-"] { transform-box: fill-box; }
+        .top2-badge .t2-s2 { animation-delay: 1.1s; }
+        .t2-eyebrow { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: #b0862a; }
+        .top2-badge strong { font-family: var(--font-display); font-weight: 600; font-size: 18px; line-height: 1.22; color: var(--ink); }
+        .top2-badge small { font-family: var(--font-mono); font-size: 10px; letter-spacing: .02em; line-height: 1.5; color: var(--muted); }
+        @media (max-width: 760px) { .hero-namerow { gap: 26px; } }
+        @media (max-width: 560px) { .top2-badge { width: 100%; max-width: 320px; padding: 20px; } }
         #typewriter { font-family: var(--font-mono); font-weight: 500; color: var(--accent-deep);
             border-right: 2px solid var(--accent); padding-right: 6px; animation: caret .8s step-end infinite; }
         @keyframes caret { 0%,100% { border-color: var(--accent);} 50% { border-color: transparent;} }
@@ -929,7 +954,15 @@
         <div class="wrap">
             <div class="hero-inner">
                 <div class="eyebrow hero-eyebrow rv">Associate Professor</div>
-                <h1 class="rv" style="--d:.08s">Dr. Ahmad<br><span class="thin">Raza Khan</span></h1>
+                <div class="hero-namerow">
+                    <h1 class="rv" style="--d:.08s">Dr. Ahmad<br><span class="thin">Raza Khan</span></h1>
+                    <div class="top2-badge rv" style="--d:.14s">
+                        <span class="t2-medallion" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g class="an-float"><path d="M16 9h16v7a8 8 0 0 1-16 0z"/><path d="M16 11h-4a4 4 0 0 0 4 7"/><path d="M32 11h4a4 4 0 0 1-4 7"/><path d="M24 24v6"/><path d="M18.5 37h11l-1.5-5h-8z"/><path d="M15.5 40h17"/></g><path class="an-twinkle t2-s1" fill="currentColor" stroke="none" d="M9 8l.9 1.9 1.9.9-1.9.9L9 13.6l-.9-1.9-1.9-.9 1.9-.9z"/><path class="an-twinkle t2-s2" fill="currentColor" stroke="none" d="M40 12l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8z"/></svg></span>
+                        <span class="t2-eyebrow">Top 2% Worldwide</span>
+                        <strong>Top 2% Scientist<br>in the World</strong>
+                        <small>Stanford / Elsevier 2026<br>Rank #8,540 in Artificial Intelligence &amp; Image Processing</small>
+                    </div>
+                </div>
                 <div class="hero-sub rv" style="--d:.16s"><span id="typewriter"></span></div>
                 <p class="lede rv" style="--d:.22s">Researching cloud security, adversarial machine learning, and
                     AI-driven threat detection &mdash; bridging rigorous theory with systems that work in the real world.</p>
