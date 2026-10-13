@@ -3586,6 +3586,14 @@
         }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
         document.querySelectorAll('.rv').forEach(function (el) { ro.observe(el); });
 
+        /* start lazy images ~2 screens early so they're ready before they scroll into view */
+        var lo = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (en.isIntersecting) { en.target.loading = 'eager'; lo.unobserve(en.target); }
+            });
+        }, { rootMargin: '1500px 0px' });
+        document.querySelectorAll('img[loading="lazy"]').forEach(function (img) { lo.observe(img); });
+
         /* ---------- animated counters ---------- */
         var co = new IntersectionObserver(function (entries) {
             entries.forEach(function (en) {
