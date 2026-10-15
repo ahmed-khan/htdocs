@@ -278,7 +278,14 @@
             padding: 0 .06em;
         }
         #researchintersts .h-display em, #servicesimage .h-display em { background: none; padding: 0; }
-        .lede { color: var(--muted); max-width: 70ch; font-size: 18px; }
+        .lede { color: var(--muted); font-size: 18px; }
+        /* full-width justified body copy: hyphenation keeps word spacing even, smoothing keeps glyphs crisp */
+        .lede, .bio-copy p {
+            text-align: justify; text-justify: inter-word;
+            hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 3 3;
+            text-wrap: pretty; text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+        }
         .lede a { font-weight: 700; }
 
         /* ---------- hero ---------- */
@@ -440,7 +447,7 @@
         @media (min-width: 981px) {
             .portrait-wrap { position: sticky; top: 110px; }
         }
-        .bio-copy { min-width: 0; max-width: 72ch; }
+        .bio-copy { min-width: 0; }
         .portrait {
             border-radius: 30px; overflow: hidden; position: relative;
             transform-style: preserve-3d; transition: transform .5s var(--ease-out), box-shadow .5s;
@@ -2565,11 +2572,11 @@
                     </div>
                     <h3 class="cloud-section-title">Certifications in Data Analysis</h3>
                     <ul class="cloud-publications-list">
-                        <li class="publication-item">
-                            <div class="pub-header">
-                                <a href="https://www.coursera.org/account/accomplishments/professional-cert/CXN5F8O603XW"
-                                    class="pub-link" target="_blank" rel="noopener noreferrer">Google Advanced Data Analytics Professional
-                                    Certificate - (By Google on Coursera Platform)</a>
+                        <li>
+                            <a href="https://www.coursera.org/account/accomplishments/professional-cert/CXN5F8O603XW"
+                                class="pub-link" target="_blank" rel="noopener noreferrer">Google Advanced Data Analytics Professional
+                                Certificate - (By Google on Coursera Platform)</a>
+                        </li>
                         <li>
                             <a href="https://www.coursera.org/account/accomplishments/verify/Y3338YFULCV8"
                                 class="pub-link" target="_blank" rel="noopener noreferrer">What is Data Science? - (By IBM on Coursera
@@ -2585,10 +2592,7 @@
                                 class="pub-link" target="_blank" rel="noopener noreferrer">Tools of the Trade: Linux and SQL - (By Google on
                                 Coursera Platform)</a>
                         </li>
-                </div>
-                </li>
-                <!-- Add more items as needed -->
-                </ul>
+                    </ul>
                 <h3 class="cloud-section-title">Selected Publications in Data Analysis</h3>
                 <ul class="cloud-publications-list">
                     <li class="publication-item">
