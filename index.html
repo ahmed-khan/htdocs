@@ -222,7 +222,7 @@
         .nav-links a.active { color: var(--ink); background: var(--lime); }
         .nav-burger { display: none; background: none; border: 0; font-size: 22px; color: #fff; padding: 8px 14px; }
 
-        @media (max-width: 1080px) {
+        @media (max-width: 1240px) {
             .nav { border-radius: 26px; flex-wrap: wrap; }
             .nav-burger { display: block; }
             .nav-links { display: none; width: 100%; flex-direction: column; align-items: stretch; padding: 8px 4px 10px; }
@@ -941,6 +941,99 @@
             .rv { opacity: 1; transform: none; }
             #typewriter { border-right: none; }
         }
+
+        /* ============================================================
+           LANGUAGE SWITCHER (EN / AR / FR) + Arabic right-to-left
+           ============================================================ */
+        .nav-links { margin-left: auto; padding-left: 14px; }
+        .nav-links a { white-space: nowrap; }
+        .lang-switch {
+            display: flex; align-items: center; gap: 2px; margin-left: 10px; padding: 3px;
+            border-radius: 999px; background: oklch(1 0 0 / .08); border: 1px solid oklch(1 0 0 / .12);
+            direction: ltr;
+        }
+        .lang-switch button {
+            min-width: 40px; padding: 8px 11px; border: 0; border-radius: 999px; background: transparent;
+            color: var(--on-dark-muted); font-size: 13px; font-weight: 700; letter-spacing: .04em; line-height: 1;
+            transition: background .25s, color .25s;
+        }
+        .lang-switch button:hover { color: #fff; background: oklch(1 0 0 / .1); }
+        .lang-switch button.is-active { color: var(--ink); background: var(--lime); }
+        .lang-switch button:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
+        @media (min-width: 1241px) {
+            .nav-links a { padding: 10px 12px; }
+        }
+        @media (max-width: 1240px) {
+            .nav-brand { margin-right: auto; }
+            .nav-burger { order: 1; }
+            .lang-switch { order: 2; margin-left: 4px; }
+            .nav-links { order: 3; margin-left: 0; padding-left: 4px; }
+        }
+        @media (max-width: 560px) {
+            .lang-switch button { min-width: 34px; padding: 8px 7px; font-size: 12px; }
+            .nav-burger { padding: 8px 8px; }
+        }
+        @media (max-width: 370px) {
+            .nav { padding-left: 14px; }
+            .nav-brand { font-size: 13.5px; }
+            .lang-switch { padding: 2px; }
+            .lang-switch button { min-width: 0; padding: 7px 5px; font-size: 11px; letter-spacing: .02em; }
+            .nav-burger { padding: 8px 5px; font-size: 20px; }
+        }
+
+        /* Arabic: Archivo keeps Latin names and numbers, IBM Plex Sans Arabic sets the Arabic text */
+        html[lang="ar"] {
+            --font-display: "Archivo", "IBM Plex Sans Arabic", "Helvetica Neue", Arial, sans-serif;
+            --font-body: "Archivo", "IBM Plex Sans Arabic", "Helvetica Neue", Arial, sans-serif;
+        }
+        html[lang="ar"] body { line-height: 1.8; }
+        html[lang="ar"] :is(h1, h2, h3, h4, .h-display, .eyebrow, .nav-brand, .footer-brand, .modal-body h2, .btn-glass, .stat span, .lede, p, li, a, span, strong, label, button) { letter-spacing: 0; }
+        html[lang="ar"] :is(.h-display, .modal-body h2) { line-height: 1.3; }
+        html[lang="ar"] .hero h1 { line-height: 1.15; }
+
+        /* keep the language tabs in the top-right corner while the rest of the nav mirrors */
+        html[dir="rtl"] .nav { padding: 8px 24px 8px 8px; }
+        html[dir="rtl"] .lang-switch { order: -1; margin-left: 14px; }
+        html[dir="rtl"] .nav-links { margin-left: 0; margin-right: auto; padding-left: 0; padding-right: 14px; }
+        @media (max-width: 1240px) {
+            html[dir="rtl"] .nav-brand { margin-right: 0; margin-left: auto; }
+            html[dir="rtl"] .nav-links { margin-right: 0; padding-right: 4px; }
+        }
+        @media (max-width: 1240px) {
+            html[dir="rtl"] .lang-switch { margin-left: 10px; }
+        }
+        @media (max-width: 370px) {
+            html[dir="rtl"] .nav { padding-left: 8px; padding-right: 14px; }
+        }
+        @media (max-width: 768px) { html[dir="rtl"] .nav { padding: 8px 18px 8px 8px; } }
+
+        html[dir="rtl"] .hero-stats .stat, html[dir="rtl"] .i-card, html[dir="rtl"] .ph-card { text-align: right; }
+        html[dir="rtl"] #typewriter { border-right: 0; padding-right: 0; border-left: 2px solid var(--lime); padding-left: 6px; unicode-bidi: plaintext; }
+        html[lang="ar"] #typewriter { font-family: var(--font-body); font-weight: 600; letter-spacing: 0; }
+        /* mirror the hero's decorative shapes so they stay clear of right-aligned Arabic text */
+        html[dir="rtl"] .hero .shape { right: auto; }
+        html[dir="rtl"] .orb-a { left: 9%; }
+        html[dir="rtl"] .orb-b { left: 27%; }
+        html[dir="rtl"] .orb-c { left: 34%; }
+        html[dir="rtl"] .ring-a { left: 4%; }
+        html[dir="rtl"] .ring-b { left: -6%; }
+        html[dir="rtl"] .prism { left: 8%; }
+        @media (max-width: 900px) { html[dir="rtl"] .orb-a { left: 4%; } }
+        html[dir="rtl"] .fa-long-arrow-right, html[dir="rtl"] .modal-body ul li::before { display: inline-block; transform: scaleX(-1); }
+        html[dir="rtl"] .modal-body ul li { padding: 9px 28px 9px 0; }
+        html[dir="rtl"] .modal-close { float: left; margin: -22px 0 0 -18px; }
+        html[dir="rtl"] .modal-body ul li::before { left: auto; right: 2px; }
+        html[dir="rtl"] .cert-count { margin-left: 0; margin-right: auto; }
+        html[dir="rtl"] .cert-filters select { padding: 11px 15px 11px 40px; background-position: left 15px center; }
+        html[dir="rtl"] .pub-video-link, html[dir="rtl"] .pub-audio-link { margin-left: 0; margin-right: 8px; }
+        html[dir="rtl"] .pub-text, html[dir="rtl"] .modal-body .cloud-pub-title, html[dir="rtl"] .journal-pills a,
+        html[dir="rtl"] a[href^="mailto:"], html[dir="rtl"] a[href^="tel:"] { unicode-bidi: plaintext; }
+        @media (max-width: 768px) {
+            html[dir="rtl"] .chip { text-align: right; }
+            html[dir="rtl"] .portrait { margin: 0 0 0 auto; }
+            html[dir="rtl"] .modal-close { margin: -14px 0 0 -6px; }
+            html[dir="rtl"] .modal-body h2 { padding-right: 0; padding-left: 40px; }
+        }
     </style>
 </head>
 
@@ -969,6 +1062,11 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="#appointments">Appointments</a></li>
         </ul>
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-skip>
+            <button type="button" data-lang="en" lang="en" title="English" aria-pressed="true" class="is-active">EN</button>
+            <button type="button" data-lang="ar" lang="ar" title="العربية" aria-pressed="false">AR</button>
+            <button type="button" data-lang="fr" lang="fr" title="Français" aria-pressed="false">FR</button>
+        </div>
     </nav>
 
     <!-- social dock -->
@@ -1370,11 +1468,11 @@
                     <label for="cf-skill">Skill</label>
                     <select id="cf-skill" aria-label="Filter by skill"><option value="">All skills</option></select>
                 </div>
-                <span class="cert-count" id="cf-count" aria-live="polite"></span>
+                <span class="cert-count" id="cf-count" aria-live="polite" data-i18n-skip></span>
                 <button type="button" class="cert-reset" id="cf-reset" hidden>Reset filters</button>
             </div>
 
-            <p class="cert-empty" id="cf-empty">No certificates match these filters. <button type="button" class="cert-reset cf-clear">Clear filters</button></p>
+            <p class="cert-empty" id="cf-empty"><span>No certificates match these filters.</span> <button type="button" class="cert-reset cf-clear">Clear filters</button></p>
 
             <div class="cert-grid">
                 <a class="cert-card rv" style="--d:0.00s" href="/Certifications/ECC-CEH-Certificate-2.pdf" target="_blank" rel="noopener noreferrer">
@@ -2184,13 +2282,13 @@
                         <textarea id="cf-message" name="message" placeholder="What would you like to discuss?" required></textarea>
                     </div>
                     <div class="fg">
-                        <label for="captchaInput">Quick check: <span id="captchaQuestion"></span></label>
+                        <label for="captchaInput"><span>Quick check:</span> <span id="captchaQuestion" data-i18n-skip></span></label>
                         <input type="text" id="captchaInput" inputmode="numeric" placeholder="Your answer" required>
                     </div>
                     <button type="submit" class="btn-glass primary" style="width:100%; justify-content:center;">
                         <i class="fa fa-paper-plane"></i> Send Message
                     </button>
-                    <div id="responseMsg"><div class="alert"><span class="message"></span></div></div>
+                    <div id="responseMsg" data-i18n-skip><div class="alert"><span class="message"></span></div></div>
                 </form>
             </div>
         </div>
@@ -3490,11 +3588,13 @@
         </div>
     </div>
 
+    <script src="js/i18n.js?v=1"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
     <script>
     (function () {
         "use strict";
         var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function t(str, vars) { return window.i18n ? window.i18n.t(str, vars) : str; }
 
         /* ---------- Lenis smooth scrolling ---------- */
         var lenis = null;
@@ -3564,16 +3664,19 @@
         ];
         var tw = document.getElementById('typewriter');
         if (tw) {
-            if (prefersReduced) { tw.textContent = messages[0]; }
+            if (prefersReduced) {
+                tw.textContent = t(messages[0]);
+                document.addEventListener('i18n:change', function () { tw.textContent = t(messages[0]); });
+            }
             else {
                 var mi = 0, ci = 0, deleting = false;
                 (function tick() {
-                    var current = messages[mi];
-                    ci += deleting ? -1 : 1;
+                    var current = t(messages[mi]);
+                    ci = Math.min(ci + (deleting ? -1 : 1), current.length);
                     tw.textContent = current.substring(0, ci);
                     var delay = deleting ? 32 : 72;
-                    if (!deleting && ci === current.length) { delay = 1900; deleting = true; }
-                    else if (deleting && ci === 0) { deleting = false; mi = (mi + 1) % messages.length; delay = 420; }
+                    if (!deleting && ci >= current.length) { delay = 1900; deleting = true; }
+                    else if (deleting && ci <= 0) { deleting = false; mi = (mi + 1) % messages.length; delay = 420; }
                     setTimeout(tick, delay);
                 })();
             }
@@ -3691,32 +3794,40 @@
         var certsBtn = document.getElementById('certs-toggle');
         var certsExt = document.getElementById('certs-extended');
         if (certsBtn && certsExt) {
+            var renderCertsBtn = function () {
+                certsBtn.innerHTML = certsExt.classList.contains('open')
+                    ? t('<i class="fa fa-compress"></i> Show fewer certifications')
+                    : t('<i class="fa fa-th-large"></i> Show all 196 certifications');
+            };
+            document.addEventListener('i18n:change', renderCertsBtn);
             certsBtn.addEventListener('click', function () {
                 var isOpen = certsExt.classList.toggle('open');
-                certsBtn.innerHTML = isOpen
-                    ? '<i class="fa fa-compress"></i> Show fewer certifications'
-                    : '<i class="fa fa-th-large"></i> Show all 196 certifications';
+                renderCertsBtn();
                 certsExt.querySelectorAll('.rv').forEach(function (el) { ro.observe(el); });
                 if (!isOpen) { scrollToTarget('#certifications'); }
             });
         }
 
         /* ---------- contact form: captcha, drafts, submit ---------- */
-        var captchaAnswer = 0;
-        function generateCaptcha() {
-            var a = Math.floor(Math.random() * 9) + 1, b = Math.floor(Math.random() * 9) + 1;
-            captchaAnswer = a + b;
+        var captchaAnswer = 0, captchaA = 0, captchaB = 0;
+        function renderCaptcha() {
             var q = document.getElementById('captchaQuestion');
-            if (q) q.textContent = 'What is ' + a + ' + ' + b + '?';
+            if (q) q.textContent = t('What is {a} + {b}?', { a: captchaA, b: captchaB });
+        }
+        function generateCaptcha() {
+            captchaA = Math.floor(Math.random() * 9) + 1; captchaB = Math.floor(Math.random() * 9) + 1;
+            captchaAnswer = captchaA + captchaB;
+            renderCaptcha();
         }
         generateCaptcha();
+        document.addEventListener('i18n:change', renderCaptcha);
 
         var form = document.getElementById('contactForm');
         var responseMsg = document.getElementById('responseMsg');
         function showMessage(text, type) {
             responseMsg.style.display = 'block';
             responseMsg.querySelector('.alert').className = 'alert alert-' + type;
-            responseMsg.querySelector('.message').textContent = text;
+            responseMsg.querySelector('.message').textContent = t(text);
         }
 
         var draftFields = ['name', 'email', 'message'];
@@ -3748,7 +3859,7 @@
             }
             var submitBtn = form.querySelector('button[type="submit"]');
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending...';
+            submitBtn.innerHTML = t('<i class="fa fa-spinner fa-spin"></i> Sending...');
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(function () {
                     showMessage("Thanks, your message is on its way. I'll be in touch soon.", 'success');
@@ -3761,7 +3872,7 @@
                 })
                 .finally(function () {
                     submitBtn.disabled = false;
-                    submitBtn.innerHTML = '<i class="fa fa-paper-plane"></i> Send Message';
+                    submitBtn.innerHTML = t('<i class="fa fa-paper-plane"></i> Send Message');
                 });
         });
     })();
@@ -3792,15 +3903,21 @@
             orgCounts[m.o] = (orgCounts[m.o] || 0) + 1;
             (m.s || []).forEach(function (s) { skillCounts[s] = (skillCounts[s] || 0) + 1; });
         });
+        function t(str, vars) { return window.i18n ? window.i18n.t(str, vars) : str; }
         function esc(v) { return v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); }
         function fill(sel, counts, allLabel) {
             var keys = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b); });
-            var html = '<option value="">' + allLabel + '</option>';
-            keys.forEach(function (k) { html += '<option value="' + esc(k) + '">' + esc(k) + ' (' + counts[k] + ')</option>'; });
+            var val = sel.value;
+            var html = '<option value="">' + esc(t(allLabel)) + '</option>';
+            keys.forEach(function (k) { html += '<option value="' + esc(k) + '">' + esc(t(k)) + ' (' + counts[k] + ')</option>'; });
             sel.innerHTML = html;
+            sel.value = val;
         }
-        fill(orgSel, orgCounts, 'All organizations');
-        fill(skillSel, skillCounts, 'All skills');
+        function fillAll() {
+            fill(orgSel, orgCounts, 'All organizations');
+            fill(skillSel, skillCounts, 'All skills');
+        }
+        fillAll();
         function apply() {
             var o = orgSel.value, s = skillSel.value;
             var filtering = !!(o || s);
@@ -3815,7 +3932,7 @@
                 c.style.display = match ? '' : 'none';
                 if (match) { c.classList.add('in'); n++; }
             });
-            if (filtering) { countEl.innerHTML = 'Showing <b>' + n + '</b> of ' + TOTAL; emptyEl.style.display = n ? 'none' : 'block'; }
+            if (filtering) { countEl.innerHTML = t('Showing <b>{n}</b> of {total}', { n: n, total: TOTAL }); emptyEl.style.display = n ? 'none' : 'block'; }
             else { countEl.innerHTML = ''; emptyEl.style.display = 'none'; }
         }
         function reset() { orgSel.value = ''; skillSel.value = ''; apply(); }
@@ -3823,6 +3940,7 @@
         skillSel.addEventListener('change', apply);
         if (resetBtn) resetBtn.addEventListener('click', reset);
         section.querySelectorAll('.cf-clear').forEach(function (b) { b.addEventListener('click', reset); });
+        document.addEventListener('i18n:change', function () { fillAll(); if (orgSel.value || skillSel.value) apply(); });
     })();
     </script>
 
