@@ -948,18 +948,26 @@
         .nav-links { margin-left: auto; padding-left: 14px; }
         .nav-links a { white-space: nowrap; }
         .lang-switch {
-            display: flex; align-items: center; gap: 2px; margin-left: 10px; padding: 3px;
-            border-radius: 999px; background: oklch(1 0 0 / .08); border: 1px solid oklch(1 0 0 / .12);
+            display: flex; align-items: center; gap: 3px; margin-left: 10px; padding: 4px;
+            border-radius: 999px; border: 2px solid transparent;
+            /* dark fill inside, sun-coral-magenta gradient ring outside */
+            background: linear-gradient(var(--ink), var(--ink)) padding-box,
+                        linear-gradient(120deg, var(--sun), var(--coral) 45%, var(--magenta)) border-box;
+            box-shadow: 0 0 18px oklch(0.72 0.17 40 / .45);
             direction: ltr;
         }
         .lang-switch button {
-            min-width: 40px; padding: 8px 11px; border: 0; border-radius: 999px; background: transparent;
-            color: var(--on-dark-muted); font-size: 13px; font-weight: 700; letter-spacing: .04em; line-height: 1;
-            transition: background .25s, color .25s;
+            min-width: 42px; padding: 9px 12px; border: 0; border-radius: 999px; background: transparent;
+            color: #fff; font-size: 14px; font-weight: 800; letter-spacing: .05em; line-height: 1;
+            transition: background .25s, color .25s, transform .2s, box-shadow .25s;
         }
-        .lang-switch button:hover { color: #fff; background: oklch(1 0 0 / .1); }
-        .lang-switch button.is-active { color: var(--ink); background: var(--lime); }
-        .lang-switch button:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
+        .lang-switch button:hover { color: var(--sun); background: oklch(1 0 0 / .12); }
+        .lang-switch button.is-active {
+            color: var(--ink); background: linear-gradient(120deg, var(--sun), var(--coral));
+            box-shadow: 0 0 14px oklch(0.88 0.16 92 / .65), inset 0 -2px 0 oklch(0 0 0 / .15);
+            transform: scale(1.05);
+        }
+        .lang-switch button:focus-visible { outline: 2px solid var(--sun); outline-offset: 2px; }
         @media (min-width: 1241px) {
             .nav-links a { padding: 10px 12px; }
         }
