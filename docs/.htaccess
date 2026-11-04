@@ -1,0 +1,4 @@
+# Keep notes out of the public site even if the root rewrite rules are skipped.
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
