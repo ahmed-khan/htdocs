@@ -62,6 +62,18 @@
   </If>
 </IfModule>
 
+# ---------- 3b. Security headers ----------
+# HSTS only on HTTPS responses. No includeSubDomains/preload, so other subdomains are unaffected.
+# No Content-Security-Policy yet: the page relies on inline scripts and third-party embeds,
+# so a CSP needs its own testing before it can be enforced.
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on'"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+</IfModule>
+
 # ---------- 4. Expires headers (belt-and-suspenders for #3) ----------
 <IfModule mod_expires.c>
   ExpiresActive On

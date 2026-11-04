@@ -381,7 +381,7 @@ window.I18N.fr = {
  "Quantum Computing": "Informatique quantique",
  "Blockchain": "Blockchain",
  "Project Management": "Gestion de projet",
- "Dr. Ahmad Raza Khan | Associate Professor": "Dr Ahmad Raza Khan | Professeur associé",
+ "Dr. Ahmad Raza Khan | Cloud Security & AI Professor": "Dr Ahmad Raza Khan | Professeur en sécurité cloud et IA",
  "Dr. Ahmad Raza Khan — Associate Professor. IEEE/ACM member. Researching cloud security, adversarial ML, and AI-driven threat detection.": "Dr Ahmad Raza Khan — Professeur associé. Membre de l’IEEE et de l’ACM. Recherches en sécurité du cloud, apprentissage automatique antagoniste et détection des menaces par l’IA.",
  "Language": "Langue",
  "© 2026 by Dr. Ahmad Raza Khan. Powered and secured by <a href=\"https://www.connectingahmad.info\">connectingahmad.info</a>": "© 2026 Dr Ahmad Raza Khan. Propulsé et sécurisé par <a href=\"https://www.connectingahmad.info\">connectingahmad.info</a>"
