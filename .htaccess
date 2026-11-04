@@ -3,6 +3,19 @@
 #  Safe to drop in your site's web root (next to index.html).
 # ============================================================
 
+# ---------- 0. Canonical host: 301 everything to https://www. ----------
+# Single hop for http://, http://www. and https:// (non-www) requests.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^ https://www.connectingahmad.info%{REQUEST_URI} [L,R=301]
+
+  # /index.html duplicates the homepage
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [L,R=301]
+</IfModule>
+
 # ---------- 1. Brotli compression (preferred) ----------
 # Requires mod_brotli (Apache 2.4.26+, included in the Bitnami stack).
 <IfModule mod_brotli.c>
@@ -22,9 +35,14 @@
 
 # ---------- 3. Cache-Control (fixes "efficient cache lifetimes") ----------
 <IfModule mod_headers.c>
-  # Fingerprint-free static assets: cache 1 year, immutable.
-  <FilesMatch "\.(avif|webp|jpg|jpeg|png|gif|ico|svg|woff2|woff|ttf|eot|css|js)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
+  # Images and fonts rarely change: cache 1 year.
+  <FilesMatch "\.(avif|webp|jpg|jpeg|png|gif|ico|svg|woff2|woff|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+
+  # CSS/JS keep the same filenames when edited: cache 30 days so updates still reach returning visitors.
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
 
   # HTML must stay fresh so content updates show immediately.
@@ -47,8 +65,8 @@
   ExpiresByType image/jpeg              "access plus 1 year"
   ExpiresByType image/svg+xml           "access plus 1 year"
   ExpiresByType image/x-icon            "access plus 1 year"
-  ExpiresByType text/css                "access plus 1 year"
-  ExpiresByType application/javascript  "access plus 1 year"
+  ExpiresByType text/css                "access plus 1 month"
+  ExpiresByType application/javascript  "access plus 1 month"
   ExpiresByType font/woff2              "access plus 1 year"
   ExpiresByType application/pdf         "access plus 1 month"
   ExpiresByType text/html               "access plus 0 seconds"

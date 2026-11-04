@@ -1,0 +1,19 @@
+node_modules/
+test-results/
+playwright-report/
+
+# macOS
+.DS_Store
+
+# Backups and copies — never deploy these to the web root
+* copy.*
+*-copy.*
+* copy/
+index-*.html
+Old-*.html
+*.bak
+
+# Private working files
+*.xlsx
+contact_responses.txt
+contact-form-process.php

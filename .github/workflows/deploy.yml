@@ -30,6 +30,11 @@ jobs:
 
           # Copy updated files to web root
           sudo cp -r /home/bitnami/htdocs/* /opt/bitnami/apache2/htdocs/
+          # The * above skips dotfiles, so copy .htaccess explicitly
+          sudo cp /home/bitnami/htdocs/.htaccess /opt/bitnami/apache2/htdocs/
+
+          # Keep repo notes out of the public web root
+          sudo rm -f /opt/bitnami/apache2/htdocs/*.md
 
           # Fix ownership and permissions
           sudo chown -R bitnami:daemon /opt/bitnami/apache2/htdocs/
