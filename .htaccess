@@ -54,6 +54,12 @@
   <FilesMatch "\.pdf$">
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
+
+  # Certificate PDFs only attract course-name searches (no clicks):
+  # keep them out of search results; visitors can still open them from the site.
+  <If "%{REQUEST_URI} =~ m#/Certifications/.*\.pdf$#i">
+    Header set X-Robots-Tag "noindex"
+  </If>
 </IfModule>
 
 # ---------- 4. Expires headers (belt-and-suspenders for #3) ----------
