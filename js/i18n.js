@@ -109,7 +109,7 @@
     function load(lang, done) {
         if (dicts[lang]) { done(); return; }
         var s = document.createElement('script');
-        s.src = 'js/i18n/' + lang + '.js?v=1';
+        s.src = '/js/i18n/' + lang + '.js?v=2';
         s.onload = function () { dicts[lang] = (window.I18N && window.I18N[lang]) || {}; done(); };
         s.onerror = function () { dicts[lang] = {}; done(); };
         document.head.appendChild(s);
