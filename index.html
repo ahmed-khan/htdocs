@@ -525,6 +525,10 @@
         /* ---------- reveal animations ---------- */
         .rv { opacity: 0; transform: translateY(30px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); transition-delay: var(--d, 0s); will-change: opacity, transform; }
         .rv.in { opacity: 1; transform: none; }
+        /* Hero is above the fold: never hide it behind JS (keeps first paint fast).
+           Entrance uses transform only, so text is painted and readable from the first frame. */
+        .hero-in { animation: hero-rise .8s var(--ease-out) backwards; animation-delay: var(--d, 0s); }
+        @keyframes hero-rise { from { transform: translateY(18px); } to { transform: none; } }
 
         /* ---------- biography ---------- */
         .bio-grid { display: grid; grid-template-columns: 380px 1fr; gap: 60px; align-items: start; }
@@ -1198,22 +1202,22 @@
 
         <div class="wrap">
             <div class="hero-inner">
-                <div class="eyebrow hero-eyebrow rv">Associate Professor</div>
-                <h1 class="rv" style="--d:.08s">Dr. Ahmad<br><span class="thin">Raza Khan</span></h1>
-                <div class="hero-sub rv" style="--d:.16s"><span id="typewriter"></span></div>
-                <p class="lede rv" style="--d:.22s">Researching cloud security, adversarial machine learning, and
+                <div class="eyebrow hero-eyebrow hero-in">Associate Professor</div>
+                <h1 class="hero-in" style="--d:.08s">Dr. Ahmad<br><span class="thin">Raza Khan</span></h1>
+                <div class="hero-sub hero-in" style="--d:.16s"><span id="typewriter"></span></div>
+                <p class="lede hero-in" style="--d:.22s">Researching cloud security, adversarial machine learning, and
                     AI-driven threat detection &mdash; bridging rigorous theory with systems that work in the real world.</p>
-                <div class="hero-cta rv" style="--d:.3s">
+                <div class="hero-cta hero-in" style="--d:.3s">
                     <a class="btn-glass primary" href="#researchintersts"><i class="fa fa-compass"></i> Explore Research</a>
                     <a class="btn-glass" href="#appointments"><i class="fa fa-calendar"></i> Book a Meeting</a>
                     <a class="btn-glass" href="#contact"><i class="fa fa-paper-plane"></i> Get in Touch</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat glass rv" style="--d:.38s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g class="an-float"><circle cx="24" cy="17" r="10"/><path d="M24 12.5l1.7 3.4 3.8.6-2.75 2.65.65 3.75L24 21.1l-3.35 1.75.65-3.75L18.5 16.5l3.8-.6z" fill="currentColor" stroke="none" class="an-twinkle"/></g><path d="M17.5 26l-2.5 11 9-4 9 4-2.5-11"/></svg></span><b data-count="196">196</b><span>Certifications</span></div>
-                    <div class="stat glass rv" style="--d:.46s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g class="an-float"><path d="M14 8h13l7 7v25H14z"/><path d="M27 8v7h7"/></g><path class="an-draw an-l1" d="M18 22h12"/><path class="an-draw an-l2" d="M18 28h12"/><path class="an-draw an-l3" d="M18 34h8"/></svg></span><b data-count="23">23</b><span>Journal Papers</span></div>
-                    <div class="stat glass rv" style="--d:.54s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="9" width="32" height="22" rx="2"/><path d="M24 31v6M17 41h14"/><g class="an-bars"><path class="an-b1" d="M16 25v-3"/><path class="an-b2" d="M24 25v-9"/><path class="an-b3" d="M32 25v-6"/></g></svg></span><b data-count="9">9</b><span>Conference Papers</span></div>
-                    <div class="stat glass rv" style="--d:.62s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="10" width="26" height="30" rx="2"/><path d="M19 8h10v5H19z"/><path class="an-check" d="M17.5 25l4.2 4.2L30.5 20"/></svg></span><b data-count="16">16</b><span>Journals Reviewed</span></div>
-                    <div class="stat glass rv" style="--d:.70s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 7a11 11 0 0 0-6.5 19.9c1.3 1 2 2.2 2.2 3.6h8.6c.2-1.4.9-2.6 2.2-3.6A11 11 0 0 0 24 7z"/><path d="M20 34.5h8M21.5 38.5h5"/><g class="an-rays"><path d="M24 1.5v2.5"/><path d="M8.5 10l1.8 1.6"/><path d="M39.5 10l-1.8 1.6"/></g></svg></span><b data-count="1">1</b><span>US Patent</span></div>
+                    <div class="stat glass hero-in" style="--d:.38s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g class="an-float"><circle cx="24" cy="17" r="10"/><path d="M24 12.5l1.7 3.4 3.8.6-2.75 2.65.65 3.75L24 21.1l-3.35 1.75.65-3.75L18.5 16.5l3.8-.6z" fill="currentColor" stroke="none" class="an-twinkle"/></g><path d="M17.5 26l-2.5 11 9-4 9 4-2.5-11"/></svg></span><b data-count="196">196</b><span>Certifications</span></div>
+                    <div class="stat glass hero-in" style="--d:.46s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><g class="an-float"><path d="M14 8h13l7 7v25H14z"/><path d="M27 8v7h7"/></g><path class="an-draw an-l1" d="M18 22h12"/><path class="an-draw an-l2" d="M18 28h12"/><path class="an-draw an-l3" d="M18 34h8"/></svg></span><b data-count="23">23</b><span>Journal Papers</span></div>
+                    <div class="stat glass hero-in" style="--d:.54s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="9" width="32" height="22" rx="2"/><path d="M24 31v6M17 41h14"/><g class="an-bars"><path class="an-b1" d="M16 25v-3"/><path class="an-b2" d="M24 25v-9"/><path class="an-b3" d="M32 25v-6"/></g></svg></span><b data-count="9">9</b><span>Conference Papers</span></div>
+                    <div class="stat glass hero-in" style="--d:.62s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="10" width="26" height="30" rx="2"/><path d="M19 8h10v5H19z"/><path class="an-check" d="M17.5 25l4.2 4.2L30.5 20"/></svg></span><b data-count="16">16</b><span>Journals Reviewed</span></div>
+                    <div class="stat glass hero-in" style="--d:.70s"><span class="stat-anim" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 7a11 11 0 0 0-6.5 19.9c1.3 1 2 2.2 2.2 3.6h8.6c.2-1.4.9-2.6 2.2-3.6A11 11 0 0 0 24 7z"/><path d="M20 34.5h8M21.5 38.5h5"/><g class="an-rays"><path d="M24 1.5v2.5"/><path d="M8.5 10l1.8 1.6"/><path d="M39.5 10l-1.8 1.6"/></g></svg></span><b data-count="1">1</b><span>US Patent</span></div>
                 </div>
             </div>
         </div>
@@ -1425,7 +1429,7 @@
                 </li>
                 <li class="pub-item rv" style="--d:0.00s">
                     <span class="pub-num">03</span>
-                    <div class="pub-text"><span>Hasim Khan, Ahmed Ibrahim Alutaibi, Ghanshyam G. Tejani, Sunil Kumar Sharma, Ahmad Raza Khan, Fuzail Ahmad, Seyed Jalaleddin Mousavirad,<a href="https://doi.org/10.1371/journal.pone.0325126" target="_blank" rel="noopener noreferrer">"MRI based early Temporal Lobe Epilepsy detection using DGWO based optimized HAETN and Fuzzy-AAL Segmentation Framework (FASF)"</a>, PLOS One, Vol. 20, July 2025, <a href="https://doi.org/10.1371/journal.pone.0325126" target="_blank" rel="noopener noreferrer">https://doi.org/10.1371/journal.pone.0325126</a> <b>[SCI / Scopus]</b> <button type="button" class="pub-video-link" data-modal="videoTemporalLobe" aria-label="Watch video overview of the Temporal Lobe Epilepsy detection paper"><i class="fa fa-play-circle"></i>[Video Overview]</button> <button type="button" class="pub-audio-link" data-modal="audioTemporalLobe" aria-label="Listen to audio overview of the Temporal Lobe Epilepsy detection paper"><i class="fa fa-headphones"></i>[Audio Overview]</button></span></div>
+                    <div class="pub-text"><span>Hasim Khan, Ahmed Ibrahim Alutaibi, Ghanshyam G. Tejani, Sunil Kumar Sharma, Ahmad Raza Khan, Fuzail Ahmad, Seyed Jalaleddin Mousavirad,<a href="https://doi.org/10.1371/journal.pone.0325126" target="_blank" rel="noopener noreferrer">"MRI based early Temporal Lobe Epilepsy detection using DGWO based optimized HAETN and Fuzzy-AAL Segmentation Framework (FASF)"</a>, PLOS ONE, Vol. 20, July 2025, <a href="https://doi.org/10.1371/journal.pone.0325126" target="_blank" rel="noopener noreferrer">https://doi.org/10.1371/journal.pone.0325126</a> <b>[SCI / Scopus]</b> <button type="button" class="pub-video-link" data-modal="videoTemporalLobe" aria-label="Watch video overview of the Temporal Lobe Epilepsy detection paper"><i class="fa fa-play-circle"></i>[Video Overview]</button> <button type="button" class="pub-audio-link" data-modal="audioTemporalLobe" aria-label="Listen to audio overview of the Temporal Lobe Epilepsy detection paper"><i class="fa fa-headphones"></i>[Audio Overview]</button></span></div>
                 </li>
                 <li class="pub-item rv" style="--d:0.06s">
                     <span class="pub-num">04</span>
@@ -1453,7 +1457,7 @@
                 </li>
                 <li class="pub-item rv" style="--d:0.06s">
                     <span class="pub-num">10</span>
-                    <div class="pub-text"><span>Ahmad Raza Khan, Shaik Shakeel Ahamad, Shailendra Mishra, Mohd Abdul Rahim Khan, Sunil Kumar Sharma, Abdullah AlEnizi, Osama Alfarraj, Majed Alowaidi, Manoj Kumar<a href="https://doi.org/10.1038/s41598-024-76214-2" target="_blank" rel="noopener noreferrer">"FinSafeNet: securing digital transactions using optimized deep learning and multi-kernel PCA (MKPCA) with Nyström approximation"</a>, Scientific Reports, Vol. 14, Issue 1, 2024, <a href="https://doi.org/10.1038/s41598-024-76214-2" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41598-024-76214-2</a> <b>[SCI / Scopus]</b> <button type="button" class="pub-video-link" data-modal="videoFinSafeNet" aria-label="Watch video overview of the FinSafeNet digital transactions paper"><i class="fa fa-play-circle"></i>[Video Overview]</button></span></div>
+                    <div class="pub-text"><span>Ahmad Raza Khan, Shaik Shakeel Ahamad, Shailendra Mishra, Mohd Abdul Rahim Khan, Sunil Kumar Sharma, Abdullah AlEnizi, Osama Alfarraj, Majed Alowaidi, Manoj Kumar<a href="https://doi.org/10.1038/s41598-024-76214-2" target="_blank" rel="noopener noreferrer">"FinSafeNet: securing digital transactions using optimized deep learning and multi-kernel PCA (MKPCA) with Nyström approximation"</a>, Scientific Reports, Vol. 14, Article 26853, November 2024, <a href="https://doi.org/10.1038/s41598-024-76214-2" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41598-024-76214-2</a> <b>[SCI / Scopus]</b> <button type="button" class="pub-video-link" data-modal="videoFinSafeNet" aria-label="Watch video overview of the FinSafeNet digital transactions paper"><i class="fa fa-play-circle"></i>[Video Overview]</button></span></div>
                 </li>
                 <li class="pub-item rv" style="--d:0.12s">
                     <span class="pub-num">11</span>
@@ -3863,11 +3867,31 @@
         }, { rootMargin: '1500px 0px' });
         document.querySelectorAll('img[loading="lazy"]').forEach(function (img) { lo.observe(img); });
 
-        /* ---------- counters ---------- */
-        /* Values are in the HTML so they are visible without JavaScript.
-           Do not animate them from zero: that changes their width and shifts layout. */
+        /* ---------- animated counters ---------- */
+        var co = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (!en.isIntersecting) return;
+                var el = en.target, target = parseInt(el.getAttribute('data-count'), 10);
+                co.unobserve(el);
+                if (prefersReduced) { el.textContent = target; return; }
+                var t0 = null;
+                function step(ts) {
+                    if (!t0) t0 = ts;
+                    var p = Math.min((ts - t0) / 1600, 1);
+                    el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+                    if (p < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            });
+        }, { threshold: 0.6 });
+        /* The real numbers are in the HTML (what Google and no-JS visitors see).
+           Only counters that start off-screen are reset and counted up when scrolled to. */
         document.querySelectorAll('[data-count]').forEach(function (el) {
-            el.textContent = el.getAttribute('data-count');
+            if (prefersReduced) return;
+            var r = el.getBoundingClientRect();
+            if (r.top < window.innerHeight && r.bottom > 0) return;
+            el.textContent = '0';
+            co.observe(el);
         });
 
         /* ---------- parallax ---------- */

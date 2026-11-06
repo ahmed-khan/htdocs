@@ -391,7 +391,7 @@ window.I18N.ar = {
  "Quantum Computing": "الحوسبة الكمومية",
  "Blockchain": "سلسلة الكتل (البلوك تشين)",
  "Project Management": "إدارة المشاريع",
- "Dr. Ahmad Raza Khan | Associate Professor": "د. أحمد رضا خان | أستاذ مشارك",
+ "Dr. Ahmad Raza Khan | Cloud Security & AI Professor": "د. أحمد رضا خان | أستاذ في أمن السحابة والذكاء الاصطناعي",
  "Dr. Ahmad Raza Khan — Associate Professor. IEEE/ACM member. Researching cloud security, adversarial ML, and AI-driven threat detection.": "د. أحمد رضا خان — أستاذ مشارك. عضو IEEE/ACM. أبحاث في أمن الحوسبة السحابية، والتعلم الآلي العدائي، واكتشاف التهديدات المدعوم بالذكاء الاصطناعي.",
  "Language": "اللغة",
  "© 2026 by Dr. Ahmad Raza Khan. Powered and secured by <a href=\"https://www.connectingahmad.info\">connectingahmad.info</a>": "© 2026 د. أحمد رضا خان. بدعم وتأمين من <a href=\"https://www.connectingahmad.info\">connectingahmad.info</a>"

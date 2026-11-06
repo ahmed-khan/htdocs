@@ -8,7 +8,7 @@ Nothing in this list was guessed onto a page. Please answer in this file or by e
 2. LinkedIn text says the associate-professor appointment started in January 2025. That date is not on this site. Should it be?
 3. The existing homepage schema lists Pune University under alumni. Please confirm that is still correct.
 4. The homepage links GitHub `https://github.com/ahmed-khan`. Please confirm that account is yours. It was already on the site; it was not newly verified beyond that link.
-5. HSTS on this branch includes subdomains (`includeSubDomains`) and is not preloaded. If any subdomain of `connectingahmad.info` is still served over plain HTTP, say so before this is published.
+5. HSTS matches the latest `main`: HTTPS only, one year, no `includeSubDomains` and no preload, so other subdomains are unaffected. Say if you want subdomains included later.
 
 ## Claims already on the homepage, not given new schema
 
