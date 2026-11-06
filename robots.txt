@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /docs/
 
 Sitemap: https://www.connectingahmad.info/sitemap.xml

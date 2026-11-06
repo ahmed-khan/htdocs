@@ -3,10 +3,26 @@
 #  Safe to drop in your site's web root (next to index.html).
 # ============================================================
 
+# Text responses name their encoding (HTML is authored as UTF-8).
+AddDefaultCharset UTF-8
+
 # ---------- 0. Canonical host: 301 everything to https://www. ----------
 # Single hop for http://, http://www. and https:// (non-www) requests.
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Section pages. Match the original client request line (THE_REQUEST).
+  # DirectoryIndex turns /research/ into an internal /research/index.html;
+  # REQUEST_URI sees that and would redirect back to /research/, looping.
+  # THE_REQUEST stays "GET /research/ HTTP/1.1", so the canonical URL is left alone.
+  # A non-canonical host, a missing slash, or an explicit /section/index.html
+  # still collapses to https://www.connectingahmad.info/section/ in one hop.
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
+  RewriteCond %{THE_REQUEST} \s/(research|teaching|certifications|contact)/index\.html[\s?] [NC,OR]
+  RewriteCond %{THE_REQUEST} \s/(research|teaching|certifications|contact)[\s?] [NC]
+  RewriteRule ^(research|teaching|certifications|contact)(?:/index\.html)?/?$ https://www.connectingahmad.info/$1/ [L,R=301]
+
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} !^www\. [NC]
   RewriteRule ^ https://www.connectingahmad.info%{REQUEST_URI} [L,R=301]
@@ -14,6 +30,10 @@
   # /index.html duplicates the homepage
   RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
   RewriteRule ^index\.html$ / [L,R=301]
+
+  # Repo notes are not a public page. Direct requests are forbidden;
+  # this does not change the host or certificate rules above.
+  RewriteRule ^docs(/|$) - [F,L]
 </IfModule>
 
 # ---------- 1. Brotli compression (preferred) ----------
@@ -50,6 +70,19 @@
     Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
 
+  # Security headers. HSTS is HTTPS-only, with no includeSubDomains and no preload,
+  # matching main so other subdomains are unaffected.
+  # CSP allows the inline scripts, JSON-LD, fonts, analytics, calendar, and
+  # contact form this site already uses. script.googleusercontent.com is the
+  # redirect target of the Apps Script contact form. No object/embed.
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on'"
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdn.jotfor.ms https://*.jotform.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jotfor.ms; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jotfor.ms data:; img-src 'self' data: blob: https:; media-src 'self'; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://script.google.com https://script.googleusercontent.com https://*.jotform.com https://cdn.jotfor.ms; frame-src https://calendar.google.com https://*.jotform.com; form-action 'self' https://script.google.com"
+
   # PDFs (certificates): cache 30 days.
   <FilesMatch "\.pdf$">
     Header set Cache-Control "public, max-age=2592000"
@@ -60,18 +93,6 @@
   <If "%{REQUEST_URI} =~ m#/Certifications/.*\.pdf$#i">
     Header set X-Robots-Tag "noindex"
   </If>
-</IfModule>
-
-# ---------- 3b. Security headers ----------
-# HSTS only on HTTPS responses. No includeSubDomains/preload, so other subdomains are unaffected.
-# No Content-Security-Policy yet: the page relies on inline scripts and third-party embeds,
-# so a CSP needs its own testing before it can be enforced.
-<IfModule mod_headers.c>
-  Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on'"
-  Header always set X-Content-Type-Options "nosniff"
-  Header always set X-Frame-Options "SAMEORIGIN"
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
 </IfModule>
 
 # ---------- 4. Expires headers (belt-and-suspenders for #3) ----------
