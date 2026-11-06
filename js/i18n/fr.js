@@ -124,7 +124,6 @@ window.I18N.fr = {
  "Get in touch": "Me contacter",
  "Feel free to contact me at <a href=\"tel:+14647689022\">+1 (464) 768 9022</a> for any questions or collaborations.": "N’hésitez pas à me contacter au <a href=\"tel:+14647689022\">+1 (464) 768 9022</a> pour toute question ou collaboration.",
  "Direct lines": "Coordonnées directes",
- "College of Computer &amp; Information Sciences, Building 4, Majmaah University, P.O. Box 11952, Kingdom of Saudi Arabia": "Faculté d’informatique et des sciences de l’information, Bâtiment 4, Université de Majmaah, B.P. 11952, Royaume d’Arabie saoudite",
  "Prefer a meeting? Book a slot below.": "Vous préférez un rendez-vous ? Réservez un créneau ci-dessous.",
  "Name": "Nom",
  "Email": "E-mail",
