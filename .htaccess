@@ -11,17 +11,19 @@ AddDefaultCharset UTF-8
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Section pages. Match the original client request line (THE_REQUEST).
-  # DirectoryIndex turns /research/ into an internal /research/index.html;
-  # REQUEST_URI sees that and would redirect back to /research/, looping.
-  # THE_REQUEST stays "GET /research/ HTTP/1.1", so the canonical URL is left alone.
-  # A non-canonical host, a missing slash, or an explicit /section/index.html
-  # still collapses to https://www.connectingahmad.info/section/ in one hop.
-  RewriteCond %{HTTPS} off [OR]
-  RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
-  RewriteCond %{THE_REQUEST} \s/(research|teaching|certifications|contact)/index\.html[\s?] [NC,OR]
-  RewriteCond %{THE_REQUEST} \s/(research|teaching|certifications|contact)[\s?] [NC]
-  RewriteRule ^(research|teaching|certifications|contact)(?:/index\.html)?/?$ https://www.connectingahmad.info/$1/ [L,R=301]
+  # No-slash section URLs. Match the full path in REQUEST_URI and a pattern
+  # that also matches an empty per-directory path, so this fires even when
+  # Apache has already mapped /research onto the directory. The generic host
+  # rule below would otherwise send https://connectingahmad.info/research to
+  # https://www.connectingahmad.info/research and leave the slash for a second hop.
+  # The slashed URL is not matched, so DirectoryIndex cannot loop.
+  RewriteCond %{REQUEST_URI} ^/(research|teaching|certifications|contact)$
+  RewriteRule ^ https://www.connectingahmad.info%{REQUEST_URI}/ [R=301,L]
+
+  # Explicit /section/index.html typed by the client. THE_REQUEST ignores
+  # DirectoryIndex's internal rewrite of /section/ to index.html.
+  RewriteCond %{THE_REQUEST} \s/(research|teaching|certifications|contact)/index\.html[\s?] [NC]
+  RewriteRule ^ https://www.connectingahmad.info/%1/ [R=301,L]
 
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} !^www\. [NC]
