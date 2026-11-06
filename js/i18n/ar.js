@@ -126,7 +126,6 @@ window.I18N.ar = {
  "Get in touch": "تواصل معي",
  "Feel free to contact me at <a href=\"tel:+14647689022\">+1 (464) 768 9022</a> for any questions or collaborations.": "لا تتردد في التواصل معي على <a href=\"tel:+14647689022\">+1 (464) 768 9022</a> لأي استفسارات أو فرص تعاون.",
  "Direct lines": "وسائل التواصل المباشر",
- "College of Computer &amp; Information Sciences, Building 4, Majmaah University, P.O. Box 11952, Kingdom of Saudi Arabia": "كلية علوم الحاسب والمعلومات، مبنى 4، جامعة المجمعة، ص.ب. 11952، المملكة العربية السعودية",
  "Prefer a meeting? Book a slot below.": "تفضّل اجتماعًا؟ احجز موعدًا أدناه.",
  "Name": "الاسم",
  "Email": "البريد الإلكتروني",
