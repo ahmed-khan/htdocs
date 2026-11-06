@@ -21,6 +21,9 @@
     <meta name="twitter:image" content="https://www.connectingahmad.info/images/Prof.jpeg">
     <meta name="twitter:image:alt" content="Portrait of Dr. Ahmad Raza Khan">
     <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="style" href="/css/font-awesome-4.7.min.css">
+    <link href="/css/font-awesome-4.7.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="/css/font-awesome-4.7.min.css" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="/css/pages.css">
     <script type="application/ld+json">
 {
@@ -32,7 +35,7 @@
       "url": "https://www.connectingahmad.info/research/",
       "name": "Research | Dr. Ahmad Raza Khan",
       "description": "Journal and conference papers by Dr. Ahmad Raza Khan, with DOI links. Each item is on his ORCID record.",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-06",
       "isPartOf": {
         "@type": "WebSite",
         "name": "Dr. Ahmad Raza Khan",
@@ -1192,14 +1195,44 @@
     </script>
 </head>
 <body>
+    <div class="sky" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
     <a class="skip" href="#main">Skip to content</a>
     <nav class="nav" id="nav" aria-label="Primary">
         <a class="nav-brand" href="/">Dr. Ahmad <span>Raza Khan</span></a>
-        <button class="nav-burger" id="navBurger" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+        <button class="nav-burger" id="navBurger" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i></button>
         <ul class="nav-links" id="navLinks">
-            <li><a href="/">Home</a></li><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/teaching/">Teaching</a></li><li><a href="/certifications/">Certifications</a></li><li><a href="/contact/">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/research/" aria-current="page">Research</a></li>
+            <li><a href="/teaching/">Teaching</a></li>
+            <li><a href="/certifications/">Certifications</a></li>
+            <li><a href="/contact/">Contact</a></li>
         </ul>
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-skip>
+            <button type="button" data-lang="en" lang="en" title="English" aria-pressed="true" class="is-active">EN</button>
+            <button type="button" data-lang="ar" lang="ar" title="العربية" aria-pressed="false">AR</button>
+            <button type="button" data-lang="fr" lang="fr" title="Français" aria-pressed="false">FR</button>
+        </div>
     </nav>
+    <aside class="dock glass" aria-label="Profiles">
+        <a href="http://www.linkedin.com/in/ahmad-raza-khan-68b39a225" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/ahmed-khan" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user=CD72xzgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fa fa-google" aria-hidden="true"></i></a>
+        <a href="https://ieeexplore.ieee.org/author/37085503176" target="_blank" rel="noopener noreferrer" title="IEEE Xplore"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></a>
+        <a href="https://orcid.org/0000-0002-5365-9189" target="_blank" rel="noopener noreferrer" title="ORCID"><i class="fa fa-id-badge" aria-hidden="true"></i></a>
+        <a href="https://www.researchgate.net/profile/Ahmed-Khan-34" target="_blank" rel="noopener noreferrer" title="ResearchGate"><i class="fa fa-flask" aria-hidden="true"></i></a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=56151985600" target="_blank" rel="noopener noreferrer" title="Scopus"><i class="fa fa-book" aria-hidden="true"></i></a>
+        <a href="https://www.webofscience.com/wos/author/record/160542" target="_blank" rel="noopener noreferrer" title="Web of Science"><i class="fa fa-globe" aria-hidden="true"></i></a>
+        <a href="https://sciprofiles.com/profile/982585" target="_blank" rel="noopener noreferrer" title="SciProfiles"><i class="fa fa-user" aria-hidden="true"></i></a>
+        <a href="https://www.coursera.org/learner/dr-ahmad-raza-khan-8754" target="_blank" rel="noopener noreferrer" title="Coursera"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+        <a href="https://tryhackme.com/p/AHMAD.RAZA.KHAN" target="_blank" rel="noopener noreferrer" title="TryHackMe"><i class="fa fa-shield" aria-hidden="true"></i></a>
+        <a href="https://www.credly.com/users/ahmad-raza-raza" target="_blank" rel="noopener noreferrer" title="Credly"><i class="fa fa-certificate" aria-hidden="true"></i></a>
+    </aside>
     <main id="main">
 
         <header class="page-head wrap">
@@ -1254,37 +1287,52 @@
         </div>
 
     </main>
-    <footer class="footer">
+        <footer class="footer" id="sitemap">
         <div class="wrap">
             <div class="footer-grid">
-                <div>
-                    <p class="footer-brand">Dr. Ahmad <span>Raza Khan</span></p>
-                    <p>Associate Professor, Majmaah University. Cloud security and AI.</p>
+                <div style="max-width:340px;">
+                    <div class="footer-brand">Dr. Ahmad <span>Raza Khan</span></div>
+                    <p>Associate Professor, researcher, and consultant &mdash; working at the intersection of cloud security, machine learning, and AI-driven threat detection.</p>
                 </div>
                 <div>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="/">Home</a></li>
                         <li><a href="/research/">Research</a></li>
                         <li><a href="/teaching/">Teaching</a></li>
                         <li><a href="/certifications/">Certifications</a></li>
                         <li><a href="/contact/">Contact</a></li>
                         <li><a href="/#biography">Biography</a></li>
-                        <li><a href="/#appointments">Book a meeting</a></li>
+                        <li><a href="/#researchintersts">Interests</a></li>
+                        <li><a href="/#publicationimage">Publications</a></li>
+                        <li><a href="/#certifications">Certificates on this page</a></li>
+                        <li><a href="/#servicesimage">Services</a></li>
+                        <li><a href="/#contact">Contact form</a></li>
+                        <li><a href="/#appointments">Appointments</a></li>
+                        <li><a href="/#faq">Questions</a></li>
                     </ul>
                 </div>
-                <div>
-                    <ul>
-                        <li><a href="https://orcid.org/0000-0002-5365-9189">ORCID</a></li>
-                        <li><a href="https://scholar.google.com/citations?user=CD72xzgAAAAJ">Google Scholar</a></li>
-                        <li><a href="https://www.researchgate.net/profile/Ahmed-Khan-34">ResearchGate</a></li>
-                        <li><a href="https://www.linkedin.com/in/ahmad-raza-khan-68b39a225">LinkedIn</a></li>
-                        <li><a href="https://github.com/ahmed-khan">GitHub</a></li>
-                    </ul>
-                </div>
+                    <div class="footer-social">
+        <a href="http://www.linkedin.com/in/ahmad-raza-khan-68b39a225" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/ahmed-khan" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user=CD72xzgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fa fa-google" aria-hidden="true"></i></a>
+        <a href="https://ieeexplore.ieee.org/author/37085503176" target="_blank" rel="noopener noreferrer" title="IEEE Xplore"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></a>
+        <a href="https://orcid.org/0000-0002-5365-9189" target="_blank" rel="noopener noreferrer" title="ORCID"><i class="fa fa-id-badge" aria-hidden="true"></i></a>
+        <a href="https://www.researchgate.net/profile/Ahmed-Khan-34" target="_blank" rel="noopener noreferrer" title="ResearchGate"><i class="fa fa-flask" aria-hidden="true"></i></a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=56151985600" target="_blank" rel="noopener noreferrer" title="Scopus"><i class="fa fa-book" aria-hidden="true"></i></a>
+        <a href="https://www.webofscience.com/wos/author/record/160542" target="_blank" rel="noopener noreferrer" title="Web of Science"><i class="fa fa-globe" aria-hidden="true"></i></a>
+        <a href="https://sciprofiles.com/profile/982585" target="_blank" rel="noopener noreferrer" title="SciProfiles"><i class="fa fa-user" aria-hidden="true"></i></a>
+        <a href="https://www.coursera.org/learner/dr-ahmad-raza-khan-8754" target="_blank" rel="noopener noreferrer" title="Coursera"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+        <a href="https://tryhackme.com/p/AHMAD.RAZA.KHAN" target="_blank" rel="noopener noreferrer" title="TryHackMe"><i class="fa fa-shield" aria-hidden="true"></i></a>
+        <a href="https://www.credly.com/users/ahmad-raza-raza" target="_blank" rel="noopener noreferrer" title="Credly"><i class="fa fa-certificate" aria-hidden="true"></i></a>
+    </div>
             </div>
-            <p class="footer-base">© 2026 Dr. Ahmad Raza Khan · <a href="mailto:ahmed@connectingahmad.info">ahmed@connectingahmad.info</a> · <a href="tel:+14647689022">+1 (464) 768 9022</a></p>
+            <div class="footer-base">
+                <span>&copy; 2026 by Dr. Ahmad Raza Khan. Powered and secured by <a href="https://www.connectingahmad.info">connectingahmad.info</a></span>
+                <span>Write to me at <a href="mailto:ahmed@connectingahmad.info">ahmed@connectingahmad.info</a> &middot; Call me at <a href="tel:+14647689022">+1 (464) 768 9022</a></span>
+            </div>
         </div>
     </footer>
+    <script src="/js/i18n.js?v=2" defer></script>
     <script>
         (function () {
             var burger = document.getElementById("navBurger");
@@ -1293,6 +1341,49 @@
                 var open = nav.classList.toggle("open");
                 burger.setAttribute("aria-expanded", open ? "true" : "false");
             });
+            var onScroll = function () {
+                nav.classList.toggle("scrolled", window.scrollY > 8);
+            };
+            onScroll();
+            window.addEventListener("scroll", onScroll, { passive: true });
+        })();
+    </script>
+    <script type="module">
+        (function () {
+            var started = false;
+            function loadJotformAgent() {
+                if (started) return; started = true;
+                var s = document.createElement("script");
+                s.src = "https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js";
+                s.onload = function () {
+                    window.AgentInitializer.init({
+                        agentRenderURL: "https://agent.jotform.com/01967c3b53da7b70a46b1d88d7ccb3fe8d50",
+                        rootId: "JotformAgent-01967c3b53da7b70a46b1d88d7ccb3fe8d50",
+                        formID: "01967c3b53da7b70a46b1d88d7ccb3fe8d50",
+                        queryParams: ["skipWelcome=1", "maximizable=1"],
+                        domain: "https://www.jotform.com",
+                        isDraggable: false,
+                        background: "linear-gradient(180deg, #6C73A8 0%, #6C73A8 100%)",
+                        buttonBackgroundColor: "#408EC6",
+                        buttonIconColor: "#FFFFFF",
+                        variant: false,
+                        customizations: {
+                            "greeting": "Yes",
+                            "greetingMessage": "Hi! How can I assist you?",
+                            "openByDefault": "No",
+                            "pulse": "Yes",
+                            "position": "right",
+                            "autoOpenChatIn": "0"
+                        },
+                        isVoice: false
+                    });
+                };
+                document.body.appendChild(s);
+            }
+            ["pointerdown", "touchstart", "keydown", "scroll", "mousemove"].forEach(function (e) {
+                window.addEventListener(e, loadJotformAgent, { once: true, passive: true });
+            });
+            setTimeout(loadJotformAgent, 4500);
         })();
     </script>
 </body>
