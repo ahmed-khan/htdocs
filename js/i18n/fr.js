@@ -26,7 +26,7 @@ window.I18N.fr = {
  "Journal Papers": "Articles de revues",
  "Conference Papers": "Articles de conférences",
  "Journals Reviewed": "Revues évaluées",
- "US Patent": "Brevet américain",
+ "US &amp; UK Patents": "Brevets américain et britannique",
  "About": "À propos",
  "A career built on <em>curiosity</em><br>and rigorous research": "Une carrière fondée sur la <em>curiosité</em><br>et une recherche rigoureuse",
  "At a glance": "En bref",
