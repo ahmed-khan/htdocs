@@ -28,7 +28,7 @@ window.I18N.ar = {
  "Journal Papers": "أوراق في مجلات علمية",
  "Conference Papers": "أوراق في مؤتمرات",
  "Journals Reviewed": "مجلات قمت بالتحكيم لها",
- "US Patent": "براءة اختراع أمريكية",
+ "US &amp; UK Patents": "براءتا اختراع أمريكية وبريطانية",
  "About": "نبذة",
  "A career built on <em>curiosity</em><br>and rigorous research": "مسيرة مهنية قائمة على <em>الفضول</em><br>والبحث العلمي الرصين",
  "At a glance": "لمحة سريعة",
