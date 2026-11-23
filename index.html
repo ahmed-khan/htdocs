@@ -1127,9 +1127,9 @@
     <div class="grain" aria-hidden="true"></div>
 
     <!-- nav -->
-    <nav class="nav" id="nav" aria-label="Primary">
+    <nav class="nav" id="nav" aria-label="Primary" data-scrolled-threshold="60">
         <a class="nav-brand" href="#home">Dr. Ahmad <span>Raza Khan</span></a>
-        <button class="nav-burger" id="navBurger" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <button class="nav-burger" id="navBurger" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i></button>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="/research/">Research</a></li>
@@ -3737,6 +3737,7 @@
         </div>
     </div>
 
+    <script src="/js/site-nav.js?v=1" defer></script>
     <script src="js/i18n.js?v=1" defer></script>
     <script src="/js/lenis.min.js" defer></script>
     <script type="module">
@@ -3773,17 +3774,13 @@
                     scrollToTarget(hash);
                     history.replaceState(null, '', hash);
                     nav.classList.remove('open');
+                    document.getElementById('navBurger').setAttribute('aria-expanded', 'false');
                 }
             });
         });
 
         /* ---------- nav ---------- */
         var nav = document.getElementById('nav');
-        var burger = document.getElementById('navBurger');
-        burger.addEventListener('click', function () { nav.classList.toggle('open'); });
-        window.addEventListener('scroll', function () {
-            nav.classList.toggle('scrolled', window.scrollY > 60);
-        }, { passive: true });
 
         /* active link highlighting */
         var sections = Array.prototype.slice.call(document.querySelectorAll('section[id], header[id], footer[id]'));

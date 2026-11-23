@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,7 +15,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
-
+      - name: Verify site files and JavaScript
+        run: |
+          python3 .github/scripts/check_site.py
+          git ls-files -z -- '*.js' | xargs -0 -r -n 1 node --check
 
       - name: Set up SSH key
         run: |
@@ -21,28 +27,31 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.LIGHTSAIL_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Run deployment script
+      - name: Deploy to Lightsail
         run: |
-         ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa bitnami@${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
-          # Pull latest code to temp directory (replace with your repo path)
-          cd /home/bitnami/htdocs || exit
-          git pull origin main
+          ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -i ~/.ssh/id_rsa bitnami@${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
+          set -eu
+          cd /home/bitnami/htdocs
+          git pull --ff-only origin main
 
-          # Copy updated files to web root
           sudo cp -r /home/bitnami/htdocs/* /opt/bitnami/apache2/htdocs/
-          # The * above skips dotfiles, so copy .htaccess explicitly
           sudo cp /home/bitnami/htdocs/.htaccess /opt/bitnami/apache2/htdocs/
 
           # Keep repo notes out of the public web root
           sudo rm -f /opt/bitnami/apache2/htdocs/*.md
 
-          # Fix ownership and permissions
           sudo chown -R bitnami:daemon /opt/bitnami/apache2/htdocs/
           sudo chmod -R 755 /opt/bitnami/apache2/htdocs/
-
-          # Restart Apache (optional)
           sudo /opt/bitnami/ctlscript.sh restart apache
-         EOF
+          EOF
+
+      - name: Smoke-test deployed pages
+        run: |
+          for path in / /research/ /teaching/ /certifications/ /contact/; do
+            curl --fail --silent --show-error --location --retry 3 --retry-all-errors --max-time 20 \
+              "https://www.connectingahmad.info${path}" > /dev/null
+          done
 
       - name: Clean up SSH key
-        run: rm -rf ~/.ssh
+        if: always()
+        run: rm -f ~/.ssh/id_rsa ~/.ssh/known_hosts

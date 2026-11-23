@@ -1392,22 +1392,8 @@
             </div>
         </div>
     </footer>
+    <script src="/js/site-nav.js?v=1" defer></script>
     <script src="/js/i18n.js?v=2" defer></script>
-    <script>
-        (function () {
-            var burger = document.getElementById("navBurger");
-            var nav = document.getElementById("nav");
-            burger.addEventListener("click", function () {
-                var open = nav.classList.toggle("open");
-                burger.setAttribute("aria-expanded", open ? "true" : "false");
-            });
-            var onScroll = function () {
-                nav.classList.toggle("scrolled", window.scrollY > 8);
-            };
-            onScroll();
-            window.addEventListener("scroll", onScroll, { passive: true });
-        })();
-    </script>
     <script type="module">
         (function () {
             var started = false;
